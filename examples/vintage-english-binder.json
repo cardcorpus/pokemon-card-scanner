@@ -1,0 +1,1739 @@
+{
+ "file": "vintage-english-binder.jpg",
+ "width": 2250,
+ "height": 3000,
+ "cards": [
+  {
+   "box": 0,
+   "quad": [
+    [
+     627.8,
+     372.9
+    ],
+    [
+     1091.3,
+     378.7
+    ],
+    [
+     1090.8,
+     1029.8
+    ],
+    [
+     632.4,
+     1027.2
+    ]
+   ],
+   "conf": 0.833,
+   "back_sim": -0.0379,
+   "orient_p": 1.0,
+   "number_read": {
+    "text": "23/64",
+    "votes": 26,
+    "n": 23,
+    "d": 64,
+    "code": null
+   },
+   "candidates": [
+    {
+     "handle": "ffa9d5499fa1781dac9667a068aac5bc",
+     "print": "international/jungle/23",
+     "set": "international/jungle",
+     "card": "23",
+     "name": "Nidoqueen",
+     "set_name": "Jungle",
+     "number": "23/64",
+     "family": "international",
+     "language": "en",
+     "release": "r645",
+     "artwork_group": "a8087",
+     "release_date": "1999-06-16",
+     "sim": 0.981,
+     "picture": "https://img.cardcorpus.com/m/ffa9d5499fa1781dac9667a068aac5bc"
+    },
+    {
+     "handle": "7ad9fc6344ae1fb58a696b0e2fec7144",
+     "print": "international/base-set-2/12",
+     "set": "international/base-set-2",
+     "card": "12",
+     "name": "Nidoqueen",
+     "set_name": "Base Set 2",
+     "number": "12/130",
+     "family": "international",
+     "language": "en",
+     "release": "r570",
+     "artwork_group": "a581",
+     "release_date": "2000-02-24",
+     "sim": 0.9811,
+     "picture": "https://img.cardcorpus.com/m/7ad9fc6344ae1fb58a696b0e2fec7144"
+    },
+    {
+     "handle": "3ff17a9bd280000ab711e46914ca1a1d",
+     "print": "international/jungle/7",
+     "set": "international/jungle",
+     "card": "7",
+     "name": "Nidoqueen",
+     "set_name": "Jungle",
+     "number": "7/64",
+     "family": "international",
+     "language": "en",
+     "release": "r645",
+     "artwork_group": "a8087",
+     "release_date": "1999-06-16",
+     "sim": 0.8544,
+     "variant": "first-edition-holo",
+     "picture": "https://img.cardcorpus.com/m/3ff17a9bd280000ab711e46914ca1a1d"
+    },
+    {
+     "handle": "0d7d41640d9a8458c7a7c168afc2fe69",
+     "print": "international/legendary-collection/32",
+     "set": "international/legendary-collection",
+     "card": "32",
+     "name": "Nidoqueen",
+     "set_name": "Legendary Collection",
+     "number": "32/110",
+     "family": "international",
+     "language": "en",
+     "release": "r647",
+     "artwork_group": "a8166",
+     "release_date": "2002-05-24",
+     "sim": 0.98,
+     "picture": "https://img.cardcorpus.com/m/0d7d41640d9a8458c7a7c168afc2fe69"
+    },
+    {
+     "handle": "7e131f0d21e0322142295e4d40440ef8",
+     "print": "international/base-set/34",
+     "set": "international/base-set",
+     "card": "34",
+     "name": "Machoke",
+     "set_name": "Base Set",
+     "number": "34/102",
+     "family": "international",
+     "language": "en",
+     "release": "r1",
+     "artwork_group": "a34",
+     "release_date": "1999-01-09",
+     "sim": 0.6673,
+     "variant": "4th-print-non-holo",
+     "picture": "https://img.cardcorpus.com/m/7e131f0d21e0322142295e4d40440ef8"
+    }
+   ],
+   "pick": {
+    "print": "international/jungle/23",
+    "margin": 0.0193
+   },
+   "verify": {
+    "international/jungle/23": 0.0,
+    "international/base-set-2/12": -0.0,
+    "international/legendary-collection/32": -0.7266,
+    "international/jungle/7": -0.0
+   },
+   "numfit": {
+    "12/130": -7.908,
+    "23/64": -0.228,
+    "32/110": -9.592,
+    "34/102": -10.361,
+    "49/130": -9.609,
+    "53/130": -9.918,
+    "62/181": -10.487,
+    "7/64": -7.208
+   },
+   "edition_stamp": 0.4364,
+   "ecard_reverse": 0.3103,
+   "ecard_reading": "dot_code",
+   "alignment": {
+    "aligned": true,
+    "pass": 1,
+    "inliers": 1055,
+    "scan_features": 3000,
+    "box_error": 0.04725917801260948
+   },
+   "quality": "sure"
+  },
+  {
+   "box": 1,
+   "quad": [
+    [
+     128.5,
+     1786.8
+    ],
+    [
+     562.2,
+     1790.3
+    ],
+    [
+     563.8,
+     2388.7
+    ],
+    [
+     134.2,
+     2380.2
+    ]
+   ],
+   "conf": 0.826,
+   "back_sim": -0.004,
+   "orient_p": 1.0,
+   "number_read": {
+    "text": "28/62",
+    "votes": 16,
+    "n": 28,
+    "d": 62,
+    "code": null
+   },
+   "candidates": [
+    {
+     "handle": "93d04354530e5b1c3403d6584f9b90e3",
+     "print": "international/fossil/28",
+     "set": "international/fossil",
+     "card": "28",
+     "name": "Muk",
+     "set_name": "Fossil",
+     "number": "28/62",
+     "family": "international",
+     "language": "en",
+     "release": "r631",
+     "artwork_group": "a7623",
+     "release_date": "1999-10-10",
+     "sim": 0.9798,
+     "variant": "fossil-1999-2000-print-non-holo",
+     "picture": "https://img.cardcorpus.com/m/93d04354530e5b1c3403d6584f9b90e3"
+    },
+    {
+     "handle": "27d4befe4cab8299f401a0a95035e811",
+     "print": "international/fossil/13",
+     "set": "international/fossil",
+     "card": "13",
+     "name": "Muk",
+     "set_name": "Fossil",
+     "number": "13/62",
+     "family": "international",
+     "language": "en",
+     "release": "r631",
+     "artwork_group": "a7623",
+     "release_date": "1999-10-10",
+     "sim": 0.9635,
+     "picture": "https://img.cardcorpus.com/m/27d4befe4cab8299f401a0a95035e811"
+    },
+    {
+     "handle": "dcf029974586f5f6ba92f4e4531ad72b",
+     "print": "international/legendary-collection/16",
+     "set": "international/legendary-collection",
+     "card": "16",
+     "name": "Muk",
+     "set_name": "Legendary Collection",
+     "number": "16/110",
+     "family": "international",
+     "language": "en",
+     "release": "r647",
+     "artwork_group": "a8150",
+     "release_date": "2002-05-24",
+     "sim": 0.9281,
+     "variant": "reverse-holo",
+     "picture": "https://img.cardcorpus.com/m/dcf029974586f5f6ba92f4e4531ad72b"
+    },
+    {
+     "handle": "d730eec9873e4c4d2b10d4393fd0dcf1",
+     "print": "international/ex-unseen-forces/41",
+     "set": "international/ex-unseen-forces",
+     "card": "41",
+     "name": "Magcargo",
+     "set_name": "EX Unseen Forces",
+     "number": "41/115",
+     "family": "international",
+     "language": "en",
+     "release": "r626",
+     "artwork_group": "a7505",
+     "release_date": "2005-08-01",
+     "sim": 0.6723,
+     "picture": "https://img.cardcorpus.com/m/d730eec9873e4c4d2b10d4393fd0dcf1"
+    },
+    {
+     "handle": "603ddd04dd4f76fc659ef8b96e04d9ce",
+     "print": "international/unified-minds/210",
+     "set": "international/unified-minds",
+     "card": "210",
+     "name": "Unidentified Fossil",
+     "set_name": "Unified Minds",
+     "number": "210/236",
+     "family": "international",
+     "language": "en",
+     "release": "r740",
+     "artwork_group": "a1776",
+     "release_date": "2019-08-02",
+     "sim": 0.6502,
+     "picture": "https://img.cardcorpus.com/m/603ddd04dd4f76fc659ef8b96e04d9ce"
+    }
+   ],
+   "pick": {
+    "print": "international/fossil/28",
+    "margin": 0.049
+   },
+   "verify": {
+    "international/fossil/28": 0.0,
+    "international/fossil/13": -0.0,
+    "international/legendary-collection/16": -0.8332,
+    "international/secret-wonders/56": -0.8493,
+    "international/next-destinies/53": -0.8415
+   },
+   "numfit": {
+    "13/62": -5.531,
+    "16/110": -6.889,
+    "207/236": -10.418,
+    "210/236": -11.817,
+    "28/62": -0.672,
+    "41/115": -8.763,
+    "53/99": -9.523,
+    "56/132": -7.932
+   },
+   "edition_stamp": 0.4116,
+   "ecard_reverse": 0.2986,
+   "ecard_reading": "dot_code",
+   "alignment": {
+    "aligned": true,
+    "pass": 1,
+    "inliers": 723,
+    "scan_features": 2697,
+    "box_error": 0.05140913650393486
+   },
+   "quality": "sure"
+  },
+  {
+   "box": 2,
+   "quad": [
+    [
+     116.5,
+     1091.2
+    ],
+    [
+     556.3,
+     1090.2
+    ],
+    [
+     562.2,
+     1713.9
+    ],
+    [
+     122.9,
+     1712.4
+    ]
+   ],
+   "conf": 0.82,
+   "back_sim": 0.0245,
+   "orient_p": 0.9872,
+   "number_read": {
+    "text": "31/64",
+    "votes": 19,
+    "n": 31,
+    "d": 64,
+    "code": null
+   },
+   "candidates": [
+    {
+     "handle": "636cf2be17417cb321ca29f72645102c",
+     "print": "international/jungle/31",
+     "set": "international/jungle",
+     "card": "31",
+     "name": "Vileplume",
+     "set_name": "Jungle",
+     "number": "31/64",
+     "family": "international",
+     "language": "en",
+     "release": "r645",
+     "artwork_group": "a8095",
+     "release_date": "1999-06-16",
+     "sim": 0.9716,
+     "variant": "white-border-test-print-non-holo",
+     "picture": "https://img.cardcorpus.com/m/636cf2be17417cb321ca29f72645102c"
+    },
+    {
+     "handle": "cd38c7b54a98d7b97168cede8e384dcc",
+     "print": "international/jungle/15",
+     "set": "international/jungle",
+     "card": "15",
+     "name": "Vileplume",
+     "set_name": "Jungle",
+     "number": "15/64",
+     "family": "international",
+     "language": "en",
+     "release": "r645",
+     "artwork_group": "a8095",
+     "release_date": "1999-06-16",
+     "sim": 0.9667,
+     "picture": "https://img.cardcorpus.com/m/cd38c7b54a98d7b97168cede8e384dcc"
+    },
+    {
+     "handle": "807c6635ae27e4fdfe836bec8e19af11",
+     "print": "international/gym-heroes/5",
+     "set": "international/gym-heroes",
+     "card": "5",
+     "name": "Erika's Vileplume",
+     "set_name": "Gym Heroes",
+     "number": "5/132",
+     "family": "international",
+     "language": "en",
+     "release": "r638",
+     "artwork_group": "a7898",
+     "release_date": "2000-08-14",
+     "sim": 0.727,
+     "picture": "https://img.cardcorpus.com/m/807c6635ae27e4fdfe836bec8e19af11"
+    },
+    {
+     "handle": "445c00f85c9dfe07b804e0da83b7588d",
+     "print": "international/celestial-storm/13",
+     "set": "international/celestial-storm",
+     "card": "13",
+     "name": "Nuzleaf",
+     "set_name": "Celestial Storm",
+     "number": "13/168",
+     "family": "international",
+     "language": "en",
+     "release": "r584",
+     "artwork_group": "a1450",
+     "release_date": "2018-08-03",
+     "sim": 0.7036,
+     "picture": "https://img.cardcorpus.com/m/445c00f85c9dfe07b804e0da83b7588d"
+    },
+    {
+     "handle": "6c19064fcef21d8408220bc8459f8dde",
+     "print": "international/team-rocket/13",
+     "set": "international/team-rocket",
+     "card": "13",
+     "name": "Dark Vileplume",
+     "set_name": "Team Rocket",
+     "number": "13/82",
+     "family": "international",
+     "language": "en",
+     "release": "r733",
+     "artwork_group": "a9640",
+     "release_date": "2000-04-24",
+     "sim": 0.6827,
+     "picture": "https://img.cardcorpus.com/m/6c19064fcef21d8408220bc8459f8dde"
+    }
+   ],
+   "pick": {
+    "print": "international/jungle/31",
+    "margin": 0.072
+   },
+   "verify": {
+    "international/jungle/31": 0.3459,
+    "international/jungle/15": -0.3459,
+    "international/unbroken-bonds/8": -0.8617,
+    "international/paldean-fates/094": -1.0
+   },
+   "numfit": {
+    "094/091": -10.104,
+    "13/168": -8.446,
+    "13/82": -8.806,
+    "15/64": -6.078,
+    "31/64": -0.56,
+    "5/132": -8.084,
+    "8/214": -10.833
+   },
+   "edition_stamp": 0.9197,
+   "ecard_reverse": 0.2927,
+   "ecard_reading": "dot_code",
+   "alignment": {
+    "aligned": true,
+    "pass": 1,
+    "inliers": 836,
+    "scan_features": 2979,
+    "box_error": 0.05058139190077782
+   },
+   "quality": "sure"
+  },
+  {
+   "box": 3,
+   "quad": [
+    [
+     1147.4,
+     386.0
+    ],
+    [
+     1605.1,
+     387.3
+    ],
+    [
+     1598.9,
+     1035.4
+    ],
+    [
+     1141.3,
+     1033.7
+    ]
+   ],
+   "conf": 0.819,
+   "back_sim": 0.0677,
+   "orient_p": 0.9875,
+   "number_read": {
+    "text": "17/64",
+    "votes": 10,
+    "n": 17,
+    "d": 64,
+    "code": null
+   },
+   "candidates": [
+    {
+     "handle": "b59ee2d5f6c2d9790738044f91dafc98",
+     "print": "international/jungle/17",
+     "set": "international/jungle",
+     "card": "17",
+     "name": "Clefable",
+     "set_name": "Jungle",
+     "number": "17/64",
+     "family": "international",
+     "language": "en",
+     "release": "r645",
+     "artwork_group": "a8081",
+     "release_date": "1999-06-16",
+     "sim": 0.9775,
+     "picture": "https://img.cardcorpus.com/m/b59ee2d5f6c2d9790738044f91dafc98"
+    },
+    {
+     "handle": "97146872de04eb90d30ce746b018c202",
+     "print": "international/jungle/1",
+     "set": "international/jungle",
+     "card": "1",
+     "name": "Clefable",
+     "set_name": "Jungle",
+     "number": "1/64",
+     "family": "international",
+     "language": "en",
+     "release": "r645",
+     "artwork_group": "a8081",
+     "release_date": "1999-06-16",
+     "sim": 0.8724,
+     "variant": "unlimited-holo-prerelease",
+     "picture": "https://img.cardcorpus.com/m/97146872de04eb90d30ce746b018c202"
+    },
+    {
+     "handle": "b9a9961074982a144f53de7903fb0cf1",
+     "print": "international/base-set-2/5",
+     "set": "international/base-set-2",
+     "card": "5",
+     "name": "Clefable",
+     "set_name": "Base Set 2",
+     "number": "5/130",
+     "family": "international",
+     "language": "en",
+     "release": "r570",
+     "artwork_group": "a586",
+     "release_date": "2000-02-24",
+     "sim": 0.9733,
+     "picture": "https://img.cardcorpus.com/m/b9a9961074982a144f53de7903fb0cf1"
+    },
+    {
+     "handle": "d9b9a1c5beaf099882ef3a6af86b436c",
+     "print": "international/gym-heroes/3",
+     "set": "international/gym-heroes",
+     "card": "3",
+     "name": "Erika's Clefable",
+     "set_name": "Gym Heroes",
+     "number": "3/132",
+     "family": "international",
+     "language": "en",
+     "release": "r638",
+     "artwork_group": "a7896",
+     "release_date": "2000-08-14",
+     "sim": 0.7831,
+     "variant": "first-edition-holo",
+     "picture": "https://img.cardcorpus.com/m/d9b9a1c5beaf099882ef3a6af86b436c"
+    },
+    {
+     "handle": "5735a5020347e533ad4a0eec4d55d793",
+     "print": "international/pokemon-tcg-classic-charizard/014",
+     "set": "international/pokemon-tcg-classic-charizard",
+     "card": "014",
+     "name": "Clefable",
+     "set_name": "Pokémon TCG Classic (Charizard)",
+     "number": "014/034",
+     "family": "international",
+     "language": "en",
+     "release": "r695",
+     "artwork_group": "a586",
+     "release_date": "2023-11-17",
+     "sim": 0.8268,
+     "picture": "https://img.cardcorpus.com/m/5735a5020347e533ad4a0eec4d55d793"
+    }
+   ],
+   "pick": {
+    "print": "international/jungle/17",
+    "margin": 0.0164
+   },
+   "verify": {
+    "international/jungle/17": 0.0,
+    "international/jungle/1": -0.0,
+    "international/base-set-2/5": -0.0,
+    "international/pokemon-tcg-classic-charizard/014": -0.8915
+   },
+   "numfit": {
+    "014/034": -9.697,
+    "1/64": -3.497,
+    "17/64": -0.592,
+    "3/132": -8.408,
+    "5/102": -7.783,
+    "5/130": -8.357,
+    "6/130": -8.654,
+    "64/132": -10.457
+   },
+   "edition_stamp": 0.4317,
+   "ecard_reverse": 0.341,
+   "ecard_reading": "dot_code",
+   "alignment": {
+    "aligned": true,
+    "pass": 1,
+    "inliers": 1069,
+    "scan_features": 3002,
+    "box_error": 0.03848034515976906
+   },
+   "quality": "sure"
+  },
+  {
+   "box": 4,
+   "quad": [
+    [
+     1140.4,
+     1102.9
+    ],
+    [
+     1594.6,
+     1106.4
+    ],
+    [
+     1582.4,
+     1729.5
+    ],
+    [
+     1134.8,
+     1724.8
+    ]
+   ],
+   "conf": 0.807,
+   "back_sim": -0.11,
+   "orient_p": 1.0,
+   "number_read": {
+    "text": "30/64",
+    "votes": 32,
+    "n": 30,
+    "d": 64,
+    "code": null
+   },
+   "candidates": [
+    {
+     "handle": "072bddb289ff6e8902b7ea185b27d282",
+     "print": "international/jungle/30",
+     "set": "international/jungle",
+     "card": "30",
+     "name": "Victreebel",
+     "set_name": "Jungle",
+     "number": "30/64",
+     "family": "international",
+     "language": "en",
+     "release": "r645",
+     "artwork_group": "a8094",
+     "release_date": "1999-06-16",
+     "sim": 0.9748,
+     "picture": "https://img.cardcorpus.com/m/072bddb289ff6e8902b7ea185b27d282"
+    },
+    {
+     "handle": "3d458e7c467f4c3130496f158e72aa99",
+     "print": "international/jungle/14",
+     "set": "international/jungle",
+     "card": "14",
+     "name": "Victreebel",
+     "set_name": "Jungle",
+     "number": "14/64",
+     "family": "international",
+     "language": "en",
+     "release": "r645",
+     "artwork_group": "a8094",
+     "release_date": "1999-06-16",
+     "sim": 0.9047,
+     "variant": "unlimited-holo-no-set-symbol",
+     "picture": "https://img.cardcorpus.com/m/3d458e7c467f4c3130496f158e72aa99"
+    },
+    {
+     "handle": "2fcb22b7b1a6f63b2d5feb48225aeec6",
+     "print": "international/base-set-2/32",
+     "set": "international/base-set-2",
+     "card": "32",
+     "name": "Victreebel",
+     "set_name": "Base Set 2",
+     "number": "32/130",
+     "family": "international",
+     "language": "en",
+     "release": "r570",
+     "artwork_group": "a621",
+     "release_date": "2000-02-24",
+     "sim": 0.9683,
+     "picture": "https://img.cardcorpus.com/m/2fcb22b7b1a6f63b2d5feb48225aeec6"
+    },
+    {
+     "handle": "fc8251473e06dcb1b1ae450c9b7b3dcf",
+     "print": "international/jungle/10",
+     "set": "international/jungle",
+     "card": "10",
+     "name": "Scyther",
+     "set_name": "Jungle",
+     "number": "10/64",
+     "family": "international",
+     "language": "en",
+     "release": "r645",
+     "artwork_group": "a8090",
+     "release_date": "1999-06-16",
+     "sim": 0.6049,
+     "variant": "first-edition-holo",
+     "picture": "https://img.cardcorpus.com/m/fc8251473e06dcb1b1ae450c9b7b3dcf"
+    },
+    {
+     "handle": "bd9a9b6f0f870a29ebb272081f7d85b3",
+     "print": "international/base-set-2/17",
+     "set": "international/base-set-2",
+     "card": "17",
+     "name": "Scyther",
+     "set_name": "Base Set 2",
+     "number": "17/130",
+     "family": "international",
+     "language": "en",
+     "release": "r570",
+     "artwork_group": "a673",
+     "release_date": "2000-02-24",
+     "sim": 0.6054,
+     "picture": "https://img.cardcorpus.com/m/bd9a9b6f0f870a29ebb272081f7d85b3"
+    }
+   ],
+   "pick": {
+    "print": "international/jungle/30",
+    "margin": 0.1232
+   },
+   "verify": {
+    "international/jungle/30": 0.0,
+    "international/base-set-2/32": -0.3696,
+    "international/jungle/14": -0.0
+   },
+   "numfit": {
+    "004/086": -8.356,
+    "10/64": -3.993,
+    "14/64": -6.726,
+    "17/130": -7.01,
+    "26/64": -5.707,
+    "30/64": -0.337,
+    "32/130": -8.291,
+    "38/106": -8.327
+   },
+   "edition_stamp": 0.4135,
+   "ecard_reverse": 0.2991,
+   "ecard_reading": "dot_code",
+   "alignment": {
+    "aligned": true,
+    "pass": 1,
+    "inliers": 1056,
+    "scan_features": 3000,
+    "box_error": 0.05305524170398712
+   },
+   "quality": "sure"
+  },
+  {
+   "box": 5,
+   "quad": [
+    [
+     1666.0,
+     1109.0
+    ],
+    [
+     2120.8,
+     1112.6
+    ],
+    [
+     2103.4,
+     1739.3
+    ],
+    [
+     1652.1,
+     1733.9
+    ]
+   ],
+   "conf": 0.806,
+   "back_sim": -0.0858,
+   "orient_p": 0.8548,
+   "number_read": {
+    "text": "26/62",
+    "votes": 25,
+    "n": 26,
+    "d": 62,
+    "code": null
+   },
+   "candidates": [
+    {
+     "handle": "1e2af36e5f1355bba88c04c5de38b191",
+     "print": "international/fossil/26",
+     "set": "international/fossil",
+     "card": "26",
+     "name": "Magneton",
+     "set_name": "Fossil",
+     "number": "26/62",
+     "family": "international",
+     "language": "en",
+     "release": "r631",
+     "artwork_group": "a7621",
+     "release_date": "1999-10-10",
+     "sim": 0.985,
+     "variant": "fossil-1999-2000-print-non-holo",
+     "picture": "https://img.cardcorpus.com/m/1e2af36e5f1355bba88c04c5de38b191"
+    },
+    {
+     "handle": "b82ab2a5104adaf5517e245ae03e5a9f",
+     "print": "international/fossil/11",
+     "set": "international/fossil",
+     "card": "11",
+     "name": "Magneton",
+     "set_name": "Fossil",
+     "number": "11/62",
+     "family": "international",
+     "language": "en",
+     "release": "r631",
+     "artwork_group": "a7621",
+     "release_date": "1999-10-10",
+     "sim": 0.9766,
+     "picture": "https://img.cardcorpus.com/m/b82ab2a5104adaf5517e245ae03e5a9f"
+    },
+    {
+     "handle": "e3fee56d40afd22af2613f4d3641b625",
+     "print": "international/legendary-collection/28",
+     "set": "international/legendary-collection",
+     "card": "28",
+     "name": "Magneton",
+     "set_name": "Legendary Collection",
+     "number": "28/110",
+     "family": "international",
+     "language": "en",
+     "release": "r647",
+     "artwork_group": "a8162",
+     "release_date": "2002-05-24",
+     "sim": 0.9761,
+     "picture": "https://img.cardcorpus.com/m/e3fee56d40afd22af2613f4d3641b625"
+    },
+    {
+     "handle": "4fcd4e6d2ee78b2c52845c49af86f0e4",
+     "print": "international/fossil/7",
+     "set": "international/fossil",
+     "card": "7",
+     "name": "Hitmonlee",
+     "set_name": "Fossil",
+     "number": "7/62",
+     "family": "international",
+     "language": "en",
+     "release": "r631",
+     "artwork_group": "a7617",
+     "release_date": "1999-10-10",
+     "sim": 0.7126,
+     "picture": "https://img.cardcorpus.com/m/4fcd4e6d2ee78b2c52845c49af86f0e4"
+    },
+    {
+     "handle": "cb53759f2e8cd9080cccde39fce6fd2b",
+     "print": "international/gym-heroes/8",
+     "set": "international/gym-heroes",
+     "card": "8",
+     "name": "Lt. Surge's Magneton",
+     "set_name": "Gym Heroes",
+     "number": "8/132",
+     "family": "international",
+     "language": "en",
+     "release": "r638",
+     "artwork_group": "a7901",
+     "release_date": "2000-08-14",
+     "sim": 0.7305,
+     "variant": "first-edition-holo",
+     "picture": "https://img.cardcorpus.com/m/cb53759f2e8cd9080cccde39fce6fd2b"
+    }
+   ],
+   "pick": {
+    "print": "international/fossil/26",
+    "margin": 0.0396
+   },
+   "verify": {
+    "international/fossil/26": 0.0,
+    "international/fossil/11": -0.0,
+    "international/legendary-collection/28": -0.8615,
+    "international/sv-black-star-promos/153": -0.9021,
+    "international/ex-firered-leafgreen/27": -1.0
+   },
+   "numfit": {
+    "11/62": -6.231,
+    "26/62": -0.576,
+    "27/112": -9.279,
+    "28/110": -7.655,
+    "7/62": -6.963,
+    "8/132": -8.082,
+    "9/102": -7.984
+   },
+   "edition_stamp": 0.4293,
+   "ecard_reverse": 0.3294,
+   "ecard_reading": "dot_code",
+   "alignment": {
+    "aligned": true,
+    "pass": 1,
+    "inliers": 1027,
+    "scan_features": 3000,
+    "box_error": 0.041645489633083344
+   },
+   "quality": "sure"
+  },
+  {
+   "box": 6,
+   "quad": [
+    [
+     1646.4,
+     1804.3
+    ],
+    [
+     2089.1,
+     1810.3
+    ],
+    [
+     2073.9,
+     2414.1
+    ],
+    [
+     1630.0,
+     2405.5
+    ]
+   ],
+   "conf": 0.806,
+   "back_sim": 0.0017,
+   "orient_p": 0.9957,
+   "number_read": {
+    "text": "23/62",
+    "votes": 35,
+    "n": 23,
+    "d": 62,
+    "code": null
+   },
+   "candidates": [
+    {
+     "handle": "30cfe4250d33b3515bcee5bc6fb396ca",
+     "print": "international/fossil/23",
+     "set": "international/fossil",
+     "card": "23",
+     "name": "Hypno",
+     "set_name": "Fossil",
+     "number": "23/62",
+     "family": "international",
+     "language": "en",
+     "release": "r631",
+     "artwork_group": "a7618",
+     "release_date": "1999-10-10",
+     "sim": 0.9645,
+     "picture": "https://img.cardcorpus.com/m/30cfe4250d33b3515bcee5bc6fb396ca"
+    },
+    {
+     "handle": "1bb2c481323771142ba09c1011fa601a",
+     "print": "international/fossil/8",
+     "set": "international/fossil",
+     "card": "8",
+     "name": "Hypno",
+     "set_name": "Fossil",
+     "number": "8/62",
+     "family": "international",
+     "language": "en",
+     "release": "r631",
+     "artwork_group": "a7618",
+     "release_date": "1999-10-10",
+     "sim": 0.9642,
+     "picture": "https://img.cardcorpus.com/m/1bb2c481323771142ba09c1011fa601a"
+    },
+    {
+     "handle": "c819ddd8a346d377afce8a10d04d80a4",
+     "print": "international/legendary-collection/25",
+     "set": "international/legendary-collection",
+     "card": "25",
+     "name": "Hypno",
+     "set_name": "Legendary Collection",
+     "number": "25/110",
+     "family": "international",
+     "language": "en",
+     "release": "r647",
+     "artwork_group": "a8159",
+     "release_date": "2002-05-24",
+     "sim": 0.9638,
+     "picture": "https://img.cardcorpus.com/m/c819ddd8a346d377afce8a10d04d80a4"
+    },
+    {
+     "handle": "329db958916e23a2696eb3cc604fb90b",
+     "print": "international/base-set/1",
+     "set": "international/base-set",
+     "card": "1",
+     "name": "Alakazam",
+     "set_name": "Base Set",
+     "number": "1/102",
+     "family": "international",
+     "language": "en",
+     "release": "r1",
+     "artwork_group": "a1",
+     "release_date": "1999-01-09",
+     "sim": 0.7664,
+     "variant": "shadowless-holo",
+     "picture": "https://img.cardcorpus.com/m/329db958916e23a2696eb3cc604fb90b"
+    },
+    {
+     "handle": "7c4bd7e609b8e1617e3c468e3bab5853",
+     "print": "international/legendary-collection/1",
+     "set": "international/legendary-collection",
+     "card": "1",
+     "name": "Alakazam",
+     "set_name": "Legendary Collection",
+     "number": "1/110",
+     "family": "international",
+     "language": "en",
+     "release": "r647",
+     "artwork_group": "a8135",
+     "release_date": "2002-05-24",
+     "sim": 0.763,
+     "picture": "https://img.cardcorpus.com/m/7c4bd7e609b8e1617e3c468e3bab5853"
+    }
+   ],
+   "pick": {
+    "print": "international/fossil/23",
+    "margin": 0.3059
+   },
+   "verify": {
+    "international/fossil/23": 0.0,
+    "international/fossil/8": -0.0,
+    "international/legendary-collection/25": -0.8536
+   },
+   "numfit": {
+    "1/102": -7.154,
+    "1/110": -6.117,
+    "23/62": -0.375,
+    "25/110": -7.398,
+    "8/62": -7.087
+   },
+   "edition_stamp": 0.4496,
+   "ecard_reverse": 0.289,
+   "ecard_reading": "dot_code",
+   "alignment": {
+    "aligned": true,
+    "pass": 1,
+    "inliers": 834,
+    "scan_features": 2657,
+    "box_error": 0.04288385063409805
+   },
+   "quality": "sure"
+  },
+  {
+   "box": 7,
+   "quad": [
+    [
+     617.7,
+     1096.1
+    ],
+    [
+     1069.4,
+     1098.9
+    ],
+    [
+     1074.5,
+     1717.2
+    ],
+    [
+     625.2,
+     1723.2
+    ]
+   ],
+   "conf": 0.804,
+   "back_sim": -0.1141,
+   "orient_p": 1.0,
+   "number_read": {
+    "text": "29/64",
+    "votes": 34,
+    "n": 29,
+    "d": 64,
+    "code": null
+   },
+   "candidates": [
+    {
+     "handle": "e890f7a92f2b7d9ee81d9a14b949bce7",
+     "print": "international/jungle/29",
+     "set": "international/jungle",
+     "card": "29",
+     "name": "Venomoth",
+     "set_name": "Jungle",
+     "number": "29/64",
+     "family": "international",
+     "language": "en",
+     "release": "r645",
+     "artwork_group": "a8093",
+     "release_date": "1999-06-16",
+     "sim": 0.9853,
+     "variant": "first-edition-non-holo",
+     "picture": "https://img.cardcorpus.com/m/e890f7a92f2b7d9ee81d9a14b949bce7"
+    },
+    {
+     "handle": "5eb1a6e1c27728eed382e8d8dac40623",
+     "print": "international/jungle/13",
+     "set": "international/jungle",
+     "card": "13",
+     "name": "Venomoth",
+     "set_name": "Jungle",
+     "number": "13/64",
+     "family": "international",
+     "language": "en",
+     "release": "r645",
+     "artwork_group": "a8093",
+     "release_date": "1999-06-16",
+     "sim": 0.9234,
+     "variant": "unlimited-holo-no-set-symbol",
+     "picture": "https://img.cardcorpus.com/m/5eb1a6e1c27728eed382e8d8dac40623"
+    },
+    {
+     "handle": "fa2bd629a0b251a5f5d7f38871890384",
+     "print": "international/base-set-2/31",
+     "set": "international/base-set-2",
+     "card": "31",
+     "name": "Venomoth",
+     "set_name": "Base Set 2",
+     "number": "31/130",
+     "family": "international",
+     "language": "en",
+     "release": "r570",
+     "artwork_group": "a599",
+     "release_date": "2000-02-24",
+     "sim": 0.9847,
+     "picture": "https://img.cardcorpus.com/m/fa2bd629a0b251a5f5d7f38871890384"
+    },
+    {
+     "handle": "7eb4cf906f4b338a868a70afcc67cb4d",
+     "print": "international/great-encounters/14",
+     "set": "international/great-encounters",
+     "card": "14",
+     "name": "Butterfree",
+     "set_name": "Great Encounters",
+     "number": "14/106",
+     "family": "international",
+     "language": "en",
+     "release": "r635",
+     "artwork_group": "a563",
+     "release_date": "2008-02-13",
+     "sim": 0.7547,
+     "picture": "https://img.cardcorpus.com/m/7eb4cf906f4b338a868a70afcc67cb4d"
+    },
+    {
+     "handle": "1bf06b33085deccdce65c1fabce12658",
+     "print": "international/ex-dragon/52",
+     "set": "international/ex-dragon",
+     "card": "52",
+     "name": "Corphish",
+     "set_name": "EX Dragon",
+     "number": "52/97",
+     "family": "international",
+     "language": "en",
+     "release": "r610",
+     "artwork_group": "a6843",
+     "release_date": "2003-11-24",
+     "sim": 0.7361,
+     "variant": "reverse-holo-2zr-3h7-dtd",
+     "picture": "https://img.cardcorpus.com/m/1bf06b33085deccdce65c1fabce12658"
+    }
+   ],
+   "pick": {
+    "print": "international/jungle/29",
+    "margin": 0.0591
+   },
+   "verify": {
+    "international/jungle/29": 0.0,
+    "international/base-set-2/31": -0.5852,
+    "international/jungle/13": -0.0
+   },
+   "numfit": {
+    "111/160": -10.029,
+    "13/64": -6.859,
+    "14/106": -6.483,
+    "15/131": -7.349,
+    "29/64": -0.43,
+    "31/130": -10.268,
+    "51/132": -10.832,
+    "52/97": -10.828
+   },
+   "edition_stamp": 0.4332,
+   "ecard_reverse": 0.3285,
+   "ecard_reading": "dot_code",
+   "alignment": {
+    "aligned": true,
+    "pass": 1,
+    "inliers": 987,
+    "scan_features": 3000,
+    "box_error": 0.054856959730386734
+   },
+   "quality": "sure"
+  },
+  {
+   "box": 8,
+   "quad": [
+    [
+     1134.3,
+     1796.7
+    ],
+    [
+     1576.7,
+     1802.2
+    ],
+    [
+     1570.3,
+     2405.1
+    ],
+    [
+     1131.6,
+     2402.6
+    ]
+   ],
+   "conf": 0.799,
+   "back_sim": 0.1256,
+   "orient_p": 1.0,
+   "number_read": {
+    "text": "20/62",
+    "votes": 27,
+    "n": 20,
+    "d": 62,
+    "code": null
+   },
+   "candidates": [
+    {
+     "handle": "15bf2e0bc3f70da8ea1bc6788564ece9",
+     "print": "international/fossil/20",
+     "set": "international/fossil",
+     "card": "20",
+     "name": "Gengar",
+     "set_name": "Fossil",
+     "number": "20/62",
+     "family": "international",
+     "language": "en",
+     "release": "r631",
+     "artwork_group": "a7615",
+     "release_date": "1999-10-10",
+     "sim": 0.9872,
+     "variant": "fossil-1999-2000-print-non-holo",
+     "picture": "https://img.cardcorpus.com/m/15bf2e0bc3f70da8ea1bc6788564ece9"
+    },
+    {
+     "handle": "8b5107a89d1519131ccc875792bd2cf4",
+     "print": "international/fossil/5",
+     "set": "international/fossil",
+     "card": "5",
+     "name": "Gengar",
+     "set_name": "Fossil",
+     "number": "5/62",
+     "family": "international",
+     "language": "en",
+     "release": "r631",
+     "artwork_group": "a7615",
+     "release_date": "1999-10-10",
+     "sim": 0.9708,
+     "picture": "https://img.cardcorpus.com/m/8b5107a89d1519131ccc875792bd2cf4"
+    },
+    {
+     "handle": "b8cb1584686cfa39b9f1bbcc303131db",
+     "print": "international/legendary-collection/11",
+     "set": "international/legendary-collection",
+     "card": "11",
+     "name": "Gengar",
+     "set_name": "Legendary Collection",
+     "number": "11/110",
+     "family": "international",
+     "language": "en",
+     "release": "r647",
+     "artwork_group": "a8145",
+     "release_date": "2002-05-24",
+     "sim": 0.9354,
+     "variant": "reverse-holo",
+     "picture": "https://img.cardcorpus.com/m/b8cb1584686cfa39b9f1bbcc303131db"
+    },
+    {
+     "handle": "8dc1b541fcb740f2d81a5592a682327d",
+     "print": "international/ex-firered-leafgreen/34",
+     "set": "international/ex-firered-leafgreen",
+     "card": "34",
+     "name": "Haunter",
+     "set_name": "EX FireRed & LeafGreen",
+     "number": "34/112",
+     "family": "international",
+     "language": "en",
+     "release": "r613",
+     "artwork_group": "a643",
+     "release_date": "2004-09-01",
+     "sim": 0.7229,
+     "picture": "https://img.cardcorpus.com/m/8dc1b541fcb740f2d81a5592a682327d"
+    },
+    {
+     "handle": "63ec522b542e780b2b0b5c6233494b97",
+     "print": "international/ex-firered-leafgreen/108",
+     "set": "international/ex-firered-leafgreen",
+     "card": "108",
+     "name": "Gengar ex",
+     "set_name": "EX FireRed & LeafGreen",
+     "number": "108/112",
+     "family": "international",
+     "language": "en",
+     "release": "r613",
+     "artwork_group": "a3544",
+     "release_date": "2004-09-01",
+     "sim": 0.7001,
+     "picture": "https://img.cardcorpus.com/m/63ec522b542e780b2b0b5c6233494b97"
+    }
+   ],
+   "pick": {
+    "print": "international/fossil/20",
+    "margin": 0.1145
+   },
+   "verify": {
+    "international/fossil/20": 0.6912,
+    "international/fossil/5": -0.6912,
+    "international/legendary-collection/11": -0.757
+   },
+   "numfit": {
+    "108/112": -9.107,
+    "11/110": -5.283,
+    "20/62": -0.648,
+    "29/132": -9.326,
+    "34/112": -8.53,
+    "38/105": -8.478,
+    "5/62": -6.376
+   },
+   "edition_stamp": 0.4482,
+   "ecard_reverse": 0.2701,
+   "ecard_reading": "dot_code",
+   "alignment": {
+    "aligned": true,
+    "pass": 1,
+    "inliers": 775,
+    "scan_features": 3000,
+    "box_error": 0.045680440962314606
+   },
+   "quality": "sure"
+  },
+  {
+   "box": 9,
+   "quad": [
+    [
+     99.1,
+     372.3
+    ],
+    [
+     549.5,
+     367.5
+    ],
+    [
+     552.0,
+     1021.6
+    ],
+    [
+     107.5,
+     1019.7
+    ]
+   ],
+   "conf": 0.796,
+   "back_sim": 0.0018,
+   "orient_p": 0.9999,
+   "number_read": {
+    "text": "29/62",
+    "votes": 23,
+    "n": 29,
+    "d": 62,
+    "code": null
+   },
+   "candidates": [
+    {
+     "handle": "19b73e7ee105bb33103a7e293f4c3608",
+     "print": "international/fossil/29",
+     "set": "international/fossil",
+     "card": "29",
+     "name": "Raichu",
+     "set_name": "Fossil",
+     "number": "29/62",
+     "family": "international",
+     "language": "en",
+     "release": "r631",
+     "artwork_group": "a7624",
+     "release_date": "1999-10-10",
+     "sim": 0.9663,
+     "variant": "fossil-1999-2000-print-non-holo",
+     "picture": "https://img.cardcorpus.com/m/19b73e7ee105bb33103a7e293f4c3608"
+    },
+    {
+     "handle": "c1102dd37a77a33c42c61f7f0fa436c2",
+     "print": "international/fossil/14",
+     "set": "international/fossil",
+     "card": "14",
+     "name": "Raichu",
+     "set_name": "Fossil",
+     "number": "14/62",
+     "family": "international",
+     "language": "en",
+     "release": "r631",
+     "artwork_group": "a7624",
+     "release_date": "1999-10-10",
+     "sim": 0.9505,
+     "picture": "https://img.cardcorpus.com/m/c1102dd37a77a33c42c61f7f0fa436c2"
+    },
+    {
+     "handle": "9d33a810616f4688881602bc112b830c",
+     "print": "international/legendary-collection/7",
+     "set": "international/legendary-collection",
+     "card": "7",
+     "name": "Dark Raichu",
+     "set_name": "Legendary Collection",
+     "number": "7/110",
+     "family": "international",
+     "language": "en",
+     "release": "r647",
+     "artwork_group": "a8141",
+     "release_date": "2002-05-24",
+     "sim": 0.7786,
+     "variant": "reverse-holo",
+     "picture": "https://img.cardcorpus.com/m/9d33a810616f4688881602bc112b830c"
+    },
+    {
+     "handle": "25338143a03275acf1ba92d531218e95",
+     "print": "international/team-rocket/83",
+     "set": "international/team-rocket",
+     "card": "83",
+     "name": "Dark Raichu",
+     "set_name": "Team Rocket",
+     "number": "83/82",
+     "family": "international",
+     "language": "en",
+     "release": "r733",
+     "artwork_group": "a9710",
+     "release_date": "2000-04-24",
+     "sim": 0.7288,
+     "picture": "https://img.cardcorpus.com/m/25338143a03275acf1ba92d531218e95"
+    },
+    {
+     "handle": "d70ddf08e2edeab32f919ce7f1e71e76",
+     "print": "international/gym-heroes/25",
+     "set": "international/gym-heroes",
+     "card": "25",
+     "name": "Erika's Clefairy",
+     "set_name": "Gym Heroes",
+     "number": "25/132",
+     "family": "international",
+     "language": "en",
+     "release": "r638",
+     "artwork_group": "a7918",
+     "release_date": "2000-08-14",
+     "sim": 0.6903,
+     "picture": "https://img.cardcorpus.com/m/d70ddf08e2edeab32f919ce7f1e71e76"
+    }
+   ],
+   "verify": {
+    "international/fossil/29": 0.0,
+    "international/fossil/14": -0.0
+   },
+   "numfit": {
+    "110/149": -9.094,
+    "14/62": -7.118,
+    "25/132": -7.442,
+    "29/62": -1.047,
+    "7/110": -7.422,
+    "83/82": -8.193
+   },
+   "edition_stamp": 0.4422,
+   "ecard_reverse": 0.3451,
+   "ecard_reading": "dot_code",
+   "alignment": {
+    "aligned": true,
+    "pass": 1,
+    "inliers": 787,
+    "scan_features": 2904,
+    "box_error": 0.0378497913479805
+   },
+   "quality": "sure"
+  },
+  {
+   "box": 10,
+   "quad": [
+    [
+     1689.2,
+     387.8
+    ],
+    [
+     2151.0,
+     388.9
+    ],
+    [
+     2135.5,
+     1041.2
+    ],
+    [
+     1675.4,
+     1036.3
+    ]
+   ],
+   "conf": 0.793,
+   "back_sim": -0.1143,
+   "orient_p": 0.9617,
+   "number_read": {
+    "text": "32/64",
+    "votes": 22,
+    "n": 32,
+    "d": 64,
+    "code": null
+   },
+   "candidates": [
+    {
+     "handle": "6c2f235100022d73d2b0c9ba4ad89b6e",
+     "print": "international/jungle/32",
+     "set": "international/jungle",
+     "card": "32",
+     "name": "Wigglytuff",
+     "set_name": "Jungle",
+     "number": "32/64",
+     "family": "international",
+     "language": "en",
+     "release": "r645",
+     "artwork_group": "a8096",
+     "release_date": "1999-06-16",
+     "sim": 0.9683,
+     "variant": "white-border-test-print-non-holo",
+     "picture": "https://img.cardcorpus.com/m/6c2f235100022d73d2b0c9ba4ad89b6e"
+    },
+    {
+     "handle": "d1bdd0e7f283ffdc69315f7e15567e4d",
+     "print": "international/jungle/16",
+     "set": "international/jungle",
+     "card": "16",
+     "name": "Wigglytuff",
+     "set_name": "Jungle",
+     "number": "16/64",
+     "family": "international",
+     "language": "en",
+     "release": "r645",
+     "artwork_group": "a8096",
+     "release_date": "1999-06-16",
+     "sim": 0.9489,
+     "variant": "first-edition-holo",
+     "picture": "https://img.cardcorpus.com/m/d1bdd0e7f283ffdc69315f7e15567e4d"
+    },
+    {
+     "handle": "cffc04b4cf2c116903f11f77a1db3c48",
+     "print": "international/base-set-2/19",
+     "set": "international/base-set-2",
+     "card": "19",
+     "name": "Wigglytuff",
+     "set_name": "Base Set 2",
+     "number": "19/130",
+     "family": "international",
+     "language": "en",
+     "release": "r570",
+     "artwork_group": "a1368",
+     "release_date": "2000-02-24",
+     "sim": 0.8366,
+     "picture": "https://img.cardcorpus.com/m/cffc04b4cf2c116903f11f77a1db3c48"
+    },
+    {
+     "handle": "8c03eb9ac1dba7f359cffb3b0fe23ca2",
+     "print": "international/neo-genesis/62",
+     "set": "international/neo-genesis",
+     "card": "62",
+     "name": "Horsea",
+     "set_name": "Neo Genesis",
+     "number": "62/111",
+     "family": "international",
+     "language": "en",
+     "release": "r674",
+     "artwork_group": "a8673",
+     "release_date": "2000-12-16",
+     "sim": 0.6912,
+     "picture": "https://img.cardcorpus.com/m/8c03eb9ac1dba7f359cffb3b0fe23ca2"
+    },
+    {
+     "handle": "7bfc77e0733c8efce2d20be8e870f453",
+     "print": "international/celestial-storm/34",
+     "set": "international/celestial-storm",
+     "card": "34",
+     "name": "Marshtomp",
+     "set_name": "Celestial Storm",
+     "number": "34/168",
+     "family": "international",
+     "language": "en",
+     "release": "r584",
+     "artwork_group": "a2901",
+     "release_date": "2018-08-03",
+     "sim": 0.6754,
+     "picture": "https://img.cardcorpus.com/m/7bfc77e0733c8efce2d20be8e870f453"
+    }
+   ],
+   "pick": {
+    "print": "international/jungle/32",
+    "margin": 0.1926
+   },
+   "verify": {
+    "international/jungle/32": 0.0,
+    "international/jungle/16": -0.0,
+    "international/base-set-2/19": -0.0,
+    "international/paldean-fates/147": -0.8743
+   },
+   "numfit": {
+    "147/091": -11.663,
+    "16/64": -7.054,
+    "19/130": -6.826,
+    "2/111": -7.349,
+    "32/64": -0.541,
+    "34/168": -8.003,
+    "62/111": -9.079
+   },
+   "edition_stamp": 0.4441,
+   "ecard_reverse": 0.3477,
+   "ecard_reading": "dot_code",
+   "alignment": {
+    "aligned": true,
+    "pass": 1,
+    "inliers": 889,
+    "scan_features": 2836,
+    "box_error": 0.04973721504211426
+   },
+   "quality": "sure"
+  },
+  {
+   "box": 11,
+   "quad": [
+    [
+     621.1,
+     1795.1
+    ],
+    [
+     1064.9,
+     1794.7
+    ],
+    [
+     1066.9,
+     2397.9
+    ],
+    [
+     626.1,
+     2398.0
+    ]
+   ],
+   "conf": 0.776,
+   "back_sim": -0.1503,
+   "orient_p": 0.9995,
+   "number_read": {
+    "text": "21/162",
+    "votes": 12,
+    "n": 21,
+    "d": 162,
+    "code": null
+   },
+   "candidates": [
+    {
+     "handle": "9a3c6abf3b39b75729f237023cfabda7",
+     "print": "international/fossil/21",
+     "set": "international/fossil",
+     "card": "21",
+     "name": "Haunter",
+     "set_name": "Fossil",
+     "number": "21/62",
+     "family": "international",
+     "language": "en",
+     "release": "r631",
+     "artwork_group": "a7616",
+     "release_date": "1999-10-10",
+     "sim": 0.9802,
+     "variant": "fossil-1999-2000-print-non-holo",
+     "picture": "https://img.cardcorpus.com/m/9a3c6abf3b39b75729f237023cfabda7"
+    },
+    {
+     "handle": "231363f7de7d3718ad2373f085ed19e3",
+     "print": "international/fossil/6",
+     "set": "international/fossil",
+     "card": "6",
+     "name": "Haunter",
+     "set_name": "Fossil",
+     "number": "6/62",
+     "family": "international",
+     "language": "en",
+     "release": "r631",
+     "artwork_group": "a7616",
+     "release_date": "1999-10-10",
+     "sim": 0.9759,
+     "picture": "https://img.cardcorpus.com/m/231363f7de7d3718ad2373f085ed19e3"
+    },
+    {
+     "handle": "7ea87214ba2b3fe12e2b5305fa8ed44d",
+     "print": "international/legendary-collection/46",
+     "set": "international/legendary-collection",
+     "card": "46",
+     "name": "Haunter",
+     "set_name": "Legendary Collection",
+     "number": "46/110",
+     "family": "international",
+     "language": "en",
+     "release": "r647",
+     "artwork_group": "a8180",
+     "release_date": "2002-05-24",
+     "sim": 0.9752,
+     "picture": "https://img.cardcorpus.com/m/7ea87214ba2b3fe12e2b5305fa8ed44d"
+    },
+    {
+     "handle": "81a26d404b6d83aee69b826db201ccd2",
+     "print": "international/base-set/1",
+     "set": "international/base-set",
+     "card": "1",
+     "name": "Alakazam",
+     "set_name": "Base Set",
+     "number": "1/102",
+     "family": "international",
+     "language": "en",
+     "release": "r1",
+     "artwork_group": "a1",
+     "release_date": "1999-01-09",
+     "sim": 0.7251,
+     "variant": "shadowless-disco-holo",
+     "picture": "https://img.cardcorpus.com/m/81a26d404b6d83aee69b826db201ccd2"
+    },
+    {
+     "handle": "3e7717d049b3aa49fba723af845961c0",
+     "print": "international/dp-black-star-promos/dp50",
+     "set": "international/dp-black-star-promos",
+     "card": "dp50",
+     "name": "Arceus",
+     "set_name": "DP Black Star Promos",
+     "number": "DP50",
+     "family": "international",
+     "language": "en",
+     "release": "r598",
+     "artwork_group": "a3499",
+     "release_date": "2007-05-01",
+     "sim": 0.733,
+     "picture": "https://img.cardcorpus.com/m/3e7717d049b3aa49fba723af845961c0"
+    }
+   ],
+   "pick": {
+    "print": "international/fossil/21",
+    "margin": 0.3278
+   },
+   "verify": {
+    "international/fossil/21": 0.0,
+    "international/fossil/6": -0.0,
+    "international/legendary-collection/46": -0.6502
+   },
+   "numfit": {
+    "1/102": -3.234,
+    "21/62": -1.12,
+    "46/110": -7.848,
+    "6/62": -7.708,
+    "21/162": -0.47
+   },
+   "edition_stamp": 0.4529,
+   "ecard_reverse": 0.2861,
+   "ecard_reading": "dot_code",
+   "alignment": {
+    "aligned": true,
+    "pass": 1,
+    "inliers": 803,
+    "scan_features": 2601,
+    "box_error": 0.0494723841547966
+   },
+   "quality": "sure"
+  }
+ ],
+ "cut_off": [],
+ "left_out": []
+}

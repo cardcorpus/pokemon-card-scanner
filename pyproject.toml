@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cardcorpus-scanner"
+version = "1.0.0"
+description = "Name Pokémon trading cards in photos: every card on a binder page, table or hand, matched to the CardCorpus dataset."
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+authors = [{ name = "The CardCorpus Authors" }]
+requires-python = ">=3.10"
+keywords = ["pokemon", "tcg", "trading cards", "card recognition", "computer vision"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Image Recognition",
+]
+dependencies = [
+    "numpy>=1.26",
+    "pillow>=10",
+    "torch>=2.4",
+    "torchvision>=0.19",
+    # the matcher, picker and detector backbones are built by timm; the
+    # weights were checked against this release
+    "timm==1.0.30",
+    "safetensors>=0.4",
+    # the print verifier (SIFT, MAGSAC) and the marks checks; its scores were
+    # measured with OpenCV 5.0
+    "opencv-python-headless>=5.0",
+    # downloads the weights when no local copy is given
+    "huggingface_hub>=0.24",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[project.scripts]
+cardcorpus-scan = "cardcorpus_scanner.cli:main"
+
+[project.urls]
+Dataset = "https://cardcorpus.com"
+Dataset-source = "https://github.com/cardcorpus/pokemon-card-dataset"
+Source = "https://github.com/cardcorpus/pokemon-card-scanner"
+Weights = "https://huggingface.co/cardcorpus/pokemon-card-scanner"
+
+[tool.setuptools]
+packages = ["cardcorpus_scanner"]
+
+[tool.setuptools.package-data]
+cardcorpus_scanner = ["edition-stamp.png", "web/index.html"]

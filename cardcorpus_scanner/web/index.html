@@ -1,0 +1,694 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Card Scanner</title>
+<style>
+  :root {
+    --bg: #f5f2ec; --panel: #fffdf9; --ink: #1d1b18; --muted: #6d675e; --line: #e3ddd2;
+    --accent: #c2410c; --accent-soft: #fde9dc; --good: #15803d; --good-soft: #dcfce7;
+    --warn: #b45309; --warn-soft: #fef3c7; --shadow: 0 1px 2px rgba(40, 30, 10, .06), 0 8px 24px rgba(40, 30, 10, .06);
+    --radius: 14px; --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #151412; --panel: #1e1c19; --ink: #f1ede6; --muted: #a39b8f; --line: #34302a;
+      --accent: #fb923c; --accent-soft: #3b2415; --good: #4ade80; --good-soft: #14301f;
+      --warn: #fbbf24; --warn-soft: #362a0f; --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px rgba(0, 0, 0, .25);
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  header { display: flex; align-items: center; gap: 12px; padding: 18px 24px; border-bottom: 1px solid var(--line); }
+  header h1 { font-size: 18px; margin: 0; letter-spacing: -.01em; }
+  header .mark { width: 26px; height: 34px; border-radius: 5px; background: linear-gradient(135deg, var(--accent), #f59e0b); box-shadow: inset 0 0 0 3px rgba(255,255,255,.35); }
+  .pill { font-size: 12px; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 2px 10px; }
+  header .spacer { flex: 1; }
+  main { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 20px; padding: 20px 24px 40px; max-width: 1400px; margin: 0 auto; }
+  @media (max-width: 900px) { main { grid-template-columns: 1fr; padding: 16px; } header { padding: 14px 16px; } }
+  @media (max-width: 560px) { header .pill.where { display: none; } }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+  .input { padding: 16px; position: sticky; top: 16px; align-self: start; }
+  @media (max-width: 900px) { .input { position: static; } }
+  .drop { border: 2px dashed var(--line); border-radius: 12px; min-height: 280px; display: grid; place-items: center; text-align: center; padding: 24px; transition: border-color .15s, background .15s; cursor: pointer; }
+  .drop.over { border-color: var(--accent); background: var(--accent-soft); }
+  .drop h2 { margin: 0 0 6px; font-size: 18px; }
+  .drop p { margin: 0; color: var(--muted); }
+  kbd { font: 12px var(--mono); border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 5px; padding: 0 5px; }
+  .row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 12px; }
+  button, .button { font: inherit; border: 1px solid var(--line); background: var(--panel); color: var(--ink); border-radius: 10px; padding: 8px 14px; cursor: pointer; }
+  button.primary { background: var(--accent); color: #fff; border-color: transparent; font-weight: 600; }
+  button:disabled { opacity: .5; cursor: default; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip { font-size: 13px; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--line); background: transparent; color: var(--muted); cursor: pointer; }
+  .chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .stage { position: relative; margin-top: 4px; border-radius: 12px; overflow: hidden; background: #000; display: none; }
+  .stage img, .stage video { display: block; width: 100%; height: auto; }
+  .stage svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .stage polygon { fill: rgba(0, 0, 0, 0); stroke: var(--accent); stroke-width: 3; vector-effect: non-scaling-stroke; cursor: pointer; }
+  .stage .dim { fill: rgba(0, 0, 0, .62); pointer-events: none; }
+  .stage polygon.edge { fill: none; stroke: rgba(255, 255, 255, .8); stroke-width: 1.5; stroke-dasharray: 5 4; cursor: default; pointer-events: none; }
+  .stage text { fill: #fff; font: 700 15px system-ui, sans-serif; paint-order: stroke; stroke: rgba(0,0,0,.65); stroke-width: 4px; pointer-events: none; }
+  .status { grid-column: 1 / -1; color: var(--muted); min-height: 22px; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; }
+  .status:empty { display: none; }
+  .status .part + .part::before { content: "·"; margin-right: 8px; color: var(--line); }
+  .status .lead { color: var(--ink); font-weight: 600; }
+  .spinner { width: 16px; height: 16px; border-radius: 50%; border: 2px solid var(--line); border-top-color: var(--accent); animation: spin .8s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .results { display: flex; flex-direction: column; gap: 12px; }
+  .empty { padding: 28px; color: var(--muted); text-align: center; }
+  .card { padding: 14px; display: grid; grid-template-columns: 34px 92px minmax(0, 1fr); gap: 14px; scroll-margin: 16px; transition: box-shadow .15s, border-color .15s; }
+  .card.active { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft), var(--shadow); }
+  .num { width: 28px; height: 28px; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 700; display: grid; place-items: center; font-size: 14px; }
+  button.art { padding: 0; border: 0; cursor: zoom-in; display: block; }
+  .art img { display: block; width: 100%; height: 100%; border-radius: inherit; object-fit: cover; }
+  .art { width: 92px; aspect-ratio: 63 / 88; border-radius: 6px; background: var(--line); object-fit: cover; box-shadow: 0 2px 6px rgba(0,0,0,.15); }
+  .card h3 { margin: 0; font-size: 17px; letter-spacing: -.01em; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; }
+  .badge { font-size: 11px; font-weight: 600; letter-spacing: .02em; border-radius: 999px; padding: 2px 8px; background: var(--warn-soft); color: var(--warn); }
+  .badge.muted { background: transparent; border: 1px solid var(--line); color: var(--muted); }
+  .sub { color: var(--muted); font-size: 14px; margin-top: 2px; }
+  .flag { margin-right: 6px; font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif; }
+  .card.waiting h3 { color: var(--muted); font-weight: 500; }
+  .card.waiting .art { animation: pulse 1.2s ease-in-out infinite; }
+  @keyframes pulse { 50% { opacity: .45; } }
+  .facts { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 8px; font-size: 13px; color: var(--muted); }
+  .facts b { color: var(--ink); font-weight: 600; }
+  .meter { height: 6px; border-radius: 3px; background: var(--line); margin-top: 10px; overflow: hidden; }
+  .meter span { display: block; height: 100%; background: var(--good); }
+  .note { margin-top: 10px; font-size: 13px; padding: 6px 10px; border-radius: 8px; background: var(--good-soft); color: var(--good); }
+  .note.warn { background: var(--warn-soft); color: var(--warn); }
+  details { margin-top: 10px; font-size: 13px; }
+  summary { cursor: pointer; color: var(--muted); }
+  .alts { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; margin-top: 8px; }
+  .alt { display: flex; gap: 8px; align-items: center; border: 1px solid var(--line); border-radius: 8px; padding: 6px; font: inherit; color: inherit; background: transparent; text-align: left; cursor: pointer; min-width: 0; }
+  .alt:hover { border-color: var(--muted); }
+  .alt.on { border-color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink); }
+  .alt img, .alt .noimg { width: 34px; flex: none; aspect-ratio: 63 / 88; border-radius: 3px; object-fit: cover; background: var(--line); }
+  .alt div { min-width: 0; }
+  .alt strong, .alt span { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .alt span { color: var(--muted); font-size: 12px; }
+  .copies { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .copy { font: inherit; font-size: 12px; border: 1px solid var(--line); border-radius: 6px; padding: 2px 8px; color: var(--muted); background: transparent; cursor: pointer; }
+  .copy:hover { border-color: var(--muted); }
+  .copy.match { border-color: var(--good); color: var(--good); }
+  .copy.on { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .copy.match.on { background: var(--good); border-color: var(--good); color: #fff; }
+  .showing { margin-top: 8px; font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: center; }
+  .showing b { color: var(--ink); font-weight: 600; }
+  .link { font: inherit; background: none; border: 0; padding: 0; color: var(--accent); cursor: pointer; }
+  .lightbox { position: fixed; inset: 0; z-index: 10; background: rgba(12, 11, 10, .94); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); display: flex; align-items: center; justify-content: center; gap: 24px; padding: 48px 16px 24px; }
+  .lightbox[hidden] { display: none; }
+  .lightbox figure { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 10px; min-width: 0; }
+  .lightbox img, .lightbox canvas { display: block; width: auto; height: min(calc(100vh - 150px), calc((50vw - 36px) * 88 / 63)); max-width: calc(50vw - 36px); object-fit: contain; border-radius: 12px; background: #2a2724; box-shadow: 0 10px 40px rgba(0,0,0,.5); }
+  .lightbox figcaption { color: #ece7df; font-size: 14px; text-align: center; max-width: calc(50vw - 36px); }
+  .lightbox figcaption { min-height: 2.9em; }
+  .lightbox figcaption .cap { display: block; color: #a39b8f; font-size: 13px; }
+  .lightbox .close { position: absolute; top: 10px; right: 12px; background: transparent; border: 0; color: #ece7df; font-size: 30px; line-height: 1; padding: 6px 10px; }
+  .desc { margin-top: 8px; font-size: 13px; color: var(--muted); }
+  a { color: var(--accent); }
+  .json { font: 12px var(--mono); }
+  footer { color: var(--muted); font-size: 12px; text-align: center; padding: 0 24px 28px; max-width: 900px; margin: 0 auto; }
+</style>
+</head>
+<body>
+<header>
+  <div class="mark" aria-hidden="true"></div>
+  <h1>Card Scanner</h1>
+  <span class="pill where">runs on this computer</span>
+  <span class="spacer"></span>
+  <span class="pill" id="info">loading…</span>
+</header>
+<main>
+  <div class="status" id="status" role="status" aria-live="polite"></div>
+  <section class="panel input">
+    <div class="drop" id="drop" tabindex="0" role="button" aria-label="Choose a photo">
+      <div>
+        <h2>Drop a photo of your cards</h2>
+        <p>or click to choose one, paste with <kbd>Ctrl</kbd>/<kbd>⌘</kbd> <kbd>V</kbd>, or use your webcam.<br>A binder page, a pile on the table or a single card.</p>
+      </div>
+    </div>
+    <div class="stage" id="stage">
+      <img id="photo" alt="Your photo">
+      <video id="video" playsinline muted></video>
+      <svg id="overlay" preserveAspectRatio="none"></svg>
+    </div>
+    <div class="row">
+      <button id="choose">Choose photo</button>
+      <button id="webcam">Use webcam</button>
+      <button id="snap" class="primary" hidden>Take photo</button>
+      <button id="cancel" hidden>Cancel</button>
+      <input id="file" type="file" accept="image/*" hidden>
+    </div>
+    <div class="row">
+      <div class="chips" id="langs" role="group" aria-label="Languages">
+        <button class="chip" data-lang="" aria-pressed="true">Any language</button>
+        <button class="chip" data-lang="international" aria-pressed="false">English and others</button>
+        <button class="chip" data-lang="japanese" aria-pressed="false">Japanese</button>
+        <button class="chip" data-lang="zh-hans" aria-pressed="false">Chinese</button>
+      </div>
+    </div>
+  </section>
+  <section class="results" id="results">
+    <div class="panel empty">The cards in your photo show here, each with what the CardCorpus dataset knows about it.</div>
+  </section>
+</main>
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="The card and its match">
+  <button class="close" id="lb-close" aria-label="Close">×</button>
+  <figure><canvas id="lb-crop" width="630" height="880"></canvas><figcaption>Your photo</figcaption></figure>
+  <figure><img id="lb-pic" alt=""><figcaption id="lb-cap"></figcaption></figure>
+</div>
+<footer>
+  The scanner and its models run on this computer. Card details and pictures come from the CardCorpus dataset at cardcorpus.com.
+  Pokémon and Pokémon character names are trademarks of Nintendo, Creatures and GAME FREAK. Card pictures and text © The Pokémon Company, Nintendo, Creatures, GAME FREAK and, for older cards, Wizards of the Coast. This project is not produced, endorsed, sponsored or supported by, or affiliated with, any of them.
+</footer>
+<script>
+const DATASET = "https://cardcorpus.com/v1";
+const MAX_SIDE = 3000;          // the photo is sent at most this size on its longer side
+const STAMP = 0.60;             // a 1st Edition stamp scores this or more
+const $ = (id) => document.getElementById(id);
+let pictures = { sized: "https://img.cardcorpus.com/s1/{width}/{id}.avif" };
+let language = "";
+let busy = false;
+let stream = null;
+const sets = new Map();
+const known = new Map(); // print -> { set, card } once its set file is in
+
+fetch(`${DATASET}/index.json`).then((r) => r.json()).then((d) => { if (d.pictures) pictures = d.pictures; }).catch(() => {});
+fetch("/api/info").then((r) => r.json()).then((d) => {
+  const n = d.cards ? Number(d.cards).toLocaleString() : "?";
+  const day = d.dataset && d.dataset.date ? ` as of ${d.dataset.date}` : "";
+  $("info").textContent = `${n} cards${day}${d.verifier ? "" : " · verifier off"}`;
+}).catch(() => { $("info").textContent = "scanner not reachable"; });
+
+// the cards as a page is read: rows top to bottom (a card joins a row when
+// its centre is within half a card's height of the row's), each left to right
+function readingOrder(cards) {
+  const at = cards.map((c) => {
+    const xs = c.quad.map((p) => p[0]), ys = c.quad.map((p) => p[1]);
+    return { c, x: xs.reduce((a, b) => a + b) / 4, y: ys.reduce((a, b) => a + b) / 4, h: Math.max(...ys) - Math.min(...ys) };
+  }).sort((a, b) => a.y - b.y);
+  const rows = [];
+  for (const a of at) {
+    const row = rows[rows.length - 1];
+    if (row && Math.abs(a.y - row.y) < 0.5 * Math.min(a.h, row.h)) row.items.push(a);
+    else rows.push({ y: a.y, h: a.h, items: [a] });
+  }
+  return rows.flatMap((r) => r.items.sort((a, b) => a.x - b.x).map((a) => a.c));
+}
+
+const picture = (id, width = 480) => id ? pictures.sized.replace("{width}", width).replace("{id}", id) : "";
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+function status(text, spin = false) {
+  const parts = [].concat(text).filter(Boolean);
+  $("status").innerHTML = (spin ? '<span class="spinner"></span>' : "")
+    + parts.map((p, i) => `<span class="part${i === 0 && parts.length > 1 ? " lead" : ""}">${esc(p)}</span>`).join("");
+}
+
+async function setFile(id) {
+  if (!sets.has(id)) sets.set(id, fetch(`${DATASET}/sets/${id}.json`).then((r) => r.ok ? r.json() : null).catch(() => null));
+  return sets.get(id);
+}
+
+async function cardData(c) {
+  if (!c || !c.set) return null;
+  const set = await setFile(c.set);
+  if (!set) return null;
+  const card = (set.cards || []).find((x) => x.id === c.card);
+  const data = card ? { set, card } : null;
+  if (data) known.set(c.print, data);
+  return data;
+}
+
+// --- input ------------------------------------------------------------------
+
+async function shrink(blob) {
+  const img = await createImageBitmap(blob, { imageOrientation: "from-image" });
+  const scale = Math.min(1, MAX_SIDE / Math.max(img.width, img.height));
+  const canvas = document.createElement("canvas");
+  canvas.width = Math.round(img.width * scale);
+  canvas.height = Math.round(img.height * scale);
+  canvas.getContext("2d").drawImage(img, 0, 0, canvas.width, canvas.height);
+  return new Promise((ok) => canvas.toBlob(ok, "image/jpeg", 0.92));
+}
+
+// each scan's number: a late answer from an earlier scan is dropped
+let gen = 0;
+
+// the scanner answers in lines of JSON: its first picks as soon as the cards
+// are fingerprinted, then its answer once each has been double-checked
+async function* lines(res) {
+  const reader = res.body.getReader();
+  const dec = new TextDecoder();
+  let buf = "";
+  for (;;) {
+    const { value, done } = await reader.read();
+    if (value) buf += dec.decode(value, { stream: true });
+    let n;
+    while ((n = buf.indexOf("\n")) >= 0) {
+      const one = buf.slice(0, n).trim();
+      buf = buf.slice(n + 1);
+      if (one) yield JSON.parse(one);
+    }
+    if (done) break;
+  }
+  if (buf.trim()) yield JSON.parse(buf);
+}
+
+// the flag the app shows beside a card's set, by the card's language
+const FLAGS = { en: ["🇬🇧", "English"], ja: ["🇯🇵", "Japanese"], "zh-Hans": ["🇨🇳", "Simplified Chinese"],
+  "zh-Hant": ["🇹🇼", "Traditional Chinese"], ko: ["🇰🇷", "Korean"], fr: ["🇫🇷", "French"], de: ["🇩🇪", "German"],
+  it: ["🇮🇹", "Italian"], es: ["🇪🇸", "Spanish"], pt: ["🇧🇷", "Portuguese"], th: ["🇹🇭", "Thai"], id: ["🇮🇩", "Indonesian"] };
+const flag = (lang) => {
+  if (!lang) return "";
+  const [f, name] = FLAGS[lang] || [lang, lang];
+  return `<span class="flag" title="${esc(name)}" aria-label="${esc(name)}">${esc(f)}</span>`;
+};
+
+const count = (n, one, many) => `${n} ${n === 1 ? one : many}`;
+
+async function scan(blob) {
+  if (busy) return;
+  busy = true;
+  const my = ++gen;
+  stopWebcam();
+  try {
+    const small = await shrink(blob);
+    const url = URL.createObjectURL(small);
+    $("photo").src = url;
+    pixels = null;
+    choice.clear();
+    current = null;
+    $("photo").style.display = "block";
+    $("video").style.display = "none";
+    $("stage").style.display = "block";
+    $("drop").style.display = "none";
+    $("overlay").innerHTML = "";
+    $("results").innerHTML = '<div class="panel empty">Looking for cards…</div>';
+    status("Scanning… the first scan loads the models and can take a little longer.", true);
+    const t = performance.now();
+    const res = await fetch(`/api/scan${language ? `?language=${language}` : ""}`, { method: "POST", headers: { "Content-Type": small.type }, body: small });
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err.error || res.statusText);
+    }
+    let final = null;
+    let first = null;
+    let draft = null;   // the cards found so far, before the first answer
+    let checked = 0;
+    const took = (n) => {
+      const secs = (performance.now() - t) / 1000;
+      return `${secs.toFixed(1)} s` + (n ? ` (${(secs / n).toFixed(2)} s avg per card)` : "");
+    };
+    const found = (out) => {
+      const edge = (out.cut_off || []).length;
+      return `${count(out.cards.length, "card", "cards")}` + (edge ? `, ${count(edge, "card", "cards")} at the photo's edge left out` : "");
+    };
+    for await (const out of lines(res)) {
+      if (my !== gen) return;
+      if (out.error) throw new Error(out.error);
+      if (out.step === "boxes") {
+        // the cards are found: their boxes at once, each named as it is fingerprinted
+        if (!out.boxes.length) continue;
+        draft = { width: out.width, height: out.height, cut_off: out.cut_off,
+                  cards: readingOrder(out.boxes.map((b) => ({ ...b, candidates: [], waiting: true }))) };
+        status([found(draft), "Matching…"], true);
+        show(draft);
+      } else if (out.step === "pick") {
+        const i = draft && current === draft ? draft.cards.findIndex((c) => c.box === out.box) : -1;
+        if (i < 0) continue;
+        draft.cards[i] = { ...draft.cards[i], quad: out.quad, candidates: out.candidates, waiting: false, checking: true };
+        redraw(i);
+      } else if (out.step === "card") {
+        // one card double-checked: it replaces its first pick
+        const i = current?.cards.findIndex((c) => c.k === out.index) ?? -1;
+        if (i < 0) continue;
+        current.cards[i] = { ...out.card, k: out.index };
+        choice.delete(i);
+        redraw(i);
+        checked++;
+        status([found(current), first, `Double-checking the prints… ${checked} of ${current.cards.length} done`], true);
+      } else if (out.first) {
+        if (!out.cards.length) continue;
+        out.cards = readingOrder(out.cards.map((c, k) => ({ ...c, k, checking: true })));
+        first = `First pass in ${took(out.cards.length)}`;
+        status([found(out), first, "Double-checking the prints…"], true);
+        choice.clear();
+        show(out);
+      } else {
+        final = out;
+        out.cards = readingOrder(out.cards.map((c, k) => ({ ...c, k })));
+        status([found(out), first, `Fully complete in ${took(out.cards.length)}`]);
+        // each card came in as it was double-checked: the answer changes nothing on show
+        if (!(current && checked && checked === out.cards.length && current.cards.length === checked)) {
+          choice.clear();
+          show(out);
+        }
+      }
+    }
+    if (!final) throw new Error("the scanner stopped before it answered");
+  } catch (e) {
+    if (my === gen) {
+      status(`Something went wrong: ${e.message}`);
+      $("results").innerHTML = '<div class="panel empty">No result. Try another photo.</div>';
+    }
+  } finally {
+    busy = false;
+  }
+}
+
+$("drop").addEventListener("click", () => $("file").click());
+$("drop").addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") $("file").click(); });
+$("choose").addEventListener("click", () => $("file").click());
+$("file").addEventListener("change", (e) => { if (e.target.files[0]) scan(e.target.files[0]); e.target.value = ""; });
+["dragenter", "dragover"].forEach((t) => document.addEventListener(t, (e) => { e.preventDefault(); $("drop").classList.add("over"); }));
+["dragleave", "drop"].forEach((t) => document.addEventListener(t, (e) => { e.preventDefault(); $("drop").classList.remove("over"); }));
+document.addEventListener("drop", (e) => { const f = [...(e.dataTransfer?.files || [])].find((f) => f.type.startsWith("image/")); if (f) scan(f); });
+document.addEventListener("paste", (e) => { const f = [...(e.clipboardData?.files || [])].find((f) => f.type.startsWith("image/")); if (f) scan(f); });
+$("langs").addEventListener("click", (e) => {
+  const b = e.target.closest(".chip");
+  if (!b) return;
+  language = b.dataset.lang;
+  for (const c of $("langs").children) c.setAttribute("aria-pressed", String(c === b));
+});
+
+async function startWebcam() {
+  try {
+    stream = await navigator.mediaDevices.getUserMedia({ video: { width: { ideal: 1920 }, height: { ideal: 1080 }, facingMode: "environment" } });
+  } catch (e) {
+    status("The webcam isn't available here.");
+    return;
+  }
+  const v = $("video");
+  v.srcObject = stream;
+  await v.play();
+  $("overlay").innerHTML = "";
+  $("photo").style.display = "none";
+  v.style.display = "block";
+  $("stage").style.display = "block";
+  $("drop").style.display = "none";
+  $("snap").hidden = $("cancel").hidden = false;
+  $("webcam").hidden = true;
+  status("Hold the cards flat and in the light, then take the photo.");
+}
+
+function stopWebcam() {
+  if (stream) stream.getTracks().forEach((t) => t.stop());
+  stream = null;
+  $("video").style.display = "none";
+  $("snap").hidden = $("cancel").hidden = true;
+  $("webcam").hidden = false;
+}
+
+$("webcam").addEventListener("click", startWebcam);
+$("cancel").addEventListener("click", () => {
+  stopWebcam();
+  if (!$("photo").getAttribute("src")) { $("stage").style.display = "none"; $("drop").style.display = "grid"; }
+  else $("photo").style.display = "block";
+  status("");
+});
+$("snap").addEventListener("click", () => {
+  const v = $("video");
+  const canvas = document.createElement("canvas");
+  canvas.width = v.videoWidth;
+  canvas.height = v.videoHeight;
+  canvas.getContext("2d").drawImage(v, 0, 0);
+  canvas.toBlob((b) => scan(b), "image/jpeg", 0.95);
+});
+
+// --- results ------------------------------------------------------------------
+
+// the answer on show, and which picture each card shows where you picked
+// another copy or another possibility (card -> { key, pic, label })
+let current = null;
+const choice = new Map();
+
+// the card you point at: the rest of the photo goes dark around it
+function highlight(i, scroll) {
+  document.querySelectorAll(".card[data-i]").forEach((el) => el.classList.toggle("active", Number(el.dataset.i) === i));
+  const dim = $("overlay").querySelector(".dim");
+  const c = i == null ? null : current?.cards[i];
+  if (dim) dim.setAttribute("d", c ? `M0 0H${current.width}V${current.height}H0Z M${c.quad.map(([x, y]) => `${x} ${y}`).join(" L")}Z` : "");
+  if (scroll && i != null) document.querySelector(`.card[data-i="${i}"]`)?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+}
+
+function overlay(out) {
+  const svg = $("overlay");
+  svg.setAttribute("viewBox", `0 0 ${out.width} ${out.height}`);
+  const scale = out.width / 900;
+  // cards cut off by the photo's edge: outlined, not matched
+  const edges = (out.cut_off || []).map((c) => `<polygon class="edge" points="${c.quad.map(([x, y]) => `${x},${y}`).join(" ")}"></polygon>`).join("");
+  svg.innerHTML = edges + out.cards.map((c, i) => {
+    const pts = c.quad.map(([x, y]) => `${x},${y}`).join(" ");
+    const cx = c.quad.reduce((s, p) => s + p[0], 0) / 4, cy = c.quad.reduce((s, p) => s + p[1], 0) / 4;
+    return `<polygon data-i="${i}" points="${pts}"></polygon><text x="${cx}" y="${cy}" text-anchor="middle" dominant-baseline="middle" style="font-size:${Math.max(15, 22 * scale)}px">${i + 1}</text>`;
+  }).join("") + '<path class="dim" fill-rule="evenodd" d=""></path>';
+  svg.querySelectorAll("polygon[data-i]").forEach((p) => {
+    p.addEventListener("click", () => highlight(Number(p.dataset.i), true));
+    p.addEventListener("mouseenter", () => highlight(Number(p.dataset.i), false));
+    p.addEventListener("mouseleave", () => highlight(null));
+  });
+}
+
+// which of the card's copies the scan shows, as the app picks it: the
+// reverse holo where the e-Reader strips show holo bars and the dataset
+// says only that copy has them; the 1st Edition run where the stamp was
+// found and the standard copy doesn't print one; else the standard copy
+function shownCopy(card, scanned) {
+  const variants = card.variants || [];
+  if (variants.length < 2) return null;
+  const standard = variants.find((v) => v.role === "standard") || variants[0];
+  const firstMark = (v) => v.editionMark === "first_edition";
+  const firstEdition = !firstMark(standard) && variants.find((v) => v !== standard && v.role === "print_run" && firstMark(v) && !v.unlikely);
+  const reverse = standard.eReaderStrip === "dot_code" &&
+    variants.find((v) => v !== standard && v.finish === "reverse_holo" && v.eReaderStrip === "holo_bars" && !v.unlikely);
+  // the stamp check knows the English stamp where Wizards of the Coast printed it
+  const stampRan = card.language === "en" && scanned.edition_stamp != null && firstEdition;
+  const stamped = stampRan && scanned.edition_stamp >= STAMP;
+  const bars = reverse && scanned.ecard_reading === "bars";
+  const shown = (bars && reverse) || (stamped && firstEdition) || standard;
+  return { variants, standard, reverse, stampRan, stamped, shown };
+}
+
+function copies(card, scanned, i) {
+  const pick = shownCopy(card, scanned);
+  if (!pick) return "";
+  const { variants, reverse, stampRan, stamped, shown } = pick;
+  const sel = choice.get(i)?.key;
+  const chips = variants.map((v, k) => {
+    const on = sel ? sel === `copy:${k}` : v === shown;
+    const pic = v.picture?.front?.image || card.picture?.front?.image || "";
+    return `<button class="copy${v === shown ? " match" : ""}${on ? " on" : ""}" data-key="copy:${k}" data-pic="${esc(pic)}" data-label="${esc(v.name)}" title="${esc(v.tell?.text || "")}">${esc(v.name)}</button>`;
+  }).join("");
+  let hint = "";
+  if (reverse && scanned.ecard_reading === "bars") hint = '<div class="note">Holo bars where the e-Reader dot code goes: the reverse holo copy.</div>';
+  else if (reverse && scanned.ecard_reading === "dot_code") hint = '<div class="note">The e-Reader dot code is printed along the edges: not the reverse holo.</div>';
+  else if (stampRan) hint = `<div class="note${stamped ? "" : " warn"}">${stamped ? "A 1st Edition stamp was found on the card." : "No 1st Edition stamp found, so probably not the 1st Edition copy."}</div>`;
+  return `<details${sel ? (sel.startsWith("copy:") ? " open" : "") : ""}><summary>${variants.length} copies of this card</summary><div class="copies">${chips}</div></details>${hint}`;
+}
+
+// how sure the scan is, in the app's words: nothing when it is sure, or
+// when it took its best guess with a clear lead (decided)
+function badge(c) {
+  if (c.checking) return ' <span class="badge muted">Checking…</span>';
+  if (!c.quality) return "";
+  if (c.quality === "back") return ' <span class="badge muted">Card back</span>';
+  if (c.quality === "likely_wrong") return ' <span class="badge">Likely wrong</span>';
+  if (c.decided || c.quality === "sure") return "";
+  if (c.quality === "printing_unclear") return ' <span class="badge muted">Which printing?</span>';
+  return ' <span class="badge">Check</span>';
+}
+
+// one card's block: from the scanner's own fields at once, with what the
+// dataset says about it once its set file is in
+function block(c, i, data) {
+  const best = c.candidates[0];
+  if (c.waiting) return `<article class="panel card waiting" data-i="${i}"><div class="num">${i + 1}</div><div class="art"></div><div><h3>Matching…</h3><div class="sub">&nbsp;</div></div></article>`;
+  if (!best) return `<article class="panel card" data-i="${i}"><div class="num">${i + 1}</div><div></div><div><h3>No match</h3></div></article>`;
+  const card = data?.card, set = data?.set;
+  // the copy the scan shows (its 1st Edition run, its reverse holo) with
+  // that copy's own picture, where it has one
+  const copy = card ? shownCopy(card, c) : null;
+  const special = copy && copy.shown !== copy.standard ? copy.shown : null;
+  const sel = choice.get(i);
+  // the copy named beside the set: the one you picked, else the scan's own
+  const picked = sel?.key.startsWith("copy:") && copy ? copy.variants[Number(sel.key.slice(5))] : null;
+  const named = picked ? (picked !== copy.standard ? picked : null) : special;
+  const pic = sel?.pic || special?.picture?.front?.image || card?.picture?.front?.image || (best.picture || "").split("/").pop();
+  const facts = [
+    card?.rarity && `<span><b>${esc(card.rarity)}</b></span>`,
+    card?.credit && `<span>Illus. <b>${esc(card.credit)}</b></span>`,
+    card?.released?.date && `<span>${esc(card.released.date)}</span>`,
+  ].filter(Boolean).join("");
+  const alts = c.candidates.slice(1).map((a, k) => {
+    const id = (a.picture || "").split("/").pop();
+    const label = `${a.name} · ${a.set_name} ${a.number || ""}`.trim();
+    return `<button class="alt${sel?.key === `alt:${k}` ? " on" : ""}" data-key="alt:${k}" data-pic="${esc(id)}" data-label="${esc(label)}">${id ? `<img loading="lazy" src="${esc(picture(id, 240))}" alt="">` : `<span class="noimg"></span>`}<div><strong>${esc(a.name)}</strong><span>${flag(a.language)}${esc(a.set_name)} ${esc(a.number || "")} · ${(a.sim * 100).toFixed(0)}%</span></div></button>`;
+  }).join("");
+  // another possibility picked: say so, with the way back
+  const showing = sel?.key.startsWith("alt:") ? `<div class="showing"><span>Showing <b>${esc(sel.label)}</b></span><button class="link" data-key="">Back to the match</button></div>` : "";
+  const desc = card?.description?.text ? `<div class="desc">${esc(card.description.text.split("\n")[0])}</div>` : "";
+  const number = card?.number?.printed || best.number || "";
+  // the print check found the card's details but couldn't line them up
+  // with this print's picture anywhere
+  const doubt = c.likely_wrong ? '<div class="note warn">The print check couldn’t line this card up with its picture, so this may not be the right card.</div>' : "";
+  return `<article class="panel card" data-i="${i}">
+    <div class="num">${i + 1}</div>
+    <button class="art" data-open="${i}" aria-label="Open the picture beside your photo"><img loading="lazy" src="${esc(picture(pic, 240))}" data-big="${esc(pic)}" alt="${esc(best.name)}"></button>
+    <div>
+      <h3>${esc(card?.name || best.name)}${badge(c)}</h3>
+      <div class="sub">${flag(card?.language || best.language)}${esc(set?.name || best.set_name)}${number ? ` · ${esc(number)}` : ""}${named ? ` · ${esc(named.name)}` : ""}</div>
+      <div class="facts">${facts}</div>
+      <div class="meter" title="Picture similarity"><span style="width:${Math.max(0, Math.min(100, best.sim * 100))}%"></span></div>
+      ${showing}
+      ${doubt}
+      ${card ? copies(card, c, i) : ""}
+      ${desc}
+      ${alts ? `<details${sel?.key.startsWith("alt:") ? " open" : ""}><summary>Other possibilities</summary><div class="alts">${alts}</div></details>` : ""}
+      <details><summary>Dataset</summary><a class="json" href="${DATASET}/sets/${esc(best.set)}.json" target="_blank" rel="noopener">${esc(best.set)}.json</a>, card <code class="json">${esc(best.card)}</code></details>
+    </div>
+  </article>`;
+}
+
+// the answer (or the cards found so far) on show, a block per card
+function show(out) {
+  current = out;
+  overlay(out);
+  if (!out.cards.length) {
+    $("results").innerHTML = '<div class="panel empty">No cards found. Try a closer, brighter photo with the cards flat.</div>';
+    return;
+  }
+  $("results").innerHTML = out.cards.map((c, i) => block(c, i, known.get(c.candidates[0]?.print) || null)).join("");
+  out.cards.forEach((c, i) => fill(i));
+}
+
+// redraw one card's block in place: its pick came in, it was double-checked,
+// or you picked another copy or possibility
+function redraw(i) {
+  const el = document.querySelector(`.card[data-i="${i}"]`);
+  const c = current?.cards[i];
+  if (!el || !c) return;
+  const active = el.classList.contains("active");
+  el.outerHTML = block(c, i, known.get(c.candidates[0]?.print) || null);
+  if (active) document.querySelector(`.card[data-i="${i}"]`)?.classList.add("active");
+  fill(i);
+}
+
+// what the dataset says about the card, once its set file is in (if the
+// card on show is still the one it was asked for)
+function fill(i) {
+  const c = current?.cards[i];
+  const best = c?.candidates[0];
+  if (!best || known.has(best.print)) return;
+  cardData(best).then((data) => { if (data && current?.cards[i] === c) redraw(i); });
+}
+
+const rowOf = (el) => el?.closest?.(".card[data-i]");
+$("results").addEventListener("mouseover", (e) => {
+  const row = rowOf(e.target);
+  highlight(row ? Number(row.dataset.i) : null);
+});
+$("results").addEventListener("mouseleave", () => highlight(null));
+
+$("results").addEventListener("click", (e) => {
+  const open = e.target.closest("[data-open]");
+  if (open) return lightbox(Number(open.dataset.open));
+  const b = e.target.closest("[data-key]");
+  const card = b?.closest(".card");
+  if (!b || !card) return;
+  const i = Number(card.dataset.i);
+  // picking what's already shown (or "Back to the match") goes back to the scan's own pick
+  if (!b.dataset.key || b.classList.contains("on")) choice.delete(i);
+  else choice.set(i, { key: b.dataset.key, pic: b.dataset.pic, label: b.dataset.label });
+  redraw(i);
+});
+
+// --- lightbox: the card as your photo shows it, beside the picture it matched
+
+let pixels = null; // the photo's pixels, at the size the scanner worked in
+
+function photoPixels() {
+  if (pixels && pixels.width === current.width) return pixels;
+  const canvas = document.createElement("canvas");
+  canvas.width = current.width;
+  canvas.height = current.height;
+  const ctx = canvas.getContext("2d", { willReadFrequently: true });
+  ctx.drawImage($("photo"), 0, 0, canvas.width, canvas.height);
+  pixels = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  return pixels;
+}
+
+// straighten the card's four corners (its top left first) onto the canvas
+function straighten(quad, canvas) {
+  const src = photoPixels();
+  const W = canvas.width, H = canvas.height;
+  const [[x0, y0], [x1, y1], [x2, y2], [x3, y3]] = quad;
+  // the unit square onto the corners (Heckbert's projective mapping)
+  const dx1 = x1 - x2, dx2 = x3 - x2, sx = x0 - x1 + x2 - x3;
+  const dy1 = y1 - y2, dy2 = y3 - y2, sy = y0 - y1 + y2 - y3;
+  const den = dx1 * dy2 - dx2 * dy1;
+  const g = den ? (sx * dy2 - dx2 * sy) / den : 0, h = den ? (dx1 * sy - sx * dy1) / den : 0;
+  const a = x1 - x0 + g * x1, b = x3 - x0 + h * x3, d = y1 - y0 + g * y1, e = y3 - y0 + h * y3;
+  const ctx = canvas.getContext("2d");
+  const out = ctx.createImageData(W, H);
+  const sw = src.width, sh = src.height, sd = src.data, od = out.data;
+  for (let v = 0; v < H; v++) {
+    const fv = (v + 0.5) / H;
+    for (let u = 0; u < W; u++) {
+      const fu = (u + 0.5) / W;
+      const z = g * fu + h * fv + 1;
+      const X = (a * fu + b * fv + x0) / z - 0.5, Y = (d * fu + e * fv + y0) / z - 0.5;
+      const o = (v * W + u) * 4;
+      if (X < 0 || Y < 0 || X >= sw - 1 || Y >= sh - 1) { od[o + 3] = 255; continue; }
+      const ix = X | 0, iy = Y | 0, fx = X - ix, fy = Y - iy;
+      const p = (iy * sw + ix) * 4, q = p + sw * 4;
+      for (let k = 0; k < 3; k++) {
+        const top = sd[p + k] + (sd[p + 4 + k] - sd[p + k]) * fx;
+        const bot = sd[q + k] + (sd[q + 4 + k] - sd[q + k]) * fx;
+        od[o + k] = top + (bot - top) * fy;
+      }
+      od[o + 3] = 255;
+    }
+  }
+  ctx.putImageData(out, 0, 0);
+}
+
+function lightbox(i) {
+  const el = document.querySelector(`.card[data-i="${i}"]`);
+  const c = current?.cards[i];
+  if (!el || !c) return;
+  const best = c.candidates[0];
+  const pic = el.querySelector(".art img")?.dataset.big;
+  const sel = choice.get(i);
+  // the row's own small picture (already loaded) at once, the sharp one once it is in
+  const want = pic ? picture(pic, 960) : "";
+  $("lb-pic").src = pic ? picture(pic, 240) : "";
+  $("lb-pic").dataset.want = want;
+  if (want) {
+    const big = new Image();
+    big.onload = () => { if ($("lb-pic").dataset.want === want) $("lb-pic").src = want; };
+    big.src = want;
+  }
+  $("lb-pic").alt = best?.name || "";
+  const title = sel?.key.startsWith("alt:") ? sel.label : el.querySelector("h3")?.firstChild?.textContent || best?.name || "";
+  // the card's own line (its flag, set and number), as the block shows it
+  const sub = sel?.key.startsWith("alt:") ? "Another possibility"
+    : (el.querySelector(".sub")?.innerHTML || "");
+  $("lb-cap").innerHTML = `${esc(title)}<span class="cap">${sub}</span>`;
+  straighten(c.quad, $("lb-crop"));
+  $("lightbox").hidden = false;
+  $("lb-close").focus();
+}
+
+const closeLightbox = () => {
+  $("lightbox").hidden = true;
+  $("lb-pic").removeAttribute("src");
+  $("lb-pic").dataset.want = "";
+};
+$("lb-close").addEventListener("click", closeLightbox);
+$("lightbox").addEventListener("click", (e) => { if (e.target === $("lightbox")) closeLightbox(); });
+document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("lightbox").hidden) closeLightbox(); });
+</script>
+</body>
+</html>

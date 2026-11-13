@@ -1,0 +1,19 @@
+CardCorpus Scanner
+Copyright 2026 The CardCorpus Authors
+
+This product includes software developed by The CardCorpus Authors,
+licensed under the Apache License, Version 2.0 (LICENSE).
+
+It runs models whose weights are distributed separately, on the Hugging
+Face Hub at cardcorpus/pokemon-card-scanner, under their own licences (see that
+repository's LICENSE.md). The card matcher there is a fine-tune of DINOv3
+and is distributed under the DINOv3 License. Built with DINOv3.
+
+The 1st Edition stamp template (cardcorpus_scanner/edition-stamp.png) is
+the mean of stamps cut from card pictures, 48 x 36 pixels.
+
+Pokémon and Pokémon character names are trademarks of Nintendo, Creatures
+and GAME FREAK. Card pictures and text are © The Pokémon Company,
+Nintendo, Creatures, GAME FREAK and, for older cards, Wizards of the
+Coast. This project is not produced, endorsed, sponsored or supported by,
+or affiliated with, any of them.
