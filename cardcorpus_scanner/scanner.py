@@ -27,11 +27,11 @@ from pathlib import Path
 
 import numpy as np
 
-from . import marks, tower
+from . import language, marks, tower
 from .detector import Detector, containment
 from .index import Index
 from .number_reader import Reader, printed_nd
-from .verifier import MIRROR, Pictures, Verifier
+from .verifier import COPY_WIDTH, MIRROR, Pictures, Verifier
 
 DEFAULTS = {
     "detector": {"conf": 0.2, "contain": 0.75, "model": {}},
@@ -48,7 +48,22 @@ DEFAULTS = {
     # the rules around the stages (SPEC.md, "Around the stages")
     "rules": {"work_px": 3000, "detail_px": 320, "cut_off": True, "left_out": True, "rescue_conf": 0.05,
               "rescue_sim": 0.80, "rescue_overlap": 0.5, "junk_conf": 0.35, "junk_sim": 0.7, "back_sim": 0.60,
-              "realigns": True, "verifier_yields": True, "twin_tie": 0.03, "rules_out": True},
+              "realigns": True, "verifier_yields": True, "twin_tie": 0.03, "rules_out": True,
+              # the language reader (SPEC.md, "Language reader"): off by default, as in the app
+              "reads_language": False,
+              # the language check on every card (SPEC.md, "Language check"), when the language model is loaded
+              "language_check": True,
+              # null: the model's own bar for a check (language.CLASSIFIER_LAYOUTS); a number in its place
+              "language_check_confidence": None,
+              # a card the language model is sure is in another language moves to that language's print
+              "language_check_switch": False,
+              # Spain's and Latin America's Spanish (SPEC.md, "Spanish twins"): the one a language check suggests
+              # for Spanish text, and only when the scan allows no Spanish print ("spanish" or
+              # "latin-american-spanish"); the reader moves a pick between the two only on the corner's exact read
+              "default_spanish": "spanish",
+              # and when the pick has a print of the same card in the other Spanish as close by picture, the
+              # corner's printed code is read on every such card, with or without the reader
+              "spanish_corner": True},
 }
 HUB_REPO = "cardcorpus/pokemon-card-scanner"
 
@@ -146,6 +161,104 @@ def ident(c):
     return c.get("print") or c.get("handle")
 
 
+# languages whose cards share a layout, which the matcher can't tell apart by picture; the reader is asked only
+# within one (between layouts the picture already decides)
+LAYOUTS = ({"en", "fr", "de", "es", "es-419", "it", "pt", "id", "th"}, {"ja", "ko", "zh-Hans", "zh-Hant"})
+# Spain's and Latin America's Spanish prints: the same text, so neither the picture, the language model nor the
+# words tell them apart; only the corner's set code does ("PBL" and "PBL LA"). rules["default_spanish"] names the
+# one a language check suggests (SPEC.md, "Spanish twins").
+SPANISH = ("es", "es-419")
+SPANISH_CATALOGS = {"spanish": "es", "latin-american-spanish": "es-419"}
+
+
+def spanish_enabled(catalogs, languages):
+    """Whether a scan allows a Spanish print: either Spanish catalog among `catalogs` (None: every catalog), or
+    either Spanish among `languages`."""
+    if languages:
+        return any(lang in SPANISH for lang in languages)
+    return catalogs is None or bool(SPANISH_CATALOGS.keys() & set(catalogs))
+
+
+def spanish_suggestion(suggested, enabled, default="spanish"):
+    """What a language check suggests, Spanish twins considered: Spanish text (either Spanish) is suggested as the
+    default Spanish (`default`, a catalog: "spanish" or "latin-american-spanish"), and only when the scan allows no
+    Spanish print; None when it suggests nothing. Any other language passes as it is."""
+    if suggested not in SPANISH:
+        return suggested
+    return None if enabled else SPANISH_CATALOGS.get(default, "es")
+
+
+def spanish_twins(cands, pick):
+    """The pick and its prints of the same card in the other Spanish whose pictures match within SURE_MARGIN of its
+    own, when the pick is Spanish and there is one; else None."""
+    own = pick.get("language")
+    if own not in SPANISH:
+        return None
+    others = [c for c in cands if c is not pick and c.get("language") in SPANISH and c.get("language") != own
+              and same_card(c, pick) and pick["sim"] - c["sim"] < SURE_MARGIN]
+    return [pick] + others if others else None
+
+
+def corner_exact(why):
+    """Whether a corner read is exact: a printed code and mark matching one print in play (why "corner <code>"; "corner
+    mark <code>" is the mark alone)."""
+    return why.startswith("corner ") and not why.startswith("corner mark ")
+
+
+def spanish_switch_allowed(pick_language, found, why):
+    """The language reader moves a pick in one Spanish to the other only on the corner reader's exact read."""
+    if pick_language in SPANISH and found in SPANISH and found != pick_language:
+        return corner_exact(why)
+    return True
+
+
+def reads_corner(found, pick_language, languages):
+    """Whether the reader reads the corner: when the language model isn't sure, and whenever both Spanish are in play
+    and the model said Spanish or the pick is Spanish (only the corner's code tells the two apart; a sure reading of
+    another language doesn't skip it)."""
+    if found is None:
+        return True
+    return set(SPANISH) <= set(languages) and (found in SPANISH or pick_language in SPANISH)
+
+
+def corner_overrides(found, cornered, why):
+    """Whether the corner's reading replaces the language model's: always when the model wasn't sure; otherwise only
+    for a Spanish print, that the model also read or that the corner read exactly."""
+    if found is None:
+        return True
+    return cornered in SPANISH and (cornered == found or corner_exact(why))
+
+
+def corner_holds(read_language, pick, other):
+    """Whether the language step settled `pick` on the corner's exact code (`read_language` its {"language", "why"}),
+    so a later step may not move it to `other` when that is its print of the same card in the other Spanish (another
+    card, even of the same name, still can: the corner settles only the language)."""
+    own, theirs = pick.get("language"), other.get("language")
+    if not read_language or own not in SPANISH or theirs not in SPANISH or theirs == own or not same_card(pick, other):
+        return False
+    return read_language.get("language") == own and corner_exact(read_language.get("why") or "")
+
+
+def same_card(a, b):
+    """Two candidates the dataset's links make one card, in different languages. A reprint in another set is not one:
+    the same name and painting, but another number, and the print the photo isn't of."""
+    return a.get("same_card") is not None and a.get("same_card") == b.get("same_card")
+
+
+def languages_in_play(cands, pick):
+    """The languages the language reader chooses among: the pick's, and those of the same card's prints in other
+    languages anywhere among the candidates whose pictures match within SURE_MARGIN of the pick's; else none."""
+    own = pick.get("language")
+    layout = next((g for g in LAYOUTS if own in g), None)
+    if layout is None:
+        return set()
+    languages = {own}
+    for c in cands:
+        if pick["sim"] - c["sim"] < SURE_MARGIN and same_card(c, pick) and c.get("language") in layout:
+            languages.add(c["language"])
+    return languages if len(languages) >= 2 else set()
+
+
 def match_quality(ordered, scores, back, likely_wrong, ruled_out, ident=ident):
     """"back", "likely_wrong", "sure", "printing_unclear" (only other prints
     of the same card are close) or "unsure", for candidates in their final
@@ -215,6 +328,16 @@ def pick_device(want="auto"):
     return "cpu"
 
 
+# The English catalog was first published as `international`; an index built
+# before then still names it so.
+SAME_CATALOG = {"english", "international"}
+# The catalogs a scan keeps to unless told otherwise, as the app's scanner does: allowing every catalog costs
+# about 15 points on English and Japanese cards, picked as their translated twins (the same picture in another
+# language). The language check still looks in every catalog, so a card from another one is flagged with its
+# print there. catalogs="all" allows every catalog in the index.
+DEFAULT_CATALOGS = ("english", "japanese", "zh-hans")
+
+
 class Scanner:
     W, H = 384, 536  # the straightened card the matcher and orientation head see
     HW, HH = 960, 1340  # full resolution: number, picker, verifier, marks
@@ -232,10 +355,12 @@ class Scanner:
         return cls(weights, **kw)
 
     def __init__(self, weights, device="cpu", number_reader=True, picker=True, verifier=True,
-                 mirror=MIRROR, picture_cache=None, picture_folder=None, picture_width=None):
+                 mirror=MIRROR, picture_cache=None, picture_folder=None, picture_width=COPY_WIDTH,
+                 catalogs=None, language_model=True, corner_reader=True):
         W = Path(weights)
         cfg = load_config(W)
-        index = Index(W / "index")
+        # catalogs loads only the index parts that hold one of them (index.py)
+        index = Index(W / "index", catalogs=catalogs)
         models = W / "models"
         det = cfg["detector"]
         from safetensors.torch import load_file
@@ -259,6 +384,21 @@ class Scanner:
                     matcher=tower.load(models / "matcher.safetensors", cfg["embedder"], device),
                     preprocess=tower.preprocess(cfg["embedder"]),
                     heads=heads, picker=pick, reader=reader, verifier=ver, mirror=mirror)
+        self.load_language_models(models, language_model, corner_reader)
+
+    def load_language_models(self, models, language_model=True, corner_reader=True):
+        """The language model (models/language-classifier.onnx; needs onnxruntime) and the corner reader
+        (models/corner-reader.safetensors with corner-reader.json beside it), when the folder has them and they
+        are wanted. A weights folder from before they shipped has neither: no language check, and the reader,
+        when asked for, goes straight to the OCR."""
+        models = Path(models)
+        if language_model and (models / "language-classifier.onnx").exists():
+            self.language_classifier = language.Classifier(models / "language-classifier.onnx")
+        if corner_reader and (models / "corner-reader.safetensors").exists():
+            from .corner import CornerReader
+
+            self.corner_reader = CornerReader(models / "corner-reader.safetensors", models / "corner-reader.json",
+                                              self.device)
 
     def _setup(self, cfg, index, device, detector, matcher, preprocess, heads, picker=None, reader=None,
                verifier=None, mirror=MIRROR):
@@ -277,6 +417,12 @@ class Scanner:
         self.device = device
         self.index = index
         self.cards = self.index.cards
+        # A row names its catalog (english, japanese, zh-hans, french); a
+        # bundle built before the word was `catalog` calls it `family`, and
+        # one built before the English catalog's rename calls it `international`.
+        for row in self.cards.values():
+            if "catalog" not in row and "family" in row:
+                row["catalog"] = row["family"]
         self.matrix = torch.from_numpy(self.index.embeddings)
         # each print's scan prior: -1 for a print a scan names only on clear
         # evidence (a World Championships deck's reprint of a booster card)
@@ -298,8 +444,10 @@ class Scanner:
                     self.stand_in[h] = sib
         # each print's own picture (its catalogue picture)
         self.own = {row["print"]: h for h, row in self.cards.items() if row.get("print") and row.get("kind") == "card"}
-        self.row_family = np.array([(self.cards.get(self.stand_in.get(h, h)) or {}).get("family") or ""
+        self.row_catalog = np.array([(self.cards.get(self.stand_in.get(h, h)) or {}).get("catalog") or ""
                                     for h in self.index.handles])
+        self.row_language = np.array([(self.cards.get(self.stand_in.get(h, h)) or {}).get("language") or ""
+                                      for h in self.index.handles])
 
         self.detector = detector
         self.matcher = matcher
@@ -321,8 +469,44 @@ class Scanner:
                 self.pick_members.setdefault(g, []).append(p)
 
         self.reader = reader
+        # the language reader's OCR (language.read's engine): Apple's Vision on macOS, else RapidOCR, unless set
+        self.language_engine = None
+        # the language model (language.Classifier): read first by the reader, and when set the language check on
+        # every card
+        self.language_classifier = None
+        # the corner reader (corner.CornerReader): the set code and language mark at the foot, read after the
+        # classifier and before the OCR; it settles only on an exact printed code and mark of one language in play
+        self.corner_reader = None
         self.verifier = verifier
         self.mirror = (mirror or "").rstrip("/")
+
+    @property
+    def languages(self):
+        """The languages the index has prints in, as the dataset codes them ("en", "ja", "zh-Hans"), in the
+        catalogs' order."""
+        have = {x for x in self.row_language.tolist() if x}
+        order = list(language.LANGUAGE_NAMES)
+        return sorted(have, key=lambda x: (order.index(x) if x in order else len(order), x))
+
+    @property
+    def catalogs(self):
+        """The catalogs the index has cards of (english, japanese, zh-hans, ...), in the order of their main
+        languages (catalog_languages)."""
+        order = list(language.LANGUAGE_NAMES)
+        main = self.catalog_languages
+        return sorted(main, key=lambda c: (order.index(main[c]) if main[c] in order else len(order), c))
+
+    @property
+    def catalog_languages(self):
+        """Each catalog's main language: the one most of its index rows print."""
+        from collections import Counter
+
+        counts = Counter(zip(self.row_catalog.tolist(), self.row_language.tolist()))
+        main = {}
+        for (cat, lang), n in counts.most_common():
+            if cat and lang and cat not in main:
+                main[cat] = lang
+        return main
 
     # --- helpers ------------------------------------------------------------
 
@@ -334,12 +518,39 @@ class Scanner:
             f = self.matcher(x)
             return (f / f.norm(dim=-1, keepdim=True)).float().cpu()
 
-    def family_mask(self, families):
-        """Bool tensor over index rows where the row's language family
-        (international, japanese, zh-hans) is allowed; None = all."""
-        if not families:
+    def catalog_mask(self, catalogs):
+        """Bool tensor over index rows where the row's catalog
+        (english, japanese, zh-hans, french) is allowed; None = all."""
+        if not catalogs:
             return None
-        return self.torch.from_numpy(np.isin(self.row_family, list(families)))
+        allowed = set(catalogs)
+        if allowed & SAME_CATALOG:
+            allowed |= SAME_CATALOG
+        return self.torch.from_numpy(np.isin(self.row_catalog, list(allowed)))
+
+    def scan_catalogs(self, catalogs, languages=None):
+        """The catalogs a scan keeps to: those given; every one for "all"; else, unless languages narrow the scan,
+        DEFAULT_CATALOGS the index holds (None, every catalog, when it holds none of them)."""
+        if isinstance(catalogs, str):
+            catalogs = [catalogs]
+        if catalogs and "all" in catalogs:
+            return None
+        if catalogs or languages:
+            return catalogs
+        if not hasattr(self, "_default_catalogs"):
+            have = set(self.catalogs)
+            # a 1.0.0 index calls the English catalog "international"
+            self._default_catalogs = [c for c in DEFAULT_CATALOGS + ("international",) if c in have] or None
+        return self._default_catalogs
+
+    def scan_mask(self, catalogs, languages):
+        """catalog_mask, narrowed to rows whose card is in one of `languages` (a card with no language stays)."""
+        mask = self.catalog_mask(catalogs)
+        if not languages:
+            return mask
+        keep = np.isin(self.row_language, list(languages)) | (self.row_language == "")
+        keep = self.torch.from_numpy(keep)
+        return keep if mask is None else mask & keep
 
     def candidate(self, handle, score):
         row = self.cards.get(handle, {})
@@ -351,8 +562,9 @@ class Scanner:
             "name": row.get("name"),
             "set_name": row.get("set_name"),
             "number": row.get("number"),
-            "family": row.get("family"),
+            "catalog": row.get("catalog"),
             "language": row.get("language"),
+            "same_card": row.get("same_card"),
             "release": row.get("release"),
             "artwork_group": row.get("artwork_group"),
             "release_date": row.get("release_date"),
@@ -361,7 +573,7 @@ class Scanner:
         if row.get("variant"):
             out["variant"] = row["variant"]
         if row.get("picture") and self.mirror:
-            out["picture"] = f"{self.mirror}/m/{row['picture']}"
+            out["picture"] = f"{self.mirror}/s1/{COPY_WIDTH}/{row['picture']}.avif"
         return out
 
     def dedupe(self, scores, idxs, limit=10, keep=None):
@@ -370,14 +582,14 @@ class Scanner:
         keep(card row) -> bool filters rows."""
         out, seen = [], set()
         for score, idx in zip(scores, idxs):
-            if score <= -2.0:  # a row the language filter left out
+            if score <= -2.0:  # a row the catalog filter left out
                 break
             h = self.index.handles[idx]
             h = self.stand_in.get(h, h)
             row = self.cards.get(h, {})
             if keep is not None and not keep(row):
                 continue
-            ident = row.get("print") or (row.get("name"), row.get("set_name"), row.get("number"), row.get("family"))
+            ident = row.get("print") or (row.get("name"), row.get("set_name"), row.get("number"), row.get("catalog"))
             if ident in seen:
                 continue
             seen.add(ident)
@@ -386,11 +598,11 @@ class Scanner:
             out.append(self.candidate(h, score))
         return out
 
-    def rank(self, feat, limit=10, families=None, keep=None):
+    def rank(self, feat, limit=10, catalogs=None, keep=None):
         """One fingerprint against the whole index, for a search of your own
-        (keep filters card rows, families the language)."""
+        (keep filters card rows, catalogs the catalogs)."""
         sims = self.matrix @ feat
-        mask = self.family_mask(families)
+        mask = self.catalog_mask(catalogs)
         if mask is not None:
             sims = sims.masked_fill(~mask, -2.0)
         if keep is None:
@@ -607,10 +819,10 @@ class Scanner:
         (was, name), (now, turned_name) = top(chosen), top(turned)
         return bool(name) and turned_name == name and now >= was + self.HALF_TURN_MARGIN and now >= self.HALF_TURN_FLOOR
 
-    def retrieve(self, sims, fam_mask=None):
+    def retrieve(self, sims, cat_mask=None):
         rcfg = self.cfg["retrieval"]
-        if fam_mask is not None:
-            sims = sims.masked_fill(~fam_mask, -2.0)
+        if cat_mask is not None:
+            sims = sims.masked_fill(~cat_mask, -2.0)
         top = self.torch.topk(sims, min(rcfg["top"], sims.shape[0]))
         return self.dedupe(top.values.tolist(), top.indices.tolist(), rcfg["candidates"])
 
@@ -720,7 +932,101 @@ class Scanner:
         except Exception:  # an odd picture never fails the scan
             return None
 
-    def settle(self, d, ordered, feats, scores, ver, prep, rules):
+    def read_language(self, d, ordered, rules=None):
+        """After fusion: when the pick has a print of the same card in another language among the candidates whose
+        picture matches within SURE_MARGIN of its own, the card's text is read (language.read) and the print in the
+        language read goes first. Returns (order, {"language": {...}, "language_switched": True?})."""
+        if not ordered:
+            return ordered, {}
+        pick = ordered[0]
+        languages = languages_in_play(d["cands"], pick)
+        if len(languages) < 2:
+            return ordered, {}
+        found = None
+        if self.language_classifier is not None:
+            # the classifier first; the OCR's reading only where it isn't sure
+            found, why = self.language_classifier.read(d["hi"], languages)
+        corner_read = None
+        # both Spanish in play: the language model can't tell them apart, so the corner is read whatever it said
+        if reads_corner(found, pick.get("language"), languages) and self.corner_reader is not None:
+            prints = [pick] + [c for c in d["cands"] if c is not pick and same_card(c, pick)
+                               and pick["sim"] - c["sim"] < SURE_MARGIN]
+            cornered, corner_why, corner_read = self.corner_reader.language(d["hi"], prints, languages)
+            if corner_overrides(found, cornered, corner_why):
+                found, why = cornered, corner_why
+        if found is None:
+            if self.language_engine is None:
+                import sys
+                self.language_engine = language.vision_engine if sys.platform == "darwin" else language.rapidocr_engine
+            found, why = language.read(d["hi"], languages, self.language_engine)
+        if found is not None and not spanish_switch_allowed(pick.get("language"), found, why):
+            why = f"spanish guard: {found} without the corner's code ({why})"
+            found = None
+        out = {"language": {"language": found, "why": why}}
+        if corner_read is not None:
+            out["language"]["corner"] = corner_read
+        if found and found != pick.get("language"):
+            for c in ordered:
+                if c.get("language") == found and same_card(c, pick):
+                    ordered = [c] + [x for x in ordered if x is not c]
+                    out["language_switched"] = True
+                    break
+        return ordered, out
+
+    def spanish_corner(self, d, ordered):
+        """When the pick has a print of the same card in the other Spanish within SURE_MARGIN (spanish_twins), the
+        corner is read and an exact read (spanish_switch_allowed) puts that language's print first. Returns (order,
+        {"language": {...}, "language_switched": True?})."""
+        if not ordered or self.corner_reader is None:
+            return ordered, {}
+        pick = ordered[0]
+        twins = spanish_twins(d["cands"], pick)
+        if not twins:
+            return ordered, {}
+        found, why, corner_read = self.corner_reader.language(d["hi"], twins, set(SPANISH))
+        if found is not None and not spanish_switch_allowed(pick.get("language"), found, why):
+            found = None
+        out = {"language": {"language": found, "why": why, "corner": corner_read}}
+        if found and found != pick.get("language"):
+            for c in ordered:
+                if c.get("language") == found and same_card(c, pick):
+                    ordered = [c] + [x for x in ordered if x is not c]
+                    out["language_switched"] = True
+                    break
+        return ordered, out
+
+    def check_language(self, d, guess, ordered, rules, spanish=True):
+        """The language check on the final order. When the model is sure of another language than the pick's, the card
+        is looked up among that language's prints; one that matches within CHECK_SWITCH_MARGIN of the pick takes its
+        place. Returns ({"suggested", "confidence", "print", "sim", "linked", "switched", "original"} or None, order)."""
+        pick = ordered[0] if ordered else None
+        bar = self.language_classifier.layout["check"]
+        least = rules.get("language_check_confidence")
+        check = language.language_check(guess, pick.get("language") if pick else None, bar if least is None else least)
+        if not check:
+            return None, ordered
+        suggested = spanish_suggestion(check["suggested"], spanish, rules.get("default_spanish", "spanish"))
+        if suggested is None or suggested == (pick.get("language") if pick else None):
+            return None, ordered
+        check["suggested"] = suggested
+        keep = self.torch.from_numpy(self.row_language == check["suggested"])
+        sims = (self.matrix @ d["feat"]).masked_fill(~keep, -2.0)
+        top = self.torch.topk(sims, min(40, sims.shape[0]))
+        found = self.dedupe(top.values.tolist(), top.indices.tolist(), self.cfg["retrieval"]["candidates"])
+        linked = next((c for c in found if same_card(c, pick)), None)
+        best = linked or (found[0] if found else None)
+        check.update(switched=False, linked=linked is not None, pick_sim=pick["sim"])
+        if best:
+            check.update(print=best.get("print"), sim=best["sim"],
+                         **{k: best[k] for k in ("name", "set_name", "number", "picture") if best.get(k) is not None})
+            # a lowered bar flags more cards but switches none the model's own bar wouldn't (as ScannerKit)
+            if (rules.get("language_check_switch") and check["confidence"] >= bar
+                    and best["sim"] >= pick["sim"] - language.CHECK_SWITCH_MARGIN):
+                check.update(switched=True, original=pick.get("print"))
+                ordered = [best] + ordered
+        return check, ordered
+
+    def settle(self, d, ordered, feats, scores, ver, prep, rules, read=None):
         """After fusion: the pick checked against its own picture; a pick
         that won't line up (or lines up only beside its box) gives way to
         the best match by picture when that one lines up (realigns); and
@@ -756,7 +1062,8 @@ class Scanner:
             if scores[first] - scores[second] < rules["twin_tie"] and shared_name(a.get("name")) is not None \
                     and shared_name(a.get("name")) == shared_name(b.get("name")) and b["sim"] > a["sim"] \
                     and (feats[second].get("pick") or 0) > (feats[first].get("pick") or 0) \
-                    and va is not None and vb is not None and va > vb:
+                    and va is not None and vb is not None and va > vb \
+                    and not corner_holds((read or {}).get("language"), a, b):
                 order[0], order[1] = second, first
                 yielded = True
                 check(second)
@@ -795,14 +1102,18 @@ class Scanner:
             out["yielded"] = True
         return [cands[i] for i in order], out
 
-    def scan(self, photo, families=None, crops_dir=None, evidence=False, rules=None, on_first=None,
-             on_progress=None, fingerprints=False):
+    def scan(self, photo, catalogs=None, crops_dir=None, evidence=False, rules=None, on_first=None,
+             on_progress=None, fingerprints=False, languages=None):
         """Every card in a photo (a path or a PIL image). Returns {"width",
         "height", "cards": [...], "cut_off": [...], "left_out": [...]}, each
         card with its corners, its five best candidates in order and the
         evidence behind them.
 
-        families limits the candidates to some language families. rules
+        catalogs limits the candidates to some catalogs (english,
+        japanese, zh-hans, french), languages to prints in some languages
+        ("en", "ja", "zh-Hans"). With neither, a scan keeps to English,
+        Japanese and Simplified Chinese (DEFAULT_CATALOGS), as the app does;
+        catalogs="all" allows every catalog in the index. rules
         overrides the settings of the rules around the stages (SPEC.md,
         "Around the stages"): rules={"cut_off": False} matches the slivers
         of cards cut off by the photo's edge too. on_first, when given, is
@@ -840,7 +1151,10 @@ class Scanner:
         size = {"width": img.width, "height": img.height}
         if detail is not None:
             size["original"] = {"width": detail.width, "height": detail.height}
-        fam_mask = self.family_mask(families)
+        scanned = self.scan_catalogs(catalogs, languages)
+        cat_mask = self.scan_mask(scanned, languages)
+        # whether the scan allows a Spanish print (the Spanish guard on language checks)
+        spanish = spanish_enabled(scanned, languages)
         rnd = lambda q: [[round(float(x), 1), round(float(y), 1)] for x, y in np.asarray(q).tolist()]
         thr = self.cfg["detector"]["conf"]
         boxes = self.detect_boxes(img, rules)
@@ -865,7 +1179,7 @@ class Scanner:
                 "quad": rnd(q),
                 "feat": feat, "orient_p": orient_p,
                 "back_sim": round(float(feat @ self.back_proto), 4) if self.back_proto is not None else None,
-                "cands": self.retrieve(sims, fam_mask),
+                "cands": self.retrieve(sims, cat_mask),
             })
             progress({"step": "pick", "box": di, "quad": items[-1]["quad"], "conf": items[-1]["conf"],
                       "candidates": items[-1]["cands"][:5]})
@@ -934,7 +1248,17 @@ class Scanner:
             scores = []
             ordered, feats = self.fuse(d["cands"], nr, page_sets, own_top, pick, with_features=True, ver=ver,
                                        nfit=nfit, scores_out=scores)
-            ordered, settled = self.settle(d, ordered, feats, scores, ver, held.get("prep"), rules)
+            read = {}
+            if rules.get("reads_language"):
+                ordered, read = self.read_language(d, ordered, rules)
+            if not read and rules.get("spanish_corner", True):
+                ordered, read = self.spanish_corner(d, ordered)
+            ordered, settled = self.settle(d, ordered, feats, scores, ver, held.get("prep"), rules, read)
+            if read.get("language_switched") and ordered and \
+                    ordered[0].get("language") != (read.get("language") or {}).get("language"):
+                # a later step moved the pick off the language read: the switch didn't hold
+                read = {k: v for k, v in read.items() if k != "language_switched"}
+            settled.update(read)
             fused = {id(c): sc for c, sc in zip(d["cands"], scores)}
             quality = match_quality(ordered, [fused.get(id(c), c["sim"]) for c in ordered],
                                     None not in (d["back_sim"], rules["back_sim"]) and d["back_sim"] >= rules["back_sim"],
@@ -946,9 +1270,18 @@ class Scanner:
             close = [c for c in held.get("siblings") or [] if reach - before.get(id(c), -9.0) < SURE_FUSED]
             missing = len(close) >= 2 and any((ver or {}).get(c.get("print")) is None for c in close)
             decided = is_decided(quality, ordered, [fused.get(id(c), c["sim"]) for c in ordered], missing)
+            guess, check = None, None
+            if self.language_classifier is not None and rules.get("language_check", True):
+                # with or without the reader (SPEC.md, "Language check")
+                guess = self.language_classifier.guess(d["hi"])
+                check, ordered = self.check_language(d, guess, ordered, rules, spanish)
             card = {**card_head(d),
                     "number_read": ({k: nr.get(k) for k in ("text", "votes", "n", "d", "code")} if nr else None),
                     "candidates": ordered[:5]}
+            if guess:
+                card["language_guess"] = {"language": guess[0], "confidence": guess[1]}
+            if check:
+                card["language_check"] = check
             if evidence:
                 card["evidence"] = feats
             if fingerprints:

@@ -2,10 +2,10 @@
 
 `cardcorpus-scan serve` runs it on http://127.0.0.1:8000. The page sends the
 photo here, the scanner names the cards, and the page shows each with what
-the CardCorpus dataset says about it, read from cardcorpus.com/v1 in the
+the CardCorpus dataset says about it, read from pokemon.cardcorpus.com/v1 in the
 browser.
 
-POST /api/scan answers in lines of JSON: first the cards by picture alone
+POST /api/scan[?catalog=english,japanese][&language=en] answers in lines of JSON: first the cards by picture alone
 (`"first": true`, as soon as the cards are fingerprinted), then the final
 answer once the later stages have double-checked them, or {"error": ...}.
 """
@@ -22,7 +22,12 @@ MAX_BYTES = 40 * 1024 * 1024
 def make_server(scanner, host="127.0.0.1", port=8000):
     """The page's HTTP server, not yet serving (port 0 picks a free one)."""
     lock = threading.Lock()  # one scan at a time: the models are shared
-    info = {**scanner.index.release, "verifier": scanner.verifier is not None}
+    from .language import LANGUAGE_NAMES
+
+    info = {**scanner.index.release, "verifier": scanner.verifier is not None,
+            "catalogs": [{"id": c, "language": scanner.catalog_languages[c],
+                          "name": LANGUAGE_NAMES.get(scanner.catalog_languages[c], c)} for c in scanner.catalogs],
+            "language_check": scanner.language_classifier is not None}
 
     class Handler(BaseHTTPRequestHandler):
         def _send(self, code, body, kind="application/json"):
@@ -52,7 +57,11 @@ def make_server(scanner, host="127.0.0.1", port=8000):
             if n <= 0 or n > MAX_BYTES:
                 return self._send(413, {"error": "send one photo, under 40 MB"})
             body = self.rfile.read(n)
-            families = [f for f in (self.path.split("language=")[1:] or [""])[0].split(",") if f] or None
+            from urllib.parse import parse_qs, urlsplit
+
+            query = parse_qs(urlsplit(self.path).query)
+            catalogs = [f for v in query.get("catalog", []) for f in v.split(",") if f] or None
+            languages = [f for v in query.get("language", []) for f in v.split(",") if f] or None
             try:
                 from PIL import Image
 
@@ -73,7 +82,8 @@ def make_server(scanner, host="127.0.0.1", port=8000):
 
             with lock:
                 try:
-                    line(scanner.scan(photo, families=families, on_first=line, on_progress=line))
+                    line(scanner.scan(photo, catalogs=catalogs, languages=languages, on_first=line,
+                                      on_progress=line))
                 except (BrokenPipeError, ConnectionResetError):
                     pass  # the page went away
                 except Exception as e:  # report it on the page rather than drop the connection

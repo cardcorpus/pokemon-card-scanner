@@ -35,6 +35,7 @@ import numpy as np
 W, H = 480, 670   # working frame
 REF_PX = 320      # the card is resampled through this width, as the pictures were compared at it
 MIRROR = "https://img.cardcorpus.com"
+COPY_WIDTH = 960  # the mirror's copy the reference pictures are fetched at: 240, 480 or 960 px wide
 
 
 def _cv2():
@@ -93,19 +94,20 @@ def card_region(gray, quad, grow):
 
 class Pictures:
     """Reference pictures by picture id: memory -> local folder (files named
-    by id) -> disk cache -> the image mirror. copy_width fetches the mirror's
-    sized copy (240, 480 or 960 px wide) in place of the original."""
+    by id) -> disk cache -> the image mirror, which serves each picture as an
+    AVIF copy copy_width px wide (240, 480 or 960). The card is compared at
+    REF_PX across, so the 960 px copy carries all the verifier looks at."""
 
-    def __init__(self, base_url=MIRROR, cache_dir=None, folder=None, keep=256, copy_width=None, user_agent=None):
+    def __init__(self, base_url=MIRROR, cache_dir=None, folder=None, keep=256, copy_width=COPY_WIDTH, user_agent=None):
         self.base = (base_url or "").rstrip("/")
-        self.copy_width = copy_width
+        self.copy_width = copy_width or COPY_WIDTH
         self.cache = Path(cache_dir) if cache_dir else None
         self.folder = Path(folder) if folder else None
         self.user_agent = user_agent or "cardcorpus-scanner"
         self.mem, self.keep, self.lock = OrderedDict(), keep, threading.Lock()
 
     def _path(self, picture):
-        return f"s1/{self.copy_width}/{picture}.avif" if self.copy_width else f"m/{picture}"
+        return f"s1/{self.copy_width}/{picture}.avif"
 
     def _bytes(self, picture):
         path = self._path(picture)

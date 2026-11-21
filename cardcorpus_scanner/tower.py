@@ -56,25 +56,39 @@ def hw(spec):
     return (size, size) if isinstance(size, int) else tuple(size)
 
 
+_TOWER = None
+
+
+def tower_class():
+    """The Tower module: a backbone, then optionally a linear projection to the index's width (its state dict:
+    backbone.* and proj.*). One class, for the scanner and for the tools that train and export it."""
+    global _TOWER
+    if _TOWER is None:
+        import torch.nn as nn
+
+        class Tower(nn.Module):
+            def __init__(self, backbone, proj=None, logit_limit=None):
+                super().__init__()
+                self.backbone = backbone
+                self.proj = proj
+                self.logit_limit = logit_limit
+
+            def forward(self, x):
+                if self.logit_limit:
+                    with clamped_attention(self.logit_limit):
+                        f = self.backbone(x)
+                else:
+                    f = self.backbone(x)
+                return self.proj(f) if self.proj is not None else f
+
+        _TOWER = Tower
+    return _TOWER
+
+
 def build(spec):
     """The tower for a spec, without weights. Its output is unnormalised."""
     import timm
     import torch.nn as nn
-
-    class Tower(nn.Module):
-        def __init__(self, backbone, proj=None, logit_limit=None):
-            super().__init__()
-            self.backbone = backbone
-            self.proj = proj
-            self.logit_limit = logit_limit
-
-        def forward(self, x):
-            if self.logit_limit:
-                with clamped_attention(self.logit_limit):
-                    f = self.backbone(x)
-            else:
-                f = self.backbone(x)
-            return self.proj(f) if self.proj is not None else f
 
     kwargs = {} if spec.get("head") == "keep" else {"num_classes": 0}
     try:
@@ -84,7 +98,7 @@ def build(spec):
         backbone = timm.create_model(spec["arch"], pretrained=False, **kwargs)
     width = spec.get("projection")
     proj = nn.Linear(width, spec["dim"], bias=False) if width is not None else None
-    return Tower(backbone, proj, spec.get("logit_limit"))
+    return tower_class()(backbone, proj, spec.get("logit_limit"))
 
 
 def load(weights, spec, device="cpu"):
@@ -110,6 +124,12 @@ def normalise(spec):
     return T.Normalize(mean=tuple(spec["mean"]), std=tuple(spec["std"]))
 
 
+def _rgb(im):
+    """A PIL image in RGB. A named function, not a lambda, so a transform
+    using it pickles into DataLoader workers (spawned on macOS)."""
+    return im.convert("RGB") if im.mode != "RGB" else im
+
+
 def preprocess(spec):
     """PIL image -> normalised tensor for the matcher: the shorter side
     resized to `size` (antialiased), the centre square, RGB in [0, 1],
@@ -127,7 +147,7 @@ def preprocess(spec):
         steps = [T.Resize(hw(spec), interpolation=interp)]
     else:
         raise ValueError(f"resize_mode {mode!r}: 'shortest' or 'squash'")
-    return T.Compose(steps + [lambda im: im.convert("RGB") if im.mode != "RGB" else im, T.ToTensor(), normalise(spec)])
+    return T.Compose(steps + [_rgb, T.ToTensor(), normalise(spec)])
 
 
 def picker_transform(spec):

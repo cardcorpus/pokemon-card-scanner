@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "cardcorpus-scanner"
-version = "1.0.0"
+version = "1.1.0"
 description = "Name Pokémon trading cards in photos: every card on a binder page, table or hand, matched to the CardCorpus dataset."
 readme = "README.md"
 license = "Apache-2.0"
@@ -30,10 +30,15 @@ dependencies = [
     "opencv-python-headless>=5.0",
     # downloads the weights when no local copy is given
     "huggingface_hub>=0.24",
+    # the language model (language-classifier.onnx): the language check on every card
+    "onnxruntime>=1.18",
 ]
 
 [project.optional-dependencies]
 test = ["pytest>=8"]
+# OCR for the language reader (--read-language), when the language model and the corner reader leave a card unsure:
+# Apple's Vision on macOS, PP-OCRv5 through RapidOCR elsewhere
+ocr = ["rapidocr>=3.4; sys_platform != 'darwin'", "pyobjc-framework-Vision>=10; sys_platform == 'darwin'"]
 
 [project.scripts]
 cardcorpus-scan = "cardcorpus_scanner.cli:main"
@@ -48,4 +53,4 @@ Weights = "https://huggingface.co/cardcorpus/pokemon-card-scanner"
 packages = ["cardcorpus_scanner"]
 
 [tool.setuptools.package-data]
-cardcorpus_scanner = ["edition-stamp.png", "web/index.html"]
+cardcorpus_scanner = ["edition-stamp.png", "script-characters.json", "web/index.html"]

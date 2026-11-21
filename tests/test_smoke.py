@@ -50,12 +50,12 @@ def test_scan(scanner, photo):
 
 def test_language_filter(scanner, photo):
     # fewer Japanese rows than the 20 retrieved: the rest must not fill in
-    result = scanner.scan(photo, families=["japanese"])
+    result = scanner.scan(photo, catalogs=["japanese"])
     for card in result["cards"]:
         assert card["candidates"]
-        assert all(c["family"] == "japanese" for c in card["candidates"])
+        assert all(c["catalog"] == "japanese" for c in card["candidates"])
     feat = scanner.embed([photo.crop((100, 120, 700, 958))])[0]
-    assert all(c["family"] == "japanese" for c in scanner.rank(feat, limit=10, families=["japanese"]))
+    assert all(c["catalog"] == "japanese" for c in scanner.rank(feat, limit=10, catalogs=["japanese"]))
 
 
 def test_web(scanner, photo):
@@ -153,3 +153,14 @@ def test_progress(scanner, photo):
     assert [e["index"] for e in cards] == list(range(len(result["cards"])))
     assert [e["card"] for e in cards] == result["cards"]
     assert steps.index("card") > max(i for i, s in enumerate(steps) if s == "pick")
+
+
+def test_pictures_are_the_mirrors_sized_copies(scanner, photo, tmp_path):
+    from cardcorpus_scanner.verifier import COPY_WIDTH, MIRROR, Pictures
+
+    picture = "0" * 32
+    assert Pictures()._path(picture) == f"s1/{COPY_WIDTH}/{picture}.avif"
+    assert Pictures(copy_width=480)._path(picture) == f"s1/480/{picture}.avif"
+    for card in scanner.scan(photo)["cards"]:
+        for candidate in card["candidates"]:
+            assert candidate["picture"].startswith(f"{MIRROR}/s1/{COPY_WIDTH}/") and candidate["picture"].endswith(".avif")

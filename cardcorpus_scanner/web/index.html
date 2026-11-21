@@ -142,10 +142,7 @@
     </div>
     <div class="row">
       <div class="chips" id="langs" role="group" aria-label="Languages">
-        <button class="chip" data-lang="" aria-pressed="true">Any language</button>
-        <button class="chip" data-lang="international" aria-pressed="false">English and others</button>
-        <button class="chip" data-lang="japanese" aria-pressed="false">Japanese</button>
-        <button class="chip" data-lang="zh-hans" aria-pressed="false">Chinese</button>
+        <button class="chip" data-lang="" aria-pressed="true" title="English, Japanese and Simplified Chinese, as the app scans by default">English, Japanese, Chinese</button>
       </div>
     </div>
   </section>
@@ -163,7 +160,7 @@
   Pokémon and Pokémon character names are trademarks of Nintendo, Creatures and GAME FREAK. Card pictures and text © The Pokémon Company, Nintendo, Creatures, GAME FREAK and, for older cards, Wizards of the Coast. This project is not produced, endorsed, sponsored or supported by, or affiliated with, any of them.
 </footer>
 <script>
-const DATASET = "https://cardcorpus.com/v1";
+const DATASET = "https://pokemon.cardcorpus.com/v1";
 const MAX_SIDE = 3000;          // the photo is sent at most this size on its longer side
 const STAMP = 0.60;             // a 1st Edition stamp scores this or more
 const $ = (id) => document.getElementById(id);
@@ -179,6 +176,21 @@ fetch("/api/info").then((r) => r.json()).then((d) => {
   const n = d.cards ? Number(d.cards).toLocaleString() : "?";
   const day = d.dataset && d.dataset.date ? ` as of ${d.dataset.date}` : "";
   $("info").textContent = `${n} cards${day}${d.verifier ? "" : " · verifier off"}`;
+  // a chip for each catalog the index holds, named for its language
+  for (const c of d.catalogs || []) {
+    const b = document.createElement("button");
+    b.className = "chip";
+    b.dataset.lang = c.id;
+    b.setAttribute("aria-pressed", "false");
+    b.innerHTML = `${flag(c.language)}${esc(c.name)}`;
+    $("langs").append(b);
+  }
+  const every = document.createElement("button");
+  every.className = "chip";
+  every.dataset.lang = "all";
+  every.setAttribute("aria-pressed", "false");
+  every.textContent = "Every catalog";
+  $("langs").append(every);
 }).catch(() => { $("info").textContent = "scanner not reachable"; });
 
 // the cards as a page is read: rows top to bottom (a card joins a row when
@@ -197,6 +209,8 @@ function readingOrder(cards) {
   return rows.flatMap((r) => r.items.sort((a, b) => a.x - b.x).map((a) => a.c));
 }
 
+// a match's `picture` is the url of its 960 px copy: the id is its file's name
+const pictureId = (url) => (url || "").split("/").pop().replace(/\.avif$/, "");
 const picture = (id, width = 480) => id ? pictures.sized.replace("{width}", width).replace("{id}", id) : "";
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
@@ -259,7 +273,8 @@ async function* lines(res) {
 // the flag the app shows beside a card's set, by the card's language
 const FLAGS = { en: ["🇬🇧", "English"], ja: ["🇯🇵", "Japanese"], "zh-Hans": ["🇨🇳", "Simplified Chinese"],
   "zh-Hant": ["🇹🇼", "Traditional Chinese"], ko: ["🇰🇷", "Korean"], fr: ["🇫🇷", "French"], de: ["🇩🇪", "German"],
-  it: ["🇮🇹", "Italian"], es: ["🇪🇸", "Spanish"], pt: ["🇧🇷", "Portuguese"], th: ["🇹🇭", "Thai"], id: ["🇮🇩", "Indonesian"] };
+  it: ["🇮🇹", "Italian"], es: ["🇪🇸", "Spanish"], pt: ["🇧🇷", "Portuguese"], th: ["🇹🇭", "Thai"], id: ["🇮🇩", "Indonesian"],
+  nl: ["🇳🇱", "Dutch"], ru: ["🇷🇺", "Russian"], pl: ["🇵🇱", "Polish"], "es-419": ["🇲🇽", "Latin American Spanish"] };
 const flag = (lang) => {
   if (!lang) return "";
   const [f, name] = FLAGS[lang] || [lang, lang];
@@ -288,7 +303,7 @@ async function scan(blob) {
     $("results").innerHTML = '<div class="panel empty">Looking for cards…</div>';
     status("Scanning… the first scan loads the models and can take a little longer.", true);
     const t = performance.now();
-    const res = await fetch(`/api/scan${language ? `?language=${language}` : ""}`, { method: "POST", headers: { "Content-Type": small.type }, body: small });
+    const res = await fetch(`/api/scan${language ? `?catalog=${encodeURIComponent(language)}` : ""}`, { method: "POST", headers: { "Content-Type": small.type }, body: small });
     if (!res.ok) {
       const err = await res.json().catch(() => ({}));
       throw new Error(err.error || res.statusText);
@@ -515,23 +530,28 @@ function block(c, i, data) {
   // the copy named beside the set: the one you picked, else the scan's own
   const picked = sel?.key.startsWith("copy:") && copy ? copy.variants[Number(sel.key.slice(5))] : null;
   const named = picked ? (picked !== copy.standard ? picked : null) : special;
-  const pic = sel?.pic || special?.picture?.front?.image || card?.picture?.front?.image || (best.picture || "").split("/").pop();
+  const pic = sel?.pic || special?.picture?.front?.image || card?.picture?.front?.image || pictureId(best.picture);
   const facts = [
     card?.rarity && `<span><b>${esc(card.rarity)}</b></span>`,
     card?.credit && `<span>Illus. <b>${esc(card.credit)}</b></span>`,
     card?.released?.date && `<span>${esc(card.released.date)}</span>`,
   ].filter(Boolean).join("");
   const alts = c.candidates.slice(1).map((a, k) => {
-    const id = (a.picture || "").split("/").pop();
+    const id = pictureId(a.picture);
     const label = `${a.name} · ${a.set_name} ${a.number || ""}`.trim();
     return `<button class="alt${sel?.key === `alt:${k}` ? " on" : ""}" data-key="alt:${k}" data-pic="${esc(id)}" data-label="${esc(label)}">${id ? `<img loading="lazy" src="${esc(picture(id, 240))}" alt="">` : `<span class="noimg"></span>`}<div><strong>${esc(a.name)}</strong><span>${flag(a.language)}${esc(a.set_name)} ${esc(a.number || "")} · ${(a.sim * 100).toFixed(0)}%</span></div></button>`;
   }).join("");
   // another possibility picked: say so, with the way back
-  const showing = sel?.key.startsWith("alt:") ? `<div class="showing"><span>Showing <b>${esc(sel.label)}</b></span><button class="link" data-key="">Back to the match</button></div>` : "";
+  const showing = sel?.key.startsWith("alt:") || sel?.key === "lang" ? `<div class="showing"><span>Showing <b>${esc(sel.label)}</b></span><button class="link" data-key="">Back to the match</button></div>` : "";
   const desc = card?.description?.text ? `<div class="desc">${esc(card.description.text.split("\n")[0])}</div>` : "";
   const number = card?.number?.printed || best.number || "";
   // the print check found the card's details but couldn't line them up
   // with this print's picture anywhere
+  // the language model is sure the card is in another language than the pick's: ask, with that language's print
+  const lc = c.language_check, lcName = lc ? (FLAGS[lc.suggested] || [lc.suggested, lc.suggested])[1] : "";
+  const lcPic = lc?.picture ? pictureId(lc.picture) : "";
+  const lcLabel = lc?.name ? `${lc.name} · ${lc.set_name} ${lc.number || ""}`.trim() : "";
+  const langCheck = lc && !lc.switched ? `<div class="note warn">This card looks ${esc(lcName)}.${lc.linked && lcPic ? ` <button class="link${sel?.key === "lang" ? " on" : ""}" data-key="lang" data-pic="${esc(lcPic)}" data-label="${esc(lcLabel)}">Show the ${esc(lcName)} print</button>` : ""}</div>` : "";
   const doubt = c.likely_wrong ? '<div class="note warn">The print check couldn’t line this card up with its picture, so this may not be the right card.</div>' : "";
   return `<article class="panel card" data-i="${i}">
     <div class="num">${i + 1}</div>
@@ -543,6 +563,7 @@ function block(c, i, data) {
       <div class="meter" title="Picture similarity"><span style="width:${Math.max(0, Math.min(100, best.sim * 100))}%"></span></div>
       ${showing}
       ${doubt}
+      ${langCheck}
       ${card ? copies(card, c, i) : ""}
       ${desc}
       ${alts ? `<details${sel?.key.startsWith("alt:") ? " open" : ""}><summary>Other possibilities</summary><div class="alts">${alts}</div></details>` : ""}

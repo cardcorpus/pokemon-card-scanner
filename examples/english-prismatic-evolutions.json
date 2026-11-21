@@ -36,92 +36,101 @@
    "candidates": [
     {
      "handle": "7ba465f98a4790b9dd14a317c7e99805",
-     "print": "international/prismatic-evolutions/005",
-     "set": "international/prismatic-evolutions",
+     "print": "english/prismatic-evolutions/005",
+     "set": "english/prismatic-evolutions",
      "card": "005",
      "name": "Leafeon",
      "set_name": "Prismatic Evolutions",
      "number": "005/131",
-     "family": "international",
+     "catalog": "english",
      "language": "en",
-     "release": "r707",
-     "artwork_group": "a858",
+     "same_card": "c24083",
+     "release": "r703",
+     "artwork_group": "a704",
      "release_date": "2025-01-17",
      "sim": 0.9218,
-     "picture": "https://img.cardcorpus.com/m/7ba465f98a4790b9dd14a317c7e99805"
+     "picture": "https://img.cardcorpus.com/s1/960/7ba465f98a4790b9dd14a317c7e99805.avif"
     },
     {
      "handle": "045b1b2805c96154d370ffeb38a3eaf4",
-     "print": "international/twilight-masquerade/011",
-     "set": "international/twilight-masquerade",
+     "print": "english/twilight-masquerade/011",
+     "set": "english/twilight-masquerade",
      "card": "011",
      "name": "Leafeon",
      "set_name": "Twilight Masquerade",
      "number": "011/167",
-     "family": "international",
+     "catalog": "english",
      "language": "en",
-     "release": "r587",
-     "artwork_group": "a858",
+     "same_card": "c1064",
+     "release": "r733",
+     "artwork_group": "a704",
      "release_date": "2024-05-24",
      "sim": 0.9212,
-     "picture": "https://img.cardcorpus.com/m/045b1b2805c96154d370ffeb38a3eaf4"
+     "picture": "https://img.cardcorpus.com/s1/960/045b1b2805c96154d370ffeb38a3eaf4.avif"
     },
     {
      "handle": "2b519721c360ea2b53d30f22029a024f",
-     "print": "international/primal-clash/16",
-     "set": "international/primal-clash",
+     "print": "english/primal-clash/16",
+     "set": "english/primal-clash",
      "card": "16",
      "name": "Breloom",
      "set_name": "Primal Clash",
      "number": "16/160",
-     "family": "international",
+     "catalog": "english",
      "language": "en",
-     "release": "r706",
-     "artwork_group": "a1453",
+     "same_card": "c12940",
+     "release": "r702",
+     "artwork_group": "a1282",
      "release_date": "2015-02-04",
      "sim": 0.7287,
-     "picture": "https://img.cardcorpus.com/m/2b519721c360ea2b53d30f22029a024f"
+     "picture": "https://img.cardcorpus.com/s1/960/2b519721c360ea2b53d30f22029a024f.avif"
     },
     {
      "handle": "6e76e0de26bbdd28eb9564ca8aa0fc1f",
-     "print": "international/gym-challenge/63",
-     "set": "international/gym-challenge",
+     "print": "english/gym-challenge/63",
+     "set": "english/gym-challenge",
      "card": "63",
      "name": "Blaine's Mankey",
      "set_name": "Gym Challenge",
      "number": "63/132",
-     "family": "international",
+     "catalog": "english",
      "language": "en",
-     "release": "r637",
-     "artwork_group": "a7826",
+     "same_card": "c242",
+     "release": "r632",
+     "artwork_group": "a265",
      "release_date": "2000-10-16",
      "sim": 0.6995,
-     "picture": "https://img.cardcorpus.com/m/6e76e0de26bbdd28eb9564ca8aa0fc1f"
+     "picture": "https://img.cardcorpus.com/s1/960/6e76e0de26bbdd28eb9564ca8aa0fc1f.avif"
     },
     {
      "handle": "f877c8afe36be6f76a74732f94306db6",
-     "print": "international/scarlet-violet-151/077",
-     "set": "international/scarlet-violet-151",
+     "print": "english/scarlet-violet-151/077",
+     "set": "english/scarlet-violet-151",
      "card": "077",
      "name": "Ponyta",
      "set_name": "Scarlet & Violet 151",
      "number": "077/165",
-     "family": "international",
+     "catalog": "english",
      "language": "en",
-     "release": "r713",
-     "artwork_group": "a627",
+     "same_card": "c367",
+     "release": "r709",
+     "artwork_group": "a60",
      "release_date": "2023-09-22",
      "sim": 0.7126,
-     "picture": "https://img.cardcorpus.com/m/f877c8afe36be6f76a74732f94306db6"
+     "picture": "https://img.cardcorpus.com/s1/960/f877c8afe36be6f76a74732f94306db6.avif"
     }
    ],
+   "language_guess": {
+    "language": "en",
+    "confidence": 0.9244875889285648
+   },
    "pick": {
-    "print": "international/prismatic-evolutions/005",
+    "print": "english/prismatic-evolutions/005",
     "margin": 0.1634
    },
    "verify": {
-    "international/prismatic-evolutions/005": 0.0,
-    "international/twilight-masquerade/011": -0.0
+    "english/prismatic-evolutions/005": 0.0,
+    "english/twilight-masquerade/011": -0.0
    },
    "numfit": {
     "005/131": -0.037,
@@ -141,9 +150,9 @@
    "alignment": {
     "aligned": true,
     "pass": 1,
-    "inliers": 959,
+    "inliers": 961,
     "scan_features": 3000,
-    "box_error": 0.01439428050071001
+    "box_error": 0.0144341504201293
    },
    "quality": "sure"
   },
@@ -180,95 +189,105 @@
    "candidates": [
     {
      "handle": "51b99cd87538d59775160059311a2441",
-     "print": "international/prismatic-evolutions/022",
-     "set": "international/prismatic-evolutions",
+     "print": "english/prismatic-evolutions/022",
+     "set": "english/prismatic-evolutions",
      "card": "022",
      "name": "Vaporeon",
      "set_name": "Prismatic Evolutions",
      "number": "022/131",
-     "family": "international",
+     "catalog": "english",
      "language": "en",
-     "release": "r707",
-     "artwork_group": "a684",
+     "same_card": "c24085",
+     "release": "r703",
+     "artwork_group": "a559",
      "release_date": "2025-01-17",
      "sim": 0.9565,
      "variant": "cosmos-holo",
-     "picture": "https://img.cardcorpus.com/m/51b99cd87538d59775160059311a2441"
+     "picture": "https://img.cardcorpus.com/s1/960/51b99cd87538d59775160059311a2441.avif"
     },
     {
      "handle": "d994e1865bfa299827e4ed0f1aac9094",
-     "print": "international/scarlet-violet-151/134",
-     "set": "international/scarlet-violet-151",
+     "print": "english/scarlet-violet-151/134",
+     "set": "english/scarlet-violet-151",
      "card": "134",
      "name": "Vaporeon",
      "set_name": "Scarlet & Violet 151",
      "number": "134/165",
-     "family": "international",
+     "catalog": "english",
      "language": "en",
-     "release": "r713",
-     "artwork_group": "a684",
+     "same_card": "c424",
+     "release": "r709",
+     "artwork_group": "a559",
      "release_date": "2023-09-22",
      "sim": 0.9242,
-     "picture": "https://img.cardcorpus.com/m/d994e1865bfa299827e4ed0f1aac9094"
+     "picture": "https://img.cardcorpus.com/s1/960/d994e1865bfa299827e4ed0f1aac9094.avif"
     },
     {
      "handle": "18141851710901c034c866d0e35e7441",
-     "print": "international/twilight-masquerade/096",
-     "set": "international/twilight-masquerade",
+     "print": "english/twilight-masquerade/096",
+     "set": "english/twilight-masquerade",
      "card": "096",
      "name": "Fezandipiti",
      "set_name": "Twilight Masquerade",
      "number": "096/167",
-     "family": "international",
+     "catalog": "english",
      "language": "en",
-     "release": "r587",
-     "artwork_group": "a1903",
+     "same_card": "c2018",
+     "release": "r733",
+     "artwork_group": "a1723",
      "release_date": "2024-05-24",
      "sim": 0.6863,
-     "picture": "https://img.cardcorpus.com/m/18141851710901c034c866d0e35e7441"
+     "picture": "https://img.cardcorpus.com/s1/960/18141851710901c034c866d0e35e7441.avif"
     },
     {
      "handle": "3dec9379f9570a54520eeee838a77dc2",
-     "print": "international/prismatic-evolutions/045",
-     "set": "international/prismatic-evolutions",
+     "print": "english/prismatic-evolutions/045",
+     "set": "english/prismatic-evolutions",
      "card": "045",
      "name": "Fezandipiti",
      "set_name": "Prismatic Evolutions",
      "number": "045/131",
-     "family": "international",
+     "catalog": "english",
      "language": "en",
-     "release": "r707",
-     "artwork_group": "a1903",
+     "same_card": "c2018",
+     "release": "r703",
+     "artwork_group": "a1723",
      "release_date": "2025-01-17",
      "sim": 0.6853,
-     "picture": "https://img.cardcorpus.com/m/3dec9379f9570a54520eeee838a77dc2"
+     "picture": "https://img.cardcorpus.com/s1/960/3dec9379f9570a54520eeee838a77dc2.avif"
     },
     {
-     "handle": "1a9f85c8b6bdb3be515ceaa5b95b2baa",
-     "print": "international/ascended-heroes/154",
-     "set": "international/ascended-heroes",
-     "card": "154",
-     "name": "N's Reshiram",
-     "set_name": "Ascended Heroes",
-     "number": "154/217",
-     "family": "international",
+     "handle": "4f68c895bfec4b7bc81cccb6d570bdba",
+     "print": "english/shrouded-fable/030",
+     "set": "english/shrouded-fable",
+     "card": "030",
+     "name": "Absol",
+     "set_name": "Shrouded Fable",
+     "number": "030/064",
+     "catalog": "english",
      "language": "en",
-     "release": "r568",
-     "artwork_group": "a5910",
-     "release_date": "2026-01-30",
-     "sim": 0.6957,
-     "picture": "https://img.cardcorpus.com/m/1a9f85c8b6bdb3be515ceaa5b95b2baa"
+     "same_card": "c2050",
+     "release": "r711",
+     "artwork_group": "a899",
+     "release_date": "2024-08-02",
+     "sim": 0.6956,
+     "picture": "https://img.cardcorpus.com/s1/960/4f68c895bfec4b7bc81cccb6d570bdba.avif"
     }
    ],
+   "language_guess": {
+    "language": "en",
+    "confidence": 0.9588693790422373
+   },
    "pick": {
-    "print": "international/prismatic-evolutions/022",
+    "print": "english/prismatic-evolutions/022",
     "margin": 0.2605
    },
    "verify": {
-    "international/prismatic-evolutions/022": 0.0,
-    "international/scarlet-violet-151/134": -0.0
+    "english/prismatic-evolutions/022": 0.0,
+    "english/scarlet-violet-151/134": -0.0
    },
    "numfit": {
+    "009/015": -10.438,
     "022/131": -0.031,
     "030/064": -9.318,
     "045/131": -9.538,
@@ -278,7 +297,6 @@
     "116/159": -11.148,
     "134/165": -8.69,
     "154/217": -12.573,
-    "92/147": -10.715,
     "22/131": -0.031
    },
    "edition_stamp": 0.4422,
@@ -287,9 +305,9 @@
    "alignment": {
     "aligned": true,
     "pass": 1,
-    "inliers": 970,
+    "inliers": 947,
     "scan_features": 3000,
-    "box_error": 0.019033722579479218
+    "box_error": 0.018825098872184753
    },
    "quality": "sure"
   },
@@ -326,94 +344,103 @@
    "candidates": [
     {
      "handle": "feae4971956fd7c0a6aea4b456a206af",
-     "print": "international/prismatic-evolutions/025",
-     "set": "international/prismatic-evolutions",
+     "print": "english/prismatic-evolutions/025",
+     "set": "english/prismatic-evolutions",
      "card": "025",
      "name": "Glaceon",
      "set_name": "Prismatic Evolutions",
      "number": "025/131",
-     "family": "international",
+     "catalog": "english",
      "language": "en",
-     "release": "r707",
-     "artwork_group": "a859",
+     "same_card": "c24086",
+     "release": "r703",
+     "artwork_group": "a705",
      "release_date": "2025-01-17",
      "sim": 0.9437,
-     "picture": "https://img.cardcorpus.com/m/feae4971956fd7c0a6aea4b456a206af"
+     "picture": "https://img.cardcorpus.com/s1/960/feae4971956fd7c0a6aea4b456a206af.avif"
     },
     {
      "handle": "9f4ec266c49f9628949da0a957e8de0f",
-     "print": "international/twilight-masquerade/054",
-     "set": "international/twilight-masquerade",
+     "print": "english/twilight-masquerade/054",
+     "set": "english/twilight-masquerade",
      "card": "054",
      "name": "Glaceon",
      "set_name": "Twilight Masquerade",
      "number": "054/167",
-     "family": "international",
+     "catalog": "english",
      "language": "en",
-     "release": "r587",
-     "artwork_group": "a859",
+     "same_card": "c1105",
+     "release": "r733",
+     "artwork_group": "a705",
      "release_date": "2024-05-24",
      "sim": 0.9439,
-     "picture": "https://img.cardcorpus.com/m/9f4ec266c49f9628949da0a957e8de0f"
+     "picture": "https://img.cardcorpus.com/s1/960/9f4ec266c49f9628949da0a957e8de0f.avif"
     },
     {
      "handle": "1726f7b09e2bde1cc5a16bd4abd19ac0",
-     "print": "international/dark-explorers/48",
-     "set": "international/dark-explorers",
+     "print": "english/dark-explorers/48",
+     "set": "english/dark-explorers",
      "card": "48",
      "name": "Espeon",
      "set_name": "Dark Explorers",
      "number": "48/108",
-     "family": "international",
+     "catalog": "english",
      "language": "en",
-     "release": "r592",
-     "artwork_group": "a849",
+     "same_card": "c11231",
+     "release": "r587",
+     "artwork_group": "a695",
      "release_date": "2012-05-09",
      "sim": 0.7244,
      "variant": "crosshatch-holo-staff-national-championships-stamp",
-     "picture": "https://img.cardcorpus.com/m/1726f7b09e2bde1cc5a16bd4abd19ac0"
+     "picture": "https://img.cardcorpus.com/s1/960/1726f7b09e2bde1cc5a16bd4abd19ac0.avif"
     },
     {
      "handle": "a7e34ae0b5ddccb0c7cff4677d7abee1",
-     "print": "international/mcdonald-s-xy-2014/7",
-     "set": "international/mcdonald-s-xy-2014",
+     "print": "english/mcdonald-s-xy-2014/7",
+     "set": "english/mcdonald-s-xy-2014",
      "card": "7",
      "name": "Honedge",
      "set_name": "McDonald's XY 2014",
      "number": "7/12",
-     "family": "international",
+     "catalog": "english",
      "language": "en",
-     "release": "r667",
-     "artwork_group": "a8374",
+     "same_card": "c23922",
+     "release": "r662",
+     "artwork_group": "a1463",
      "release_date": "2014-05-23",
      "sim": 0.7062,
-     "picture": "https://img.cardcorpus.com/m/a7e34ae0b5ddccb0c7cff4677d7abee1"
+     "picture": "https://img.cardcorpus.com/s1/960/a7e34ae0b5ddccb0c7cff4677d7abee1.avif"
     },
     {
      "handle": "cfd8781a29dec1604afe866ad2eb0705",
-     "print": "international/silver-tempest/068",
-     "set": "international/silver-tempest",
+     "print": "english/silver-tempest/068",
+     "set": "english/silver-tempest",
      "card": "068",
      "name": "Kirlia",
      "set_name": "Silver Tempest",
      "number": "068/195",
-     "family": "international",
+     "catalog": "english",
      "language": "en",
-     "release": "r719",
-     "artwork_group": "a924",
+     "same_card": "c8600",
+     "release": "r715",
+     "artwork_group": "a765",
      "release_date": "2022-11-11",
      "sim": 0.6985,
-     "picture": "https://img.cardcorpus.com/m/cfd8781a29dec1604afe866ad2eb0705"
+     "picture": "https://img.cardcorpus.com/s1/960/cfd8781a29dec1604afe866ad2eb0705.avif"
     }
    ],
+   "language_guess": {
+    "language": "en",
+    "confidence": 0.9543138036127642
+   },
    "pick": {
-    "print": "international/prismatic-evolutions/025",
+    "print": "english/prismatic-evolutions/025",
     "margin": 0.2417
    },
    "verify": {
-    "international/prismatic-evolutions/025": 0.0,
-    "international/twilight-masquerade/054": -0.0,
-    "international/majestic-dawn/20": -0.862
+    "english/prismatic-evolutions/025": 0.0,
+    "english/twilight-masquerade/054": -0.0,
+    "english/majestic-dawn/20": -0.8333
    },
    "numfit": {
     "025/131": -0.043,
@@ -434,9 +461,9 @@
    "alignment": {
     "aligned": true,
     "pass": 1,
-    "inliers": 785,
-    "scan_features": 2684,
-    "box_error": 0.015539105981588364
+    "inliers": 776,
+    "scan_features": 2692,
+    "box_error": 0.015393626876175404
    },
    "quality": "sure"
   },
@@ -473,94 +500,103 @@
    "candidates": [
     {
      "handle": "89cce94b0703423d0747e02fa7319721",
-     "print": "international/prismatic-evolutions/029",
-     "set": "international/prismatic-evolutions",
+     "print": "english/prismatic-evolutions/029",
+     "set": "english/prismatic-evolutions",
      "card": "029",
      "name": "Jolteon",
      "set_name": "Prismatic Evolutions",
      "number": "029/131",
-     "family": "international",
+     "catalog": "english",
      "language": "en",
-     "release": "r707",
-     "artwork_group": "a685",
+     "same_card": "c24087",
+     "release": "r703",
+     "artwork_group": "a560",
      "release_date": "2025-01-17",
      "sim": 0.9549,
-     "picture": "https://img.cardcorpus.com/m/89cce94b0703423d0747e02fa7319721"
+     "picture": "https://img.cardcorpus.com/s1/960/89cce94b0703423d0747e02fa7319721.avif"
     },
     {
      "handle": "43755c1a44fde1db4ec9814132422d62",
-     "print": "international/scarlet-violet-151/135",
-     "set": "international/scarlet-violet-151",
+     "print": "english/scarlet-violet-151/135",
+     "set": "english/scarlet-violet-151",
      "card": "135",
      "name": "Jolteon",
      "set_name": "Scarlet & Violet 151",
      "number": "135/165",
-     "family": "international",
+     "catalog": "english",
      "language": "en",
-     "release": "r713",
-     "artwork_group": "a685",
+     "same_card": "c425",
+     "release": "r709",
+     "artwork_group": "a560",
      "release_date": "2023-09-22",
      "sim": 0.9518,
-     "picture": "https://img.cardcorpus.com/m/43755c1a44fde1db4ec9814132422d62"
+     "picture": "https://img.cardcorpus.com/s1/960/43755c1a44fde1db4ec9814132422d62.avif"
     },
     {
      "handle": "3d4def6621e0a5669055ea33bfca7cef",
-     "print": "international/scarlet-violet-151/125",
-     "set": "international/scarlet-violet-151",
+     "print": "english/scarlet-violet-151/125",
+     "set": "english/scarlet-violet-151",
      "card": "125",
      "name": "Electabuzz",
      "set_name": "Scarlet & Violet 151",
      "number": "125/165",
-     "family": "international",
+     "catalog": "english",
      "language": "en",
-     "release": "r713",
-     "artwork_group": "a675",
+     "same_card": "c415",
+     "release": "r709",
+     "artwork_group": "a20",
      "release_date": "2023-09-22",
      "sim": 0.7125,
      "variant": "cosmos-holo",
-     "picture": "https://img.cardcorpus.com/m/3d4def6621e0a5669055ea33bfca7cef"
+     "picture": "https://img.cardcorpus.com/s1/960/3d4def6621e0a5669055ea33bfca7cef.avif"
     },
     {
      "handle": "dd10b9f78176ef12fe9772899450c7b1",
-     "print": "international/sm-black-star-promos/sm159",
-     "set": "international/sm-black-star-promos",
+     "print": "english/sm-black-star-promos/sm159",
+     "set": "english/sm-black-star-promos",
      "card": "sm159",
      "name": "Zapdos",
      "set_name": "SM Black Star Promos",
      "number": "SM159",
-     "family": "international",
+     "catalog": "english",
      "language": "en",
-     "release": "r721",
-     "artwork_group": "a1115",
+     "same_card": "c8030",
+     "release": "r717",
+     "artwork_group": "a16",
      "release_date": "2017-02-03",
      "sim": 0.7113,
-     "picture": "https://img.cardcorpus.com/m/dd10b9f78176ef12fe9772899450c7b1"
+     "picture": "https://img.cardcorpus.com/s1/960/dd10b9f78176ef12fe9772899450c7b1.avif"
     },
     {
      "handle": "f8947bf89851a80c6f31e85cbaeb67a2",
-     "print": "international/forbidden-light/69",
-     "set": "international/forbidden-light",
+     "print": "english/forbidden-light/69",
+     "set": "english/forbidden-light",
      "card": "69",
      "name": "Tyrantrum",
      "set_name": "Forbidden Light",
      "number": "69/131",
-     "family": "international",
+     "catalog": "english",
      "language": "en",
-     "release": "r630",
-     "artwork_group": "a3363",
+     "same_card": "c6863",
+     "release": "r625",
+     "artwork_group": "a2818",
      "release_date": "2018-05-04",
      "sim": 0.6999,
-     "picture": "https://img.cardcorpus.com/m/f8947bf89851a80c6f31e85cbaeb67a2"
+     "picture": "https://img.cardcorpus.com/s1/960/f8947bf89851a80c6f31e85cbaeb67a2.avif"
     }
    ],
+   "language_guess": {
+    "language": "en",
+    "confidence": 0.9517619708321305
+   },
    "pick": {
-    "print": "international/prismatic-evolutions/029",
+    "print": "english/prismatic-evolutions/029",
     "margin": 0.2158
    },
    "verify": {
-    "international/prismatic-evolutions/029": 0.0,
-    "international/scarlet-violet-151/135": -0.0,
-    "international/rising-rivals/26": -0.8995
+    "english/prismatic-evolutions/029": 0.0,
+    "english/scarlet-violet-151/135": -0.0,
+    "english/rising-rivals/26": -0.8937
    },
    "numfit": {
     "029/131": -0.033,
@@ -578,9 +614,9 @@
    "alignment": {
     "aligned": true,
     "pass": 1,
-    "inliers": 785,
-    "scan_features": 2818,
-    "box_error": 0.01654862053692341
+    "inliers": 771,
+    "scan_features": 2832,
+    "box_error": 0.01670231483876705
    },
    "quality": "sure"
   },
@@ -617,86 +653,96 @@
    "candidates": [
     {
      "handle": "3cc8eb7176b8a5db30a2b71536399e25",
-     "print": "international/prismatic-evolutions/033",
-     "set": "international/prismatic-evolutions",
+     "print": "english/prismatic-evolutions/033",
+     "set": "english/prismatic-evolutions",
      "card": "033",
      "name": "Espeon",
      "set_name": "Prismatic Evolutions",
      "number": "033/131",
-     "family": "international",
+     "catalog": "english",
      "language": "en",
-     "release": "r707",
-     "artwork_group": "a849",
+     "same_card": "c8172",
+     "release": "r703",
+     "artwork_group": "a695",
      "release_date": "2025-01-17",
      "sim": 0.9566,
-     "picture": "https://img.cardcorpus.com/m/3cc8eb7176b8a5db30a2b71536399e25"
+     "picture": "https://img.cardcorpus.com/s1/960/3cc8eb7176b8a5db30a2b71536399e25.avif"
     },
     {
      "handle": "4f68c895bfec4b7bc81cccb6d570bdba",
-     "print": "international/shrouded-fable/030",
-     "set": "international/shrouded-fable",
+     "print": "english/shrouded-fable/030",
+     "set": "english/shrouded-fable",
      "card": "030",
      "name": "Absol",
      "set_name": "Shrouded Fable",
      "number": "030/064",
-     "family": "international",
+     "catalog": "english",
      "language": "en",
-     "release": "r715",
-     "artwork_group": "a1062",
+     "same_card": "c2050",
+     "release": "r711",
+     "artwork_group": "a899",
      "release_date": "2024-08-02",
      "sim": 0.6616,
-     "picture": "https://img.cardcorpus.com/m/4f68c895bfec4b7bc81cccb6d570bdba"
+     "picture": "https://img.cardcorpus.com/s1/960/4f68c895bfec4b7bc81cccb6d570bdba.avif"
+    },
+    {
+     "handle": "52e356a6e9cfb38e8a3beddd2343ec8b",
+     "print": "english/mcdonald-s-collection-2026/009",
+     "set": "english/mcdonald-s-collection-2026",
+     "card": "009",
+     "name": "Absol",
+     "set_name": "McDonald's Collection 2026",
+     "number": "009/015",
+     "catalog": "english",
+     "language": "en",
+     "same_card": null,
+     "release": "r886",
+     "artwork_group": "a899",
+     "release_date": "2026-11-03",
+     "sim": 0.669,
+     "picture": "https://img.cardcorpus.com/s1/960/52e356a6e9cfb38e8a3beddd2343ec8b.avif"
     },
     {
      "handle": "7d898c1e4e7452bab537603fe061b4f6",
-     "print": "international/stellar-crown/019",
-     "set": "international/stellar-crown",
+     "print": "english/stellar-crown/019",
+     "set": "english/stellar-crown",
      "card": "019",
      "name": "Ponyta",
      "set_name": "Stellar Crown",
      "number": "019/142",
-     "family": "international",
+     "catalog": "english",
      "language": "en",
-     "release": "r726",
-     "artwork_group": "a627",
+     "same_card": "c820",
+     "release": "r722",
+     "artwork_group": "a60",
      "release_date": "2024-09-13",
      "sim": 0.6459,
-     "picture": "https://img.cardcorpus.com/m/7d898c1e4e7452bab537603fe061b4f6"
+     "picture": "https://img.cardcorpus.com/s1/960/7d898c1e4e7452bab537603fe061b4f6.avif"
     },
     {
      "handle": "b6ab7f2555e51bce0c6019dc0dc6a632",
-     "print": "international/scarlet-violet/085",
-     "set": "international/scarlet-violet",
+     "print": "english/scarlet-violet/085",
+     "set": "english/scarlet-violet",
      "card": "085",
      "name": "Kirlia",
      "set_name": "Scarlet & Violet",
      "number": "085/198",
-     "family": "international",
+     "catalog": "english",
      "language": "en",
-     "release": "r712",
-     "artwork_group": "a924",
+     "same_card": "c4081",
+     "release": "r708",
+     "artwork_group": "a765",
      "release_date": "2023-03-31",
      "sim": 0.635,
-     "picture": "https://img.cardcorpus.com/m/b6ab7f2555e51bce0c6019dc0dc6a632"
-    },
-    {
-     "handle": "fe71cfe18700c38d7d3f9d4ce4911ee4",
-     "print": "international/2025-world-championships-deck-flutter-devo-gardevoir/kirlia",
-     "set": "international/2025-world-championships-deck-flutter-devo-gardevoir",
-     "card": "kirlia",
-     "name": "Kirlia",
-     "set_name": "2025 World Championships Deck: Flutter Devo Gardevoir",
-     "number": null,
-     "family": "international",
-     "language": "en",
-     "release": "r848",
-     "artwork_group": "a924",
-     "release_date": "2026-06-05",
-     "sim": 0.6547,
-     "picture": "https://img.cardcorpus.com/m/fe71cfe18700c38d7d3f9d4ce4911ee4"
+     "picture": "https://img.cardcorpus.com/s1/960/b6ab7f2555e51bce0c6019dc0dc6a632.avif"
     }
    ],
+   "language_guess": {
+    "language": "en",
+    "confidence": 0.955728399110259
+   },
    "numfit": {
+    "009/015": -10.822,
     "015/015": -9.16,
     "019/142": -7.374,
     "028/091": -9.908,
@@ -705,7 +751,6 @@
     "033/131": -0.034,
     "085/198": -10.105,
     "103/163": -9.518,
-    "140/214": -10.079,
     "33/131": -0.034
    },
    "edition_stamp": 0.4494,
@@ -714,9 +759,9 @@
    "alignment": {
     "aligned": true,
     "pass": 1,
-    "inliers": 704,
-    "scan_features": 3001,
-    "box_error": 0.020761357620358467
+    "inliers": 723,
+    "scan_features": 3000,
+    "box_error": 0.02078845165669918
    },
    "quality": "sure"
   },
@@ -753,93 +798,102 @@
    "candidates": [
     {
      "handle": "d2234477cfd904714190bfaf459dbf9b",
-     "print": "international/prismatic-evolutions/040",
-     "set": "international/prismatic-evolutions",
+     "print": "english/prismatic-evolutions/040",
+     "set": "english/prismatic-evolutions",
      "card": "040",
      "name": "Sylveon",
      "set_name": "Prismatic Evolutions",
      "number": "040/131",
-     "family": "international",
+     "catalog": "english",
      "language": "en",
-     "release": "r707",
-     "artwork_group": "a876",
+     "same_card": "c13158",
+     "release": "r703",
+     "artwork_group": "a721",
      "release_date": "2025-01-17",
      "sim": 0.9813,
-     "picture": "https://img.cardcorpus.com/m/d2234477cfd904714190bfaf459dbf9b"
+     "picture": "https://img.cardcorpus.com/s1/960/d2234477cfd904714190bfaf459dbf9b.avif"
     },
     {
      "handle": "cdcd965f625ab15864f621c65d4c9107",
-     "print": "international/brilliant-stars/056",
-     "set": "international/brilliant-stars",
+     "print": "english/brilliant-stars/056",
+     "set": "english/brilliant-stars",
      "card": "056",
      "name": "Mewtwo",
      "set_name": "Brilliant Stars",
      "number": "056/172",
-     "family": "international",
+     "catalog": "english",
      "language": "en",
-     "release": "r578",
-     "artwork_group": "a6151",
+     "same_card": "c1814",
+     "release": "r574",
+     "artwork_group": "a10",
      "release_date": "2022-02-25",
      "sim": 0.7027,
-     "picture": "https://img.cardcorpus.com/m/cdcd965f625ab15864f621c65d4c9107"
+     "picture": "https://img.cardcorpus.com/s1/960/cdcd965f625ab15864f621c65d4c9107.avif"
     },
     {
      "handle": "1f077080924ded8f519da4505b2cf04c",
-     "print": "international/white-flare/026",
-     "set": "international/white-flare",
+     "print": "english/white-flare/026",
+     "set": "english/white-flare",
      "card": "026",
      "name": "Swanna",
      "set_name": "White Flare",
      "number": "026/086",
-     "family": "international",
+     "catalog": "english",
      "language": "en",
-     "release": "r563",
-     "artwork_group": "a9905",
+     "same_card": "c14595",
+     "release": "r741",
+     "artwork_group": "a1755",
      "release_date": "2025-07-18",
      "sim": 0.615,
-     "picture": "https://img.cardcorpus.com/m/1f077080924ded8f519da4505b2cf04c"
+     "picture": "https://img.cardcorpus.com/s1/960/1f077080924ded8f519da4505b2cf04c.avif"
     },
     {
      "handle": "192c2e982be916e355c732483cedfb89",
-     "print": "international/white-flare/028",
-     "set": "international/white-flare",
+     "print": "english/white-flare/028",
+     "set": "english/white-flare",
      "card": "028",
      "name": "Vanillish",
      "set_name": "White Flare",
      "number": "028/086",
-     "family": "international",
+     "catalog": "english",
      "language": "en",
-     "release": "r563",
-     "artwork_group": "a9907",
+     "same_card": "c14597",
+     "release": "r741",
+     "artwork_group": "a3025",
      "release_date": "2025-07-18",
      "sim": 0.6114,
-     "picture": "https://img.cardcorpus.com/m/192c2e982be916e355c732483cedfb89"
+     "picture": "https://img.cardcorpus.com/s1/960/192c2e982be916e355c732483cedfb89.avif"
     },
     {
      "handle": "d685532acc899413dfca5423bdd403bb",
-     "print": "international/swsh-black-star-promos/swsh206",
-     "set": "international/swsh-black-star-promos",
+     "print": "english/swsh-black-star-promos/swsh206",
+     "set": "english/swsh-black-star-promos",
      "card": "swsh206",
      "name": "Wyrdeer",
      "set_name": "SWSH Black Star Promos",
      "number": "SWSH206",
-     "family": "international",
+     "catalog": "english",
      "language": "en",
+     "same_card": "c675",
      "release": "r8",
-     "artwork_group": "a872",
+     "artwork_group": "a717",
      "release_date": "2019-11-15",
      "sim": 0.6091,
-     "picture": "https://img.cardcorpus.com/m/d685532acc899413dfca5423bdd403bb"
+     "picture": "https://img.cardcorpus.com/s1/960/d685532acc899413dfca5423bdd403bb.avif"
     }
    ],
+   "language_guess": {
+    "language": "en",
+    "confidence": 0.951145171717272
+   },
    "pick": {
-    "print": "international/prismatic-evolutions/040",
+    "print": "english/prismatic-evolutions/040",
     "margin": 0.9275
    },
    "verify": {
-    "international/prismatic-evolutions/040": 0.7764,
-    "international/xy-trainer-kit-sylveon/15": -0.7916,
-    "international/xy-trainer-kit-sylveon/30": -0.7764
+    "english/prismatic-evolutions/040": 0.7779,
+    "english/xy-trainer-kit-sylveon/15": -0.79,
+    "english/xy-trainer-kit-sylveon/30": -0.7779
    },
    "numfit": {
     "026/086": -8.368,
@@ -857,9 +911,9 @@
    "alignment": {
     "aligned": true,
     "pass": 1,
-    "inliers": 835,
-    "scan_features": 2823,
-    "box_error": 0.01770836114883423
+    "inliers": 862,
+    "scan_features": 2853,
+    "box_error": 0.017822185531258583
    },
    "quality": "sure"
   },
@@ -896,88 +950,97 @@
    "candidates": [
     {
      "handle": "2ac85a4721738113b50e941aa9386e34",
-     "print": "international/prismatic-evolutions/059",
-     "set": "international/prismatic-evolutions",
+     "print": "english/prismatic-evolutions/059",
+     "set": "english/prismatic-evolutions",
      "card": "059",
      "name": "Umbreon",
      "set_name": "Prismatic Evolutions",
      "number": "059/131",
-     "family": "international",
+     "catalog": "english",
      "language": "en",
-     "release": "r707",
-     "artwork_group": "a820",
+     "same_card": "c8196",
+     "release": "r703",
+     "artwork_group": "a666",
      "release_date": "2025-01-17",
      "sim": 0.9431,
-     "picture": "https://img.cardcorpus.com/m/2ac85a4721738113b50e941aa9386e34"
+     "picture": "https://img.cardcorpus.com/s1/960/2ac85a4721738113b50e941aa9386e34.avif"
     },
     {
      "handle": "f1cd73abdd9f5ddb2501bc9d67b9c8fe",
-     "print": "international/destined-rivals/131",
-     "set": "international/destined-rivals",
+     "print": "english/destined-rivals/131",
+     "set": "english/destined-rivals",
      "card": "131",
      "name": "Marnie's Liepard",
      "set_name": "Destined Rivals",
      "number": "131/182",
-     "family": "international",
+     "catalog": "english",
      "language": "en",
-     "release": "r594",
-     "artwork_group": "a2078",
+     "same_card": "c2327",
+     "release": "r589",
+     "artwork_group": "a1898",
      "release_date": "2025-05-30",
      "sim": 0.7311,
-     "picture": "https://img.cardcorpus.com/m/f1cd73abdd9f5ddb2501bc9d67b9c8fe"
+     "picture": "https://img.cardcorpus.com/s1/960/f1cd73abdd9f5ddb2501bc9d67b9c8fe.avif"
     },
     {
      "handle": "98fd8200a9a8edf246002d6df0b71b15",
-     "print": "international/ultra-prism/48",
-     "set": "international/ultra-prism",
+     "print": "english/ultra-prism/48",
+     "set": "english/ultra-prism",
      "card": "48",
      "name": "Luxray",
      "set_name": "Ultra Prism",
      "number": "48/156",
-     "family": "international",
+     "catalog": "english",
      "language": "en",
-     "release": "r737",
-     "artwork_group": "a743",
+     "same_card": "c7104",
+     "release": "r734",
+     "artwork_group": "a591",
      "release_date": "2018-02-02",
      "sim": 0.7299,
-     "picture": "https://img.cardcorpus.com/m/98fd8200a9a8edf246002d6df0b71b15"
+     "picture": "https://img.cardcorpus.com/s1/960/98fd8200a9a8edf246002d6df0b71b15.avif"
     },
     {
      "handle": "61daccc570f8e6d6a9d8b010be7a7f74",
-     "print": "international/cosmic-eclipse/183",
-     "set": "international/cosmic-eclipse",
+     "print": "english/cosmic-eclipse/183",
+     "set": "english/cosmic-eclipse",
      "card": "183",
      "name": "Type: Null",
      "set_name": "Cosmic Eclipse",
      "number": "183/236",
-     "family": "international",
+     "catalog": "english",
      "language": "en",
-     "release": "r589",
-     "artwork_group": "a3153",
+     "same_card": "c6207",
+     "release": "r584",
+     "artwork_group": "a2622",
      "release_date": "2019-11-01",
      "sim": 0.7264,
-     "picture": "https://img.cardcorpus.com/m/61daccc570f8e6d6a9d8b010be7a7f74"
+     "picture": "https://img.cardcorpus.com/s1/960/61daccc570f8e6d6a9d8b010be7a7f74.avif"
     },
     {
      "handle": "75ed5e71f4109efa65f59828cb7d848a",
-     "print": "international/fates-collide/112",
-     "set": "international/fates-collide",
+     "print": "english/fates-collide/112",
+     "set": "english/fates-collide",
      "card": "112",
      "name": "Team Rocket's Handiwork",
      "set_name": "Fates Collide",
      "number": "112/124",
-     "family": "international",
+     "catalog": "english",
      "language": "en",
-     "release": "r628",
-     "artwork_group": "a3841",
+     "same_card": "c9647",
+     "release": "r623",
+     "artwork_group": "a3238",
      "release_date": "2016-05-02",
      "sim": 0.7159,
-     "picture": "https://img.cardcorpus.com/m/75ed5e71f4109efa65f59828cb7d848a"
+     "picture": "https://img.cardcorpus.com/s1/960/75ed5e71f4109efa65f59828cb7d848a.avif"
     }
    ],
+   "language_guess": {
+    "language": "en",
+    "confidence": 0.9518785739003265
+   },
    "verify": {
-    "international/prismatic-evolutions/059": 0.8308,
-    "japanese/terastal-festival-ex/092": -0.8308
+    "english/prismatic-evolutions/059": 0.8267,
+    "japanese/terastal-festival-ex/092": -0.8267
    },
    "numfit": {
     "059/131": -0.09,
@@ -997,9 +1060,9 @@
    "alignment": {
     "aligned": true,
     "pass": 1,
-    "inliers": 756,
-    "scan_features": 2600,
-    "box_error": 0.03788129240274429
+    "inliers": 765,
+    "scan_features": 2605,
+    "box_error": 0.03811897709965706
    },
    "quality": "sure"
   },
@@ -1036,93 +1099,102 @@
    "candidates": [
     {
      "handle": "7fc265dad90286ed499f0a842257b629",
-     "print": "international/prismatic-evolutions/020",
-     "set": "international/prismatic-evolutions",
+     "print": "english/prismatic-evolutions/020",
+     "set": "english/prismatic-evolutions",
      "card": "020",
      "name": "Goldeen",
      "set_name": "Prismatic Evolutions",
      "number": "020/131",
-     "family": "international",
+     "catalog": "english",
      "language": "en",
-     "release": "r707",
-     "artwork_group": "a668",
+     "same_card": "c1973",
+     "release": "r703",
+     "artwork_group": "a549",
      "release_date": "2025-01-17",
      "sim": 0.9448,
      "variant": "poke-ball",
-     "picture": "https://img.cardcorpus.com/m/7fc265dad90286ed499f0a842257b629"
+     "picture": "https://img.cardcorpus.com/s1/960/7fc265dad90286ed499f0a842257b629.avif"
     },
     {
      "handle": "de4cfe228f36c705bc7c6290b2faca62",
-     "print": "international/twilight-masquerade/044",
-     "set": "international/twilight-masquerade",
+     "print": "english/twilight-masquerade/044",
+     "set": "english/twilight-masquerade",
      "card": "044",
      "name": "Goldeen",
      "set_name": "Twilight Masquerade",
      "number": "044/167",
-     "family": "international",
+     "catalog": "english",
      "language": "en",
-     "release": "r587",
-     "artwork_group": "a668",
+     "same_card": "c1973",
+     "release": "r733",
+     "artwork_group": "a549",
      "release_date": "2024-05-24",
      "sim": 0.9458,
-     "picture": "https://img.cardcorpus.com/m/de4cfe228f36c705bc7c6290b2faca62"
+     "picture": "https://img.cardcorpus.com/s1/960/de4cfe228f36c705bc7c6290b2faca62.avif"
     },
     {
      "handle": "98a2f82d214c7391dd612d6550343aa5",
-     "print": "international/prismatic-evolutions/022",
-     "set": "international/prismatic-evolutions",
+     "print": "english/prismatic-evolutions/022",
+     "set": "english/prismatic-evolutions",
      "card": "022",
      "name": "Vaporeon",
      "set_name": "Prismatic Evolutions",
      "number": "022/131",
-     "family": "international",
+     "catalog": "english",
      "language": "en",
-     "release": "r707",
-     "artwork_group": "a684",
+     "same_card": "c24085",
+     "release": "r703",
+     "artwork_group": "a559",
      "release_date": "2025-01-17",
      "sim": 0.6882,
-     "picture": "https://img.cardcorpus.com/m/98a2f82d214c7391dd612d6550343aa5"
+     "picture": "https://img.cardcorpus.com/s1/960/98a2f82d214c7391dd612d6550343aa5.avif"
     },
     {
      "handle": "5da6f32f9af37995999ac7772eb70f80",
-     "print": "international/temporal-forces/026",
-     "set": "international/temporal-forces",
+     "print": "english/temporal-forces/026",
+     "set": "english/temporal-forces",
      "card": "026",
      "name": "Ponyta",
      "set_name": "Temporal Forces",
      "number": "026/162",
-     "family": "international",
+     "catalog": "english",
      "language": "en",
-     "release": "r735",
-     "artwork_group": "a627",
+     "same_card": "c7882",
+     "release": "r731",
+     "artwork_group": "a60",
      "release_date": "2024-03-22",
      "sim": 0.7107,
-     "picture": "https://img.cardcorpus.com/m/5da6f32f9af37995999ac7772eb70f80"
+     "picture": "https://img.cardcorpus.com/s1/960/5da6f32f9af37995999ac7772eb70f80.avif"
     },
     {
      "handle": "5d0424a3ac8f909cd7b1b3656f4a7eaf",
-     "print": "international/burning-shadows/13",
-     "set": "international/burning-shadows",
+     "print": "english/burning-shadows/13",
+     "set": "english/burning-shadows",
      "card": "13",
      "name": "Simisage",
      "set_name": "Burning Shadows",
      "number": "13/147",
-     "family": "international",
+     "catalog": "english",
      "language": "en",
-     "release": "r579",
-     "artwork_group": "a2897",
+     "same_card": "c21517",
+     "release": "r575",
+     "artwork_group": "a2386",
      "release_date": "2017-08-04",
      "sim": 0.6982,
-     "picture": "https://img.cardcorpus.com/m/5d0424a3ac8f909cd7b1b3656f4a7eaf"
+     "picture": "https://img.cardcorpus.com/s1/960/5d0424a3ac8f909cd7b1b3656f4a7eaf.avif"
     }
    ],
+   "language_guess": {
+    "language": "en",
+    "confidence": 0.932888311078255
+   },
    "pick": {
-    "print": "international/prismatic-evolutions/020",
+    "print": "english/prismatic-evolutions/020",
     "margin": 0.239
    },
    "verify": {
-    "international/prismatic-evolutions/020": 0.0,
-    "international/twilight-masquerade/044": -0.0
+    "english/prismatic-evolutions/020": 0.0,
+    "english/twilight-masquerade/044": -0.0
    },
    "numfit": {
     "020/131": -0.033,
@@ -1143,9 +1215,9 @@
    "alignment": {
     "aligned": true,
     "pass": 1,
-    "inliers": 967,
+    "inliers": 955,
     "scan_features": 3000,
-    "box_error": 0.015417386777698994
+    "box_error": 0.015497222542762756
    },
    "quality": "sure"
   },
@@ -1186,15 +1258,16 @@
      "set": "japanese/double-blaze",
      "card": "043",
      "name": "Diglett",
-     "set_name": "Double Blaze",
+     "set_name": "ダブルブレイズ",
      "number": "043/095",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c6338",
      "release": "r217",
-     "artwork_group": "a600",
+     "artwork_group": "a47",
      "release_date": "2019-03-01",
      "sim": 0.9475,
-     "picture": "https://img.cardcorpus.com/m/b54dae69c382de62f63e5e35e4704b93"
+     "picture": "https://img.cardcorpus.com/s1/960/b54dae69c382de62f63e5e35e4704b93.avif"
     },
     {
      "handle": "2cea8e485ceb85cb9a5147853645ed79",
@@ -1204,13 +1277,14 @@
      "name": "Cubone",
      "set_name": "Sun & Moon Promos",
      "number": "254/SM-P",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c20402",
      "release": "r481",
-     "artwork_group": "a654",
+     "artwork_group": "a539",
      "release_date": "2016-11-01",
      "sim": 0.7896,
-     "picture": "https://img.cardcorpus.com/m/2cea8e485ceb85cb9a5147853645ed79"
+     "picture": "https://img.cardcorpus.com/s1/960/2cea8e485ceb85cb9a5147853645ed79.avif"
     },
     {
      "handle": "f2bfb8bfcdb31f2974398ed673d6219d",
@@ -1218,15 +1292,16 @@
      "set": "japanese/ninja-spinner",
      "card": "064",
      "name": "Goomy",
-     "set_name": "Ninja Spinner",
+     "set_name": "ニンジャスピナー",
      "number": "064/083",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c16610",
      "release": "r387",
-     "artwork_group": "a1767",
+     "artwork_group": "a1593",
      "release_date": "2026-03-13",
      "sim": 0.784,
-     "picture": "https://img.cardcorpus.com/m/f2bfb8bfcdb31f2974398ed673d6219d"
+     "picture": "https://img.cardcorpus.com/s1/960/f2bfb8bfcdb31f2974398ed673d6219d.avif"
     },
     {
      "handle": "688de6331863cfc45aaac3a1e8c1bfe2",
@@ -1234,15 +1309,16 @@
      "set": "japanese/ancient-roar",
      "card": "011",
      "name": "Numel",
-     "set_name": "Ancient Roar",
+     "set_name": "古代の咆哮",
      "number": "011/066",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c1319",
      "release": "r151",
-     "artwork_group": "a1353",
+     "artwork_group": "a1185",
      "release_date": "2023-10-27",
      "sim": 0.775,
-     "picture": "https://img.cardcorpus.com/m/688de6331863cfc45aaac3a1e8c1bfe2"
+     "picture": "https://img.cardcorpus.com/s1/960/688de6331863cfc45aaac3a1e8c1bfe2.avif"
     },
     {
      "handle": "dd91f002c8855cd4149f67ef202140e0",
@@ -1250,17 +1326,22 @@
      "set": "japanese/mega-dream-ex",
      "card": "082",
      "name": "Team Rocket's Diglett",
-     "set_name": "MEGA Dream ex",
+     "set_name": "MEGAドリームex",
      "number": "082/193",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c15371",
      "release": "r348",
-     "artwork_group": "a4854",
+     "artwork_group": "a4071",
      "release_date": "2025-11-28",
      "sim": 0.7702,
-     "picture": "https://img.cardcorpus.com/m/dd91f002c8855cd4149f67ef202140e0"
+     "picture": "https://img.cardcorpus.com/s1/960/dd91f002c8855cd4149f67ef202140e0.avif"
     }
    ],
+   "language_guess": {
+    "language": "ja",
+    "confidence": 0.9487406760075644
+   },
    "numfit": {
     "011/066": -9.68,
     "020/078": -8.8,
@@ -1278,9 +1359,9 @@
    "alignment": {
     "aligned": true,
     "pass": 1,
-    "inliers": 650,
-    "scan_features": 1767,
-    "box_error": 0.012751738540828228
+    "inliers": 659,
+    "scan_features": 1769,
+    "box_error": 0.01370623242110014
    },
    "quality": "sure"
   }
@@ -1310,19 +1391,20 @@
    "reason": "unsure",
    "top": {
     "handle": "5d1e2563065b279d3b3f0047030df780",
-    "print": "international/ex-power-keepers/79",
-    "set": "international/ex-power-keepers",
+    "print": "english/ex-power-keepers/79",
+    "set": "english/ex-power-keepers",
     "card": "79",
     "name": "Phoebe's Stadium",
     "set_name": "EX Power Keepers",
     "number": "79/108",
-    "family": "international",
+    "catalog": "english",
     "language": "en",
-    "release": "r617",
-    "artwork_group": "a7317",
+    "same_card": "c22498",
+    "release": "r612",
+    "artwork_group": "a4753",
     "release_date": "2007-02-14",
     "sim": 0.7403,
-    "picture": "https://img.cardcorpus.com/m/5d1e2563065b279d3b3f0047030df780"
+    "picture": "https://img.cardcorpus.com/s1/960/5d1e2563065b279d3b3f0047030df780.avif"
    }
   },
   {
@@ -1348,19 +1430,20 @@
    "reason": "unsure",
    "top": {
     "handle": "57a11fa27404434713e71c0ea8ddc954",
-    "print": "international/delta-reign/097",
-    "set": "international/delta-reign",
+    "print": "english/delta-reign/097",
+    "set": "english/delta-reign",
     "card": "097",
     "name": "Legendary Summit",
     "set_name": "Delta Reign",
     "number": "097/103",
-    "family": "international",
+    "catalog": "english",
     "language": "en",
-    "release": "r884",
-    "artwork_group": "a5490",
+    "same_card": "c20201",
+    "release": "r882",
+    "artwork_group": "a4612",
     "release_date": "2026-11-06",
     "sim": 0.7071,
-    "picture": "https://img.cardcorpus.com/m/57a11fa27404434713e71c0ea8ddc954"
+    "picture": "https://img.cardcorpus.com/s1/960/57a11fa27404434713e71c0ea8ddc954.avif"
    }
   },
   {
@@ -1386,19 +1469,20 @@
    "reason": "unsure",
    "top": {
     "handle": "863ae1a666f6974050aaf6a009fb6d48",
-    "print": "international/2009-world-championships-deck-stallgon/89-poke-drawer",
-    "set": "international/2009-world-championships-deck-stallgon",
+    "print": "english/2009-world-championships-deck-stallgon/89-poke-drawer",
+    "set": "english/2009-world-championships-deck-stallgon",
     "card": "89-poke-drawer",
     "name": "Poké Drawer +",
     "set_name": "2009 World Championships Deck: Stallgon",
     "number": "89/100",
-    "family": "international",
+    "catalog": "english",
     "language": "en",
-    "release": "r788",
-    "artwork_group": "a4692",
+    "same_card": null,
+    "release": "r786",
+    "artwork_group": "a3934",
     "release_date": "2009-10-28",
     "sim": 0.6408,
-    "picture": "https://img.cardcorpus.com/m/863ae1a666f6974050aaf6a009fb6d48"
+    "picture": "https://img.cardcorpus.com/s1/960/863ae1a666f6974050aaf6a009fb6d48.avif"
    }
   }
  ]

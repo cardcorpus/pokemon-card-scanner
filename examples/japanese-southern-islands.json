@@ -42,13 +42,14 @@
      "name": "Exeggutor",
      "set_name": "Southern Islands",
      "number": "No. 103",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c19030",
      "release": "r464",
-     "artwork_group": "a653",
+     "artwork_group": "a538",
      "release_date": "1999-07-17",
      "sim": 0.9487,
-     "picture": "https://img.cardcorpus.com/m/a9195f4935315b5f1de63cd084c40ab7"
+     "picture": "https://img.cardcorpus.com/s1/960/a9195f4935315b5f1de63cd084c40ab7.avif"
     },
     {
      "handle": "ec1fe0ac34fbd788e3dd86ed57f0a2ea",
@@ -58,13 +59,14 @@
      "name": "Onix",
      "set_name": "Southern Islands",
      "number": "No. 095",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c19029",
      "release": "r464",
-     "artwork_group": "a645",
+     "artwork_group": "a56",
      "release_date": "1999-07-17",
      "sim": 0.5505,
-     "picture": "https://img.cardcorpus.com/m/ec1fe0ac34fbd788e3dd86ed57f0a2ea"
+     "picture": "https://img.cardcorpus.com/s1/960/ec1fe0ac34fbd788e3dd86ed57f0a2ea.avif"
     },
     {
      "handle": "5892a803c9815be8dc4c9e41c3342e70",
@@ -72,16 +74,17 @@
      "set": "japanese/expansion-pack-base-set",
      "card": "no-001",
      "name": "Bulbasaur",
-     "set_name": "Expansion Pack (Base Set)",
+     "set_name": "第1弾 拡張パック",
      "number": "No. 001",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c44",
      "release": "r246",
-     "artwork_group": "a552",
+     "artwork_group": "a44",
      "release_date": "1996-10-20",
      "sim": 0.5676,
      "variant": "no-rarity-non-holo",
-     "picture": "https://img.cardcorpus.com/m/5892a803c9815be8dc4c9e41c3342e70"
+     "picture": "https://img.cardcorpus.com/s1/960/5892a803c9815be8dc4c9e41c3342e70.avif"
     },
     {
      "handle": "15d86dcaf063fcafe60dc27f5d58129a",
@@ -89,16 +92,17 @@
      "set": "japanese/space-time-creation",
      "card": "dpbp-449",
      "name": "Grotle",
-     "set_name": "Space-Time Creation",
+     "set_name": "時空の創造",
      "number": "DPBP#449",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c19099",
      "release": "r466",
-     "artwork_group": "a1454",
+     "artwork_group": "a1283",
      "release_date": "2006-11-30",
      "sim": 0.5514,
      "variant": "unlimited-non-holo",
-     "picture": "https://img.cardcorpus.com/m/15d86dcaf063fcafe60dc27f5d58129a"
+     "picture": "https://img.cardcorpus.com/s1/960/15d86dcaf063fcafe60dc27f5d58129a.avif"
     },
     {
      "handle": "6fb9bb4206c80340300bf9a7cbfe029c",
@@ -106,17 +110,22 @@
      "set": "japanese/arceus-lv-x-deck-grass-fire",
      "card": "009",
      "name": "Wingull",
-     "set_name": "Arceus LV.X Deck: Grass & Fire",
+     "set_name": "構築スタンダードデッキ「アルセウスLV.X草＆炎」",
      "number": "009/017",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c9441",
      "release": "r153",
-     "artwork_group": "a2340",
+     "artwork_group": "a2151",
      "release_date": "2009-07-08",
      "sim": 0.5335,
-     "picture": "https://img.cardcorpus.com/m/6fb9bb4206c80340300bf9a7cbfe029c"
+     "picture": "https://img.cardcorpus.com/s1/960/6fb9bb4206c80340300bf9a7cbfe029c.avif"
     }
    ],
+   "language_guess": {
+    "language": "ja",
+    "confidence": 0.9531419830485807
+   },
    "numfit": {
     "006/082": -9.611,
     "009/017": -10.544,
@@ -129,9 +138,9 @@
    "alignment": {
     "aligned": true,
     "pass": 1,
-    "inliers": 1059,
-    "scan_features": 2770,
-    "box_error": 0.012702410109341145
+    "inliers": 1033,
+    "scan_features": 2705,
+    "box_error": 0.012701544910669327
    },
    "quality": "sure"
   },
@@ -174,13 +183,14 @@
      "name": "Slowking",
      "set_name": "Southern Islands",
      "number": null,
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c19036",
      "release": "r464",
-     "artwork_group": "a3307",
+     "artwork_group": "a2765",
      "release_date": "1999-07-17",
      "sim": 0.9486,
-     "picture": "https://img.cardcorpus.com/m/4d5aab948de7f1abbb8f0d046076453d"
+     "picture": "https://img.cardcorpus.com/s1/960/4d5aab948de7f1abbb8f0d046076453d.avif"
     },
     {
      "handle": "346aede68001fbf7c52d59f7f8701bf3",
@@ -188,15 +198,16 @@
      "set": "japanese/vending-sheet-1",
      "card": "no-113",
      "name": "Chansey",
-     "set_name": "Vending Sheet 1 (Blue)",
+     "set_name": "拡張シート 第1弾 (青版)",
      "number": "No. 113",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": null,
      "release": "r528",
-     "artwork_group": "a663",
+     "artwork_group": "a3",
      "release_date": "1998-03-23",
      "sim": 0.7139,
-     "picture": "https://img.cardcorpus.com/m/346aede68001fbf7c52d59f7f8701bf3"
+     "picture": "https://img.cardcorpus.com/s1/960/346aede68001fbf7c52d59f7f8701bf3.avif"
     },
     {
      "handle": "02d8fb84f226de329768cb7d378a4bf4",
@@ -204,15 +215,16 @@
      "set": "japanese/vending-sheet-3",
      "card": "no-115",
      "name": "Kangaskhan",
-     "set_name": "Vending Sheet 3 (Green)",
+     "set_name": "拡張シート 第3弾 (緑版)",
      "number": "No. 115",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": null,
      "release": "r530",
-     "artwork_group": "a756",
+     "artwork_group": "a604",
      "release_date": "1998-11-24",
      "sim": 0.7063,
-     "picture": "https://img.cardcorpus.com/m/02d8fb84f226de329768cb7d378a4bf4"
+     "picture": "https://img.cardcorpus.com/s1/960/02d8fb84f226de329768cb7d378a4bf4.avif"
     },
     {
      "handle": "26c6383e401e0efca19ed2a9e3014ec7",
@@ -222,13 +234,14 @@
      "name": "Wartortle",
      "set_name": "Southern Islands",
      "number": "No. 008",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c19021",
      "release": "r464",
-     "artwork_group": "a559",
+     "artwork_group": "a42",
      "release_date": "1999-07-17",
      "sim": 0.6372,
-     "picture": "https://img.cardcorpus.com/m/26c6383e401e0efca19ed2a9e3014ec7"
+     "picture": "https://img.cardcorpus.com/s1/960/26c6383e401e0efca19ed2a9e3014ec7.avif"
     },
     {
      "handle": "9198aa0ae374d7bc4084ddb808191fe6",
@@ -236,26 +249,31 @@
      "set": "japanese/rocket-gang",
      "card": "no-064",
      "name": "Dark Kadabra",
-     "set_name": "Rocket Gang",
+     "set_name": "ロケット団",
      "number": "No. 064",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c18033",
      "release": "r434",
-     "artwork_group": "a5233",
+     "artwork_group": "a4409",
      "release_date": "1997-11-21",
      "sim": 0.657,
-     "picture": "https://img.cardcorpus.com/m/9198aa0ae374d7bc4084ddb808191fe6"
+     "picture": "https://img.cardcorpus.com/s1/960/9198aa0ae374d7bc4084ddb808191fe6.avif"
     }
    ],
+   "language_guess": {
+    "language": "ja",
+    "confidence": 0.9688816680789852
+   },
    "edition_stamp": 0.4091,
    "ecard_reverse": 0.2872,
    "ecard_reading": "dot_code",
    "alignment": {
     "aligned": true,
     "pass": 1,
-    "inliers": 540,
-    "scan_features": 2658,
-    "box_error": 0.013466570526361465
+    "inliers": 546,
+    "scan_features": 2622,
+    "box_error": 0.013350182212889194
    },
    "quality": "sure"
   },
@@ -298,13 +316,14 @@
      "name": "Wartortle",
      "set_name": "Southern Islands",
      "number": "No. 008",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c19021",
      "release": "r464",
-     "artwork_group": "a559",
+     "artwork_group": "a42",
      "release_date": "1999-07-17",
      "sim": 0.9613,
-     "picture": "https://img.cardcorpus.com/m/26c6383e401e0efca19ed2a9e3014ec7"
+     "picture": "https://img.cardcorpus.com/s1/960/26c6383e401e0efca19ed2a9e3014ec7.avif"
     },
     {
      "handle": "301cbabfd3c90d461087f5e7cd79c07d",
@@ -312,15 +331,16 @@
      "set": "japanese/challenge-from-the-darkness-gym-challenge",
      "card": "no-122",
      "name": "Sabrina's Mr. Mime",
-     "set_name": "Challenge From The Darkness (Gym Challenge)",
+     "set_name": "ポケモンジム ジム拡張第2弾「闇からの挑戦」",
      "number": "No. 122",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c263",
      "release": "r4",
-     "artwork_group": "a354",
+     "artwork_group": "a294",
      "release_date": "1999-06-25",
      "sim": 0.7612,
-     "picture": "https://img.cardcorpus.com/m/301cbabfd3c90d461087f5e7cd79c07d"
+     "picture": "https://img.cardcorpus.com/s1/960/301cbabfd3c90d461087f5e7cd79c07d.avif"
     },
     {
      "handle": "6ad213be5c366bf6a6cd7c1ea87f5a38",
@@ -328,15 +348,16 @@
      "set": "japanese/rocket-gang",
      "card": "no-080",
      "name": "Dark Slowbro",
-     "set_name": "Rocket Gang",
+     "set_name": "ロケット団",
      "number": "No. 080",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c18041",
      "release": "r434",
-     "artwork_group": "a5234",
+     "artwork_group": "a4410",
      "release_date": "1997-11-21",
      "sim": 0.7055,
-     "picture": "https://img.cardcorpus.com/m/6ad213be5c366bf6a6cd7c1ea87f5a38"
+     "picture": "https://img.cardcorpus.com/s1/960/6ad213be5c366bf6a6cd7c1ea87f5a38.avif"
     },
     {
      "handle": "875d33e83857d1f95a355c4c65b10616",
@@ -346,13 +367,14 @@
      "name": "Jynx",
      "set_name": "How I Became a Pokémon Card",
      "number": null,
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
-     "release": "r882",
-     "artwork_group": "a1671",
+     "same_card": null,
+     "release": "r880",
+     "artwork_group": "a31",
      "release_date": "1999-05-22",
      "sim": 0.691,
-     "picture": "https://img.cardcorpus.com/m/875d33e83857d1f95a355c4c65b10616"
+     "picture": "https://img.cardcorpus.com/s1/960/875d33e83857d1f95a355c4c65b10616.avif"
     },
     {
      "handle": "0020130a60366fd7b3ab9aa34f3037c7",
@@ -360,22 +382,27 @@
      "set": "japanese/expansion-pack-base-set",
      "card": "no-061",
      "name": "Poliwhirl",
-     "set_name": "Expansion Pack (Base Set)",
+     "set_name": "第1弾 拡張パック",
      "number": "No. 061",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c38",
      "release": "r246",
-     "artwork_group": "a611",
+     "artwork_group": "a38",
      "release_date": "1996-10-20",
      "sim": 0.6813,
      "variant": "no-rarity-non-holo",
-     "picture": "https://img.cardcorpus.com/m/0020130a60366fd7b3ab9aa34f3037c7"
+     "picture": "https://img.cardcorpus.com/s1/960/0020130a60366fd7b3ab9aa34f3037c7.avif"
     }
    ],
+   "language_guess": {
+    "language": "ja",
+    "confidence": 0.9590009135653512
+   },
    "verify": {
-    "japanese/southern-islands/no-008": 0.768,
-    "japanese/intro-pack-squirtle/3": -0.768,
-    "japanese/intro-pack-squirtle/10": -0.7755
+    "japanese/southern-islands/no-008": 0.7725,
+    "japanese/intro-pack-squirtle/3": -0.7725,
+    "japanese/intro-pack-squirtle/10": -0.7736
    },
    "edition_stamp": 0.4038,
    "ecard_reverse": 0.2475,
@@ -383,9 +410,9 @@
    "alignment": {
     "aligned": true,
     "pass": 1,
-    "inliers": 724,
-    "scan_features": 2269,
-    "box_error": 0.01894926093518734
+    "inliers": 726,
+    "scan_features": 2224,
+    "box_error": 0.019066112115979195
    },
    "quality": "sure"
   },
@@ -413,10 +440,10 @@
    "back_sim": -0.0976,
    "orient_p": 0.9077,
    "number_read": {
-    "text": "16/100",
-    "votes": 6,
-    "n": 16,
-    "d": 100,
+    "text": "11/186",
+    "votes": 9,
+    "n": 11,
+    "d": 186,
     "code": null
    },
    "candidates": [
@@ -428,13 +455,14 @@
      "name": "Vileplume",
      "set_name": "Southern Islands",
      "number": "No. 045",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c19026",
      "release": "r464",
-     "artwork_group": "a595",
+     "artwork_group": "a505",
      "release_date": "1999-07-17",
      "sim": 0.9753,
-     "picture": "https://img.cardcorpus.com/m/ee77b3b1ac0809b826122162920e6a6b"
+     "picture": "https://img.cardcorpus.com/s1/960/ee77b3b1ac0809b826122162920e6a6b.avif"
     },
     {
      "handle": "c79bef95fb64ca5cfa1d15dfa78cfe43",
@@ -442,15 +470,16 @@
      "set": "japanese/mystery-of-the-fossils",
      "card": "no-023",
      "name": "Ekans",
-     "set_name": "Mystery of the Fossils",
+     "set_name": "化石の秘密",
      "number": "No. 023",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c16280",
      "release": "r378",
-     "artwork_group": "a574",
+     "artwork_group": "a490",
      "release_date": "1997-06-20",
      "sim": 0.7018,
-     "picture": "https://img.cardcorpus.com/m/c79bef95fb64ca5cfa1d15dfa78cfe43"
+     "picture": "https://img.cardcorpus.com/s1/960/c79bef95fb64ca5cfa1d15dfa78cfe43.avif"
     },
     {
      "handle": "62588f80721ea9bdd2b3a3f9e1d69751",
@@ -458,15 +487,16 @@
      "set": "japanese/gold-silver-to-a-new-world-neo-genesis",
      "card": "no-079",
      "name": "Slowpoke",
-     "set_name": "Gold Silver to a new World (Neo Genesis)",
+     "set_name": "金、銀、新世界へ...",
      "number": "No. 079",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c13278",
      "release": "r280",
-     "artwork_group": "a629",
+     "artwork_group": "a526",
      "release_date": "2000-02-04",
      "sim": 0.6913,
-     "picture": "https://img.cardcorpus.com/m/62588f80721ea9bdd2b3a3f9e1d69751"
+     "picture": "https://img.cardcorpus.com/s1/960/62588f80721ea9bdd2b3a3f9e1d69751.avif"
     },
     {
      "handle": "4a2c184ce69624ed4713eab30929bcaf",
@@ -474,15 +504,16 @@
      "set": "japanese/pokemon-jungle",
      "card": "no-048",
      "name": "Venonat",
-     "set_name": "Pokémon Jungle",
+     "set_name": "ポケモンジャングル",
      "number": "No. 048",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c17154",
      "release": "r405",
-     "artwork_group": "a598",
+     "artwork_group": "a508",
      "release_date": "1997-03-05",
      "sim": 0.6898,
-     "picture": "https://img.cardcorpus.com/m/4a2c184ce69624ed4713eab30929bcaf"
+     "picture": "https://img.cardcorpus.com/s1/960/4a2c184ce69624ed4713eab30929bcaf.avif"
     },
     {
      "handle": "3699c25d7e88e6529af170ba9178c724",
@@ -490,21 +521,26 @@
      "set": "japanese/pokemon-jungle",
      "card": "no-108",
      "name": "Lickitung",
-     "set_name": "Pokémon Jungle",
+     "set_name": "ポケモンジャングル",
      "number": "No. 108",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c17170",
      "release": "r405",
-     "artwork_group": "a658",
+     "artwork_group": "a542",
      "release_date": "1997-03-05",
      "sim": 0.6861,
-     "picture": "https://img.cardcorpus.com/m/3699c25d7e88e6529af170ba9178c724"
+     "picture": "https://img.cardcorpus.com/s1/960/3699c25d7e88e6529af170ba9178c724.avif"
     }
    ],
+   "language_guess": {
+    "language": "ja",
+    "confidence": 0.9356048133495349
+   },
    "verify": {
-    "japanese/southern-islands/no-045": 0.337,
-    "japanese/pokemon-jungle/no-045": -0.337,
-    "international/southern-islands/17": -0.424
+    "japanese/southern-islands/no-045": 0.403,
+    "japanese/pokemon-jungle/no-045": -0.403,
+    "english/southern-islands/17": -0.4133
    },
    "edition_stamp": 0.4645,
    "ecard_reverse": 0.3324,
@@ -514,7 +550,7 @@
     "pass": 1,
     "inliers": 572,
     "scan_features": 3000,
-    "box_error": 0.04671294987201691
+    "box_error": 0.04668764770030975
    },
    "quality": "sure"
   },
@@ -557,13 +593,14 @@
      "name": "Lapras",
      "set_name": "Southern Islands",
      "number": "No. 131",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c19032",
      "release": "r464",
-     "artwork_group": "a681",
+     "artwork_group": "a556",
      "release_date": "1999-07-17",
      "sim": 0.9762,
-     "picture": "https://img.cardcorpus.com/m/cfe1464d05b5dac548cc9a40aa844532"
+     "picture": "https://img.cardcorpus.com/s1/960/cfe1464d05b5dac548cc9a40aa844532.avif"
     },
     {
      "handle": "ce1a38156e2250a8c91a54cc5f874c05",
@@ -571,15 +608,16 @@
      "set": "japanese/leader-s-stadium-gym-heroes",
      "card": "no-086",
      "name": "Misty's Seel",
-     "set_name": "Leader's Stadium (Gym Heroes)",
+     "set_name": "ポケモンジム ジム拡張第1弾「リーダーズスタジアム」",
      "number": "No. 086",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c182",
      "release": "r3",
-     "artwork_group": "a240",
+     "artwork_group": "a181",
      "release_date": "1998-10-24",
      "sim": 0.7014,
-     "picture": "https://img.cardcorpus.com/m/ce1a38156e2250a8c91a54cc5f874c05"
+     "picture": "https://img.cardcorpus.com/s1/960/ce1a38156e2250a8c91a54cc5f874c05.avif"
     },
     {
      "handle": "eb2205ccb1ef48d7795723eb9e5f0833",
@@ -587,15 +625,16 @@
      "set": "japanese/leader-s-stadium-gym-heroes",
      "card": "no-061",
      "name": "Misty's Poliwhirl",
-     "set_name": "Leader's Stadium (Gym Heroes)",
+     "set_name": "ポケモンジム ジム拡張第1弾「リーダーズスタジアム」",
      "number": "No. 061",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c176",
      "release": "r3",
-     "artwork_group": "a228",
+     "artwork_group": "a170",
      "release_date": "1998-10-24",
      "sim": 0.6751,
-     "picture": "https://img.cardcorpus.com/m/eb2205ccb1ef48d7795723eb9e5f0833"
+     "picture": "https://img.cardcorpus.com/s1/960/eb2205ccb1ef48d7795723eb9e5f0833.avif"
     },
     {
      "handle": "a12d08618adaefd435f84eda44d8e74b",
@@ -603,15 +642,16 @@
      "set": "japanese/expansion-pack-base-set",
      "card": "no-148",
      "name": "Dragonair",
-     "set_name": "Expansion Pack (Base Set)",
+     "set_name": "第1弾 拡張パック",
      "number": "No. 148",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c18",
      "release": "r246",
-     "artwork_group": "a698",
+     "artwork_group": "a18",
      "release_date": "1996-10-20",
      "sim": 0.669,
-     "picture": "https://img.cardcorpus.com/m/a12d08618adaefd435f84eda44d8e74b"
+     "picture": "https://img.cardcorpus.com/s1/960/a12d08618adaefd435f84eda44d8e74b.avif"
     },
     {
      "handle": "9d6f75d28fa02a6071f2776de71d9449",
@@ -619,18 +659,23 @@
      "set": "japanese/expansion-pack-base-set",
      "card": "no-087",
      "name": "Dewgong",
-     "set_name": "Expansion Pack (Base Set)",
+     "set_name": "第1弾 拡張パック",
      "number": "No. 087",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c25",
      "release": "r246",
-     "artwork_group": "a637",
+     "artwork_group": "a25",
      "release_date": "1996-10-20",
      "sim": 0.6623,
      "variant": "no-rarity-non-holo",
-     "picture": "https://img.cardcorpus.com/m/9d6f75d28fa02a6071f2776de71d9449"
+     "picture": "https://img.cardcorpus.com/s1/960/9d6f75d28fa02a6071f2776de71d9449.avif"
     }
    ],
+   "language_guess": {
+    "language": "ja",
+    "confidence": 0.9534612322655509
+   },
    "numfit": {
     "019/059": -9.904,
     "026/087": -10.127,
@@ -642,9 +687,9 @@
    "alignment": {
     "aligned": true,
     "pass": 1,
-    "inliers": 771,
-    "scan_features": 2664,
-    "box_error": 0.016640422865748405
+    "inliers": 753,
+    "scan_features": 2670,
+    "box_error": 0.016762210056185722
    },
    "quality": "sure"
   },
@@ -672,10 +717,10 @@
    "back_sim": 0.105,
    "orient_p": 0.9953,
    "number_read": {
-    "text": "10/110",
-    "votes": 3,
+    "text": "10/186",
+    "votes": 5,
     "n": 10,
-    "d": 110,
+    "d": 186,
     "code": null
    },
    "candidates": [
@@ -687,13 +732,14 @@
      "name": "Lickitung",
      "set_name": "Southern Islands",
      "number": "No. 108",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c19031",
      "release": "r464",
-     "artwork_group": "a658",
+     "artwork_group": "a542",
      "release_date": "1999-07-17",
      "sim": 0.9574,
-     "picture": "https://img.cardcorpus.com/m/f5846ba0a5f3846b956125981aff9f66"
+     "picture": "https://img.cardcorpus.com/s1/960/f5846ba0a5f3846b956125981aff9f66.avif"
     },
     {
      "handle": "346aede68001fbf7c52d59f7f8701bf3",
@@ -701,15 +747,16 @@
      "set": "japanese/vending-sheet-1",
      "card": "no-113",
      "name": "Chansey",
-     "set_name": "Vending Sheet 1 (Blue)",
+     "set_name": "拡張シート 第1弾 (青版)",
      "number": "No. 113",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": null,
      "release": "r528",
-     "artwork_group": "a663",
+     "artwork_group": "a3",
      "release_date": "1998-03-23",
      "sim": 0.7662,
-     "picture": "https://img.cardcorpus.com/m/346aede68001fbf7c52d59f7f8701bf3"
+     "picture": "https://img.cardcorpus.com/s1/960/346aede68001fbf7c52d59f7f8701bf3.avif"
     },
     {
      "handle": "1fcf579a7430af8a4a14689f30191f9c",
@@ -719,13 +766,14 @@
      "name": "Hungry Snorlax",
      "set_name": "Miscellaneous Promos",
      "number": null,
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
-     "release": "r755",
-     "artwork_group": "a10047",
+     "same_card": null,
+     "release": "r753",
+     "artwork_group": "a4918",
      "release_date": "1996-10-15",
      "sim": 0.7255,
-     "picture": "https://img.cardcorpus.com/m/1fcf579a7430af8a4a14689f30191f9c"
+     "picture": "https://img.cardcorpus.com/s1/960/1fcf579a7430af8a4a14689f30191f9c.avif"
     },
     {
      "handle": "ee77b3b1ac0809b826122162920e6a6b",
@@ -735,13 +783,14 @@
      "name": "Vileplume",
      "set_name": "Southern Islands",
      "number": "No. 045",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c19026",
      "release": "r464",
-     "artwork_group": "a595",
+     "artwork_group": "a505",
      "release_date": "1999-07-17",
      "sim": 0.67,
-     "picture": "https://img.cardcorpus.com/m/ee77b3b1ac0809b826122162920e6a6b"
+     "picture": "https://img.cardcorpus.com/s1/960/ee77b3b1ac0809b826122162920e6a6b.avif"
     },
     {
      "handle": "aede117fab30d48a851b78cab1bc6686",
@@ -749,20 +798,25 @@
      "set": "japanese/rocket-gang",
      "card": "no-050",
      "name": "Diglett",
-     "set_name": "Rocket Gang",
+     "set_name": "ロケット団",
      "number": "No. 050",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c18024",
      "release": "r434",
-     "artwork_group": "a600",
+     "artwork_group": "a47",
      "release_date": "1997-11-21",
      "sim": 0.688,
-     "picture": "https://img.cardcorpus.com/m/aede117fab30d48a851b78cab1bc6686"
+     "picture": "https://img.cardcorpus.com/s1/960/aede117fab30d48a851b78cab1bc6686.avif"
     }
    ],
+   "language_guess": {
+    "language": "ja",
+    "confidence": 0.9606280362943223
+   },
    "verify": {
-    "japanese/southern-islands/no-108": 0.8094,
-    "japanese/pokemon-jungle/no-108": -0.8094
+    "japanese/southern-islands/no-108": 0.8115,
+    "japanese/pokemon-jungle/no-108": -0.8115
    },
    "edition_stamp": 0.4581,
    "ecard_reverse": 0.3183,
@@ -771,8 +825,8 @@
     "aligned": true,
     "pass": 1,
     "inliers": 860,
-    "scan_features": 2710,
-    "box_error": 0.012613978236913681
+    "scan_features": 2726,
+    "box_error": 0.012508649379014969
    },
    "quality": "sure"
   },
@@ -815,13 +869,14 @@
      "name": "Tentacruel",
      "set_name": "Southern Islands",
      "number": "No. 073",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c19028",
      "release": "r464",
-     "artwork_group": "a623",
+     "artwork_group": "a521",
      "release_date": "1999-07-17",
      "sim": 0.9856,
-     "picture": "https://img.cardcorpus.com/m/6ba45baef8eb032a9d2385040bd326fa"
+     "picture": "https://img.cardcorpus.com/s1/960/6ba45baef8eb032a9d2385040bd326fa.avif"
     },
     {
      "handle": "5345799680ffe02f08e07bd43c89b7b6",
@@ -829,15 +884,16 @@
      "set": "japanese/challenge-from-the-darkness-gym-challenge",
      "card": "no-049",
      "name": "Sabrina's Venomoth",
-     "set_name": "Challenge From The Darkness (Gym Challenge)",
+     "set_name": "ポケモンジム ジム拡張第2弾「闇からの挑戦」",
      "number": "No. 049",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c235",
      "release": "r4",
-     "artwork_group": "a319",
+     "artwork_group": "a259",
      "release_date": "1999-06-25",
      "sim": 0.7217,
-     "picture": "https://img.cardcorpus.com/m/5345799680ffe02f08e07bd43c89b7b6"
+     "picture": "https://img.cardcorpus.com/s1/960/5345799680ffe02f08e07bd43c89b7b6.avif"
     },
     {
      "handle": "39450855a83de389403862a8a602d43c",
@@ -845,15 +901,16 @@
      "set": "japanese/challenge-from-the-darkness-gym-challenge",
      "card": "no-053",
      "name": "Giovanni's Persian",
-     "set_name": "Challenge From The Darkness (Gym Challenge)",
+     "set_name": "ポケモンジム ジム拡張第2弾「闇からの挑戦」",
      "number": "No. 053",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c239",
      "release": "r4",
-     "artwork_group": "a322",
+     "artwork_group": "a262",
      "release_date": "1999-06-25",
      "sim": 0.7147,
-     "picture": "https://img.cardcorpus.com/m/39450855a83de389403862a8a602d43c"
+     "picture": "https://img.cardcorpus.com/s1/960/39450855a83de389403862a8a602d43c.avif"
     },
     {
      "handle": "b70975eb307573072c3d3b1dad05a391",
@@ -861,15 +918,16 @@
      "set": "japanese/rocket-gang",
      "card": "no-055",
      "name": "Dark Golduck",
-     "set_name": "Rocket Gang",
+     "set_name": "ロケット団",
      "number": "No. 055",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c18029",
      "release": "r434",
-     "artwork_group": "a5319",
+     "artwork_group": "a4484",
      "release_date": "1997-11-21",
      "sim": 0.7129,
-     "picture": "https://img.cardcorpus.com/m/b70975eb307573072c3d3b1dad05a391"
+     "picture": "https://img.cardcorpus.com/s1/960/b70975eb307573072c3d3b1dad05a391.avif"
     },
     {
      "handle": "9c3695aa3893de550297fbe3f068fd68",
@@ -877,26 +935,31 @@
      "set": "japanese/leader-s-stadium-gym-heroes",
      "card": "no-072",
      "name": "Misty's Tentacool",
-     "set_name": "Leader's Stadium (Gym Heroes)",
+     "set_name": "ポケモンジム ジム拡張第1弾「リーダーズスタジアム」",
      "number": "No. 072",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c179",
      "release": "r3",
-     "artwork_group": "a232",
+     "artwork_group": "a174",
      "release_date": "1998-10-24",
      "sim": 0.7112,
-     "picture": "https://img.cardcorpus.com/m/9c3695aa3893de550297fbe3f068fd68"
+     "picture": "https://img.cardcorpus.com/s1/960/9c3695aa3893de550297fbe3f068fd68.avif"
     }
    ],
+   "language_guess": {
+    "language": "ja",
+    "confidence": 0.9514087446562368
+   },
    "edition_stamp": 0.4045,
    "ecard_reverse": 0.3057,
    "ecard_reading": "dot_code",
    "alignment": {
     "aligned": true,
     "pass": 1,
-    "inliers": 878,
-    "scan_features": 2884,
-    "box_error": 0.00740421749651432
+    "inliers": 866,
+    "scan_features": 2827,
+    "box_error": 0.007266783155500889
    },
    "quality": "sure"
   },
@@ -924,11 +987,11 @@
    "back_sim": 0.0253,
    "orient_p": 0.9998,
    "number_read": {
-    "text": "A/123",
-    "votes": 11,
-    "n": null,
-    "d": null,
-    "code": "A/123"
+    "text": "11/186",
+    "votes": 6,
+    "n": 11,
+    "d": 186,
+    "code": null
    },
    "candidates": [
     {
@@ -939,13 +1002,14 @@
      "name": "Primeape",
      "set_name": "Southern Islands",
      "number": "No. 057",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c19027",
      "release": "r464",
-     "artwork_group": "a607",
+     "artwork_group": "a515",
      "release_date": "1999-07-17",
      "sim": 0.9668,
-     "picture": "https://img.cardcorpus.com/m/a1c63b882983a7d2077e66d82847bfbf"
+     "picture": "https://img.cardcorpus.com/s1/960/a1c63b882983a7d2077e66d82847bfbf.avif"
     },
     {
      "handle": "6d6ac76cb4cba028f0a0b87703c64f56",
@@ -955,13 +1019,14 @@
      "name": "Pichu",
      "set_name": "Intro Pack Neo (Totodile)",
      "number": "No. 172",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": null,
      "release": "r310",
-     "artwork_group": "a3733",
+     "artwork_group": "a3154",
      "release_date": "2001-04-06",
      "sim": 0.7018,
-     "picture": "https://img.cardcorpus.com/m/6d6ac76cb4cba028f0a0b87703c64f56"
+     "picture": "https://img.cardcorpus.com/s1/960/6d6ac76cb4cba028f0a0b87703c64f56.avif"
     },
     {
      "handle": "caa00680dd606a98895c38d8b876bd01",
@@ -971,13 +1036,14 @@
      "name": "Raticate",
      "set_name": "Southern Islands",
      "number": "No. 020",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c19024",
      "release": "r464",
-     "artwork_group": "a571",
+     "artwork_group": "a40",
      "release_date": "1999-07-17",
      "sim": 0.6571,
-     "picture": "https://img.cardcorpus.com/m/caa00680dd606a98895c38d8b876bd01"
+     "picture": "https://img.cardcorpus.com/s1/960/caa00680dd606a98895c38d8b876bd01.avif"
     },
     {
      "handle": "60aa0a60ba7269603ccf2ebba4cb004b",
@@ -985,15 +1051,16 @@
      "set": "japanese/split-earth",
      "card": "036",
      "name": "Jolteon",
-     "set_name": "Split Earth",
+     "set_name": "裂けた大地",
      "number": "036/088",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c19241",
      "release": "r468",
-     "artwork_group": "a685",
+     "artwork_group": "a560",
      "release_date": "2002-08-23",
      "sim": 0.6773,
-     "picture": "https://img.cardcorpus.com/m/60aa0a60ba7269603ccf2ebba4cb004b"
+     "picture": "https://img.cardcorpus.com/s1/960/60aa0a60ba7269603ccf2ebba4cb004b.avif"
     },
     {
      "handle": "fc4d0ad6a8177d652efdd276702b4538",
@@ -1001,23 +1068,29 @@
      "set": "japanese/expansion-pack-base-set",
      "card": "no-107",
      "name": "Hitmonchan",
-     "set_name": "Expansion Pack (Base Set)",
+     "set_name": "第1弾 拡張パック",
      "number": "No. 107",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c7",
      "release": "r246",
-     "artwork_group": "a657",
+     "artwork_group": "a7",
      "release_date": "1996-10-20",
      "sim": 0.6755,
      "variant": "no-rarity-holo",
-     "picture": "https://img.cardcorpus.com/m/fc4d0ad6a8177d652efdd276702b4538"
+     "picture": "https://img.cardcorpus.com/s1/960/fc4d0ad6a8177d652efdd276702b4538.avif"
     }
    ],
+   "language_guess": {
+    "language": "ja",
+    "confidence": 0.9623698732253846
+   },
    "numfit": {
     "036/088": -11.534,
     "055/070": -10.92,
     "055/090": -9.746,
-    "353/414": -22.984
+    "353/414": -22.984,
+    "11/186": -6.493
    },
    "edition_stamp": 0.407,
    "ecard_reverse": 0.3288,
@@ -1025,9 +1098,9 @@
    "alignment": {
     "aligned": true,
     "pass": 1,
-    "inliers": 928,
-    "scan_features": 2963,
-    "box_error": 0.027232179418206215
+    "inliers": 919,
+    "scan_features": 2983,
+    "box_error": 0.0274361465126276
    },
    "quality": "sure"
   },
@@ -1070,13 +1143,14 @@
      "name": "Marill",
      "set_name": "Southern Islands",
      "number": null,
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c19035",
      "release": "r464",
-     "artwork_group": "a996",
+     "artwork_group": "a834",
      "release_date": "1999-07-17",
      "sim": 0.9568,
-     "picture": "https://img.cardcorpus.com/m/1e62c8d8426f127a8186923e530d418c"
+     "picture": "https://img.cardcorpus.com/s1/960/1e62c8d8426f127a8186923e530d418c.avif"
     },
     {
      "handle": "fb28f439fafff0f4028a1453fa388d0c",
@@ -1084,15 +1158,16 @@
      "set": "japanese/gold-silver-to-a-new-world-neo-genesis",
      "card": "no-189",
      "name": "Jumpluff",
-     "set_name": "Gold Silver to a new World (Neo Genesis)",
+     "set_name": "金、銀、新世界へ...",
      "number": "No. 189",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c13316",
      "release": "r280",
-     "artwork_group": "a2426",
+     "artwork_group": "a2232",
      "release_date": "2000-02-04",
      "sim": 0.6714,
-     "picture": "https://img.cardcorpus.com/m/fb28f439fafff0f4028a1453fa388d0c"
+     "picture": "https://img.cardcorpus.com/s1/960/fb28f439fafff0f4028a1453fa388d0c.avif"
     },
     {
      "handle": "37a6f9e8800a001209eb826222e4530f",
@@ -1100,15 +1175,16 @@
      "set": "japanese/black-collection",
      "card": "016",
      "name": "Swanna",
-     "set_name": "Black Collection",
+     "set_name": "ブラックコレクション",
      "number": "016/053",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c10042",
      "release": "r174",
-     "artwork_group": "a1935",
+     "artwork_group": "a1755",
      "release_date": "2010-12-17",
      "sim": 0.6562,
-     "picture": "https://img.cardcorpus.com/m/37a6f9e8800a001209eb826222e4530f"
+     "picture": "https://img.cardcorpus.com/s1/960/37a6f9e8800a001209eb826222e4530f.avif"
     },
     {
      "handle": "f9fb6201e83a181cabaa4ec7ec534139",
@@ -1116,16 +1192,17 @@
      "set": "japanese/moonlit-pursuit",
      "card": "dpbp-087",
      "name": "Slowking",
-     "set_name": "Moonlit Pursuit",
+     "set_name": "月光の追跡",
      "number": "DPBP#087",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c16134",
      "release": "r370",
-     "artwork_group": "a3307",
+     "artwork_group": "a2765",
      "release_date": "2007-10-26",
      "sim": 0.6554,
      "variant": "unlimited-non-holo",
-     "picture": "https://img.cardcorpus.com/m/f9fb6201e83a181cabaa4ec7ec534139"
+     "picture": "https://img.cardcorpus.com/s1/960/f9fb6201e83a181cabaa4ec7ec534139.avif"
     },
     {
      "handle": "b0f25654fb2d736433897bcc7d32abd7",
@@ -1133,21 +1210,26 @@
      "set": "japanese/pokemon-jungle",
      "card": "no-043",
      "name": "Oddish",
-     "set_name": "Pokémon Jungle",
+     "set_name": "ポケモンジャングル",
      "number": "No. 043",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c17149",
      "release": "r405",
-     "artwork_group": "a593",
+     "artwork_group": "a503",
      "release_date": "1997-03-05",
      "sim": 0.6347,
-     "picture": "https://img.cardcorpus.com/m/b0f25654fb2d736433897bcc7d32abd7"
+     "picture": "https://img.cardcorpus.com/s1/960/b0f25654fb2d736433897bcc7d32abd7.avif"
     }
    ],
+   "language_guess": {
+    "language": "ja",
+    "confidence": 0.8806077459205454
+   },
    "verify": {
-    "japanese/southern-islands/marill": 0.2359,
-    "japanese/corocoro-comics/marill": -0.2359,
-    "japanese/miscellaneous-promos/marill": -0.3724
+    "japanese/southern-islands/marill": 0.23,
+    "japanese/corocoro-comics/marill": -0.23,
+    "japanese/miscellaneous-promos/marill": -0.3624
    },
    "edition_stamp": 0.3534,
    "ecard_reverse": 0.3137,
@@ -1155,9 +1237,9 @@
    "alignment": {
     "aligned": true,
     "pass": 1,
-    "inliers": 652,
+    "inliers": 645,
     "scan_features": 3000,
-    "box_error": 0.018809065222740173
+    "box_error": 0.019196767359972
    },
    "quality": "sure"
   }

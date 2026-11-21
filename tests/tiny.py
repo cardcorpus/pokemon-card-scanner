@@ -51,10 +51,10 @@ def make(folder, cards=24, seed=0):
         handles.append(h)
         rows.append({"handle": h, "kind": "card", "set": "international/test-set", "card": str(i + 1),
                      "name": f"Test Card {i % 8}", "set_name": "Test Set", "number": f"{i + 1}/64",
-                     "family": "international" if i % 3 else "japanese", "language": "en" if i % 3 else "ja",
+                     "catalog": "international" if i % 3 else "japanese", "language": "en" if i % 3 else "ja",
                      "release": f"r{i % 2}", "artwork_group": f"a{i % 8}", "release_date": f"2000-01-{i % 28 + 1:02d}",
                      "rarity": "Rare Holo" if i % 4 == 0 else "Common", "picture": h})
-    rows.append({"handle": "view-1", "kind": "view", "name": "Test Card 0", "family": "international"})
+    rows.append({"handle": "view-1", "kind": "view", "name": "Test Card 0", "catalog": "international"})
     handles.append("view-1")
     with gzip.open(W / "index" / "cards.jsonl.gz", "wt") as f:
         for r in rows:

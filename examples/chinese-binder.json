@@ -40,15 +40,16 @@
      "set": "zh-hans/30th-celebration",
      "card": "012",
      "name": "Articuno",
-     "set_name": "30th Celebration",
+     "set_name": "30周年庆典",
      "number": "012/103",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
-     "release": "r760",
-     "artwork_group": "a694",
+     "same_card": "c22936",
+     "release": "r758",
+     "artwork_group": "a568",
      "release_date": "2026-09-16",
      "sim": 0.9568,
-     "picture": "https://img.cardcorpus.com/m/b0df18d6aa8b511f4b06a702c233adf9"
+     "picture": "https://img.cardcorpus.com/s1/960/b0df18d6aa8b511f4b06a702c233adf9.avif"
     },
     {
      "handle": "5e00bc3f25b348b6af0041157bb66658",
@@ -56,15 +57,16 @@
      "set": "zh-hans/30th-celebration",
      "card": "011",
      "name": "Lapras",
-     "set_name": "30th Celebration",
+     "set_name": "30周年庆典",
      "number": "011/103",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
-     "release": "r760",
-     "artwork_group": "a681",
+     "same_card": "c22935",
+     "release": "r758",
+     "artwork_group": "a556",
      "release_date": "2026-09-16",
      "sim": 0.7485,
-     "picture": "https://img.cardcorpus.com/m/5e00bc3f25b348b6af0041157bb66658"
+     "picture": "https://img.cardcorpus.com/s1/960/5e00bc3f25b348b6af0041157bb66658.avif"
     },
     {
      "handle": "860e14fccaecb73ae0b9cc7b30a57351",
@@ -72,15 +74,16 @@
      "set": "zh-hans/30th-celebration",
      "card": "146",
      "name": "Metagross δ",
-     "set_name": "30th Celebration",
+     "set_name": "30周年庆典",
      "number": "146/103",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
-     "release": "r760",
-     "artwork_group": "a4611",
+     "same_card": "c22924",
+     "release": "r758",
+     "artwork_group": "a3856",
      "release_date": "2026-09-16",
      "sim": 0.7614,
-     "picture": "https://img.cardcorpus.com/m/860e14fccaecb73ae0b9cc7b30a57351"
+     "picture": "https://img.cardcorpus.com/s1/960/860e14fccaecb73ae0b9cc7b30a57351.avif"
     },
     {
      "handle": "97e2cbfde7a87785e1110ae15d11d369",
@@ -88,15 +91,16 @@
      "set": "zh-hans/storming-emergence-gx-starter-deck",
      "card": "263",
      "name": "Rainbow Brush",
-     "set_name": "Storming Emergence GX Starter Deck",
+     "set_name": "起始卡组 横空出世GX",
      "number": "263/324",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
+     "same_card": "c7250",
      "release": "r122",
-     "artwork_group": "a3423",
+     "artwork_group": "a2869",
      "release_date": "2022-10-28",
      "sim": 0.7474,
-     "picture": "https://img.cardcorpus.com/m/97e2cbfde7a87785e1110ae15d11d369"
+     "picture": "https://img.cardcorpus.com/s1/960/97e2cbfde7a87785e1110ae15d11d369.avif"
     },
     {
      "handle": "1564cc6bd3e342d4e2d3d77cd6961783",
@@ -104,21 +108,26 @@
      "set": "zh-hans/gem-pack-volume-4",
      "card": "1202",
      "name": "Froslass",
-     "set_name": "Gem Pack Volume 4",
+     "set_name": "宝石包 VOL.4",
      "number": "1202/07",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
+     "same_card": "c1103",
      "release": "r60",
-     "artwork_group": "a1483",
+     "artwork_group": "a1312",
      "release_date": "2026-02-06",
      "sim": 0.7383,
-     "picture": "https://img.cardcorpus.com/m/1564cc6bd3e342d4e2d3d77cd6961783"
+     "picture": "https://img.cardcorpus.com/s1/960/1564cc6bd3e342d4e2d3d77cd6961783.avif"
     }
    ],
+   "language_guess": {
+    "language": "zh-Hans",
+    "confidence": 0.9587609500611126
+   },
    "verify": {
-    "zh-hans/30th-celebration/012": 0.8257,
-    "zh-hans/shining-synergy-shower/027": -0.8332,
-    "zh-hans/sv-chinese-promos/433": -0.8257
+    "zh-hans/30th-celebration/012": 0.8198,
+    "zh-hans/shining-synergy-shower/027": -0.8198,
+    "zh-hans/sv-chinese-promos/433": -0.8242
    },
    "numfit": {
     "011/103": -4.213,
@@ -136,9 +145,9 @@
    "alignment": {
     "aligned": true,
     "pass": 1,
-    "inliers": 615,
-    "scan_features": 2236,
-    "box_error": 0.027651820331811905
+    "inliers": 587,
+    "scan_features": 2200,
+    "box_error": 0.027621068060398102
    },
    "quality": "sure"
   },
@@ -179,15 +188,16 @@
      "set": "zh-hans/30th-celebration",
      "card": "094",
      "name": "Eevee",
-     "set_name": "30th Celebration",
+     "set_name": "30周年庆典",
      "number": "094/103",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
-     "release": "r760",
-     "artwork_group": "a683",
+     "same_card": "c23054",
+     "release": "r758",
+     "artwork_group": "a558",
      "release_date": "2026-09-16",
      "sim": 0.9307,
-     "picture": "https://img.cardcorpus.com/m/5e467725e539a47d6c39107ebb3e77a1"
+     "picture": "https://img.cardcorpus.com/s1/960/5e467725e539a47d6c39107ebb3e77a1.avif"
     },
     {
      "handle": "b3b41a13a855500c28c60766bcb5f1e5",
@@ -195,15 +205,16 @@
      "set": "zh-hans/shining-synergy-shower",
      "card": "119",
      "name": "Farfetch'd",
-     "set_name": "Shining Synergy (Shower)",
+     "set_name": "交相辉映 沐",
      "number": "119/150",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
+     "same_card": "c6054",
      "release": "r115",
-     "artwork_group": "a633",
+     "artwork_group": "a27",
      "release_date": "2023-01-18",
      "sim": 0.6944,
-     "picture": "https://img.cardcorpus.com/m/b3b41a13a855500c28c60766bcb5f1e5"
+     "picture": "https://img.cardcorpus.com/s1/960/b3b41a13a855500c28c60766bcb5f1e5.avif"
     },
     {
      "handle": "afb26f815913efbd2530d5b79b662276",
@@ -211,15 +222,16 @@
      "set": "zh-hans/white-flare",
      "card": "072",
      "name": "Lillipup",
-     "set_name": "White Flare",
+     "set_name": "白焰迸涌",
      "number": "072/086",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
-     "release": "r887",
-     "artwork_group": "a1645",
+     "same_card": "c14644",
+     "release": "r885",
+     "artwork_group": "a1473",
      "release_date": "2026-11-06",
      "sim": 0.6781,
-     "picture": "https://img.cardcorpus.com/m/afb26f815913efbd2530d5b79b662276"
+     "picture": "https://img.cardcorpus.com/s1/960/afb26f815913efbd2530d5b79b662276.avif"
     },
     {
      "handle": "e1de32f9914d2305bcbd7e8b73ecf0bb",
@@ -227,15 +239,16 @@
      "set": "zh-hans/storming-emergence-gx-starter-deck",
      "card": "205",
      "name": "Lickitung",
-     "set_name": "Storming Emergence GX Starter Deck",
+     "set_name": "起始卡组 横空出世GX",
      "number": "205/324",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
+     "same_card": "c7209",
      "release": "r122",
-     "artwork_group": "a658",
+     "artwork_group": "a542",
      "release_date": "2022-10-28",
      "sim": 0.6779,
-     "picture": "https://img.cardcorpus.com/m/e1de32f9914d2305bcbd7e8b73ecf0bb"
+     "picture": "https://img.cardcorpus.com/s1/960/e1de32f9914d2305bcbd7e8b73ecf0bb.avif"
     },
     {
      "handle": "2ea2ba1e8e28fb8f1ab2e2437cf260c7",
@@ -243,22 +256,40 @@
      "set": "zh-hans/nine-colours-gathering-friend",
      "card": "113",
      "name": "Stantler",
-     "set_name": "Nine Colours Gathering (Friend)",
+     "set_name": "九彩汇聚 朋",
      "number": "113/132",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
+     "same_card": "c4428",
      "release": "r92",
-     "artwork_group": "a1699",
+     "artwork_group": "a1526",
      "release_date": "2024-03-01",
      "sim": 0.6778,
-     "picture": "https://img.cardcorpus.com/m/2ea2ba1e8e28fb8f1ab2e2437cf260c7"
+     "picture": "https://img.cardcorpus.com/s1/960/2ea2ba1e8e28fb8f1ab2e2437cf260c7.avif"
     }
    ],
+   "language_guess": {
+    "language": "zh-Hant",
+    "confidence": 0.9471234898706639
+   },
+   "language_check": {
+    "suggested": "zh-Hant",
+    "confidence": 0.9471234898706639,
+    "switched": false,
+    "linked": true,
+    "pick_sim": 0.9307,
+    "print": "zh-hant/30th-celebration/094",
+    "sim": 0.9276,
+    "name": "Eevee",
+    "set_name": "30th Celebration",
+    "number": "094/103",
+    "picture": "https://img.cardcorpus.com/s1/960/5041ab545d70e183b7aefd6536fbae8d.avif"
+   },
    "verify": {
-    "zh-hans/30th-celebration/094": 0.1775,
-    "zh-hans/stellar-crystal/153": -0.4602,
-    "zh-hans/terastal-gathering/139": -0.4607,
-    "zh-hans/battle-academy/045": -0.1775
+    "zh-hans/30th-celebration/094": 0.1746,
+    "zh-hans/stellar-crystal/153": -0.4533,
+    "zh-hans/terastal-gathering/139": -0.4592,
+    "zh-hans/battle-academy/045": -0.1746
    },
    "numfit": {
     "023/066": -9.776,
@@ -279,9 +310,9 @@
    "alignment": {
     "aligned": true,
     "pass": 1,
-    "inliers": 1116,
+    "inliers": 1094,
     "scan_features": 3000,
-    "box_error": 0.011788900010287762
+    "box_error": 0.011598648503422737
    },
    "quality": "sure"
   },
@@ -322,15 +353,16 @@
      "set": "zh-hans/30th-celebration",
      "card": "084",
      "name": "Solgaleo",
-     "set_name": "30th Celebration",
+     "set_name": "30周年庆典",
      "number": "084/103",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
-     "release": "r760",
-     "artwork_group": "a146",
+     "same_card": "c23038",
+     "release": "r758",
+     "artwork_group": "a129",
      "release_date": "2026-09-16",
      "sim": 0.8618,
-     "picture": "https://img.cardcorpus.com/m/58f627264b25915a45ef4452cd396ce7"
+     "picture": "https://img.cardcorpus.com/s1/960/58f627264b25915a45ef4452cd396ce7.avif"
     },
     {
      "handle": "d72709a819d9bb8e564153cc4497e072",
@@ -338,15 +370,16 @@
      "set": "zh-hans/sv-chinese-promos",
      "card": "251",
      "name": "Iron Valiant",
-     "set_name": "SV Chinese Promos",
+     "set_name": "朱&紫 特典卡",
      "number": "251/SV-P",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
+     "same_card": "c1154",
      "release": "r126",
-     "artwork_group": "a1523",
+     "artwork_group": "a1352",
      "release_date": "2024-08-03",
      "sim": 0.7588,
-     "picture": "https://img.cardcorpus.com/m/d72709a819d9bb8e564153cc4497e072"
+     "picture": "https://img.cardcorpus.com/s1/960/d72709a819d9bb8e564153cc4497e072.avif"
     },
     {
      "handle": "a7ac87a1162e569ec2552e4f0e7de36a",
@@ -354,16 +387,17 @@
      "set": "zh-hans/dynamax-clash-thunder",
      "card": "041",
      "name": "Toxtricity",
-     "set_name": "Dynamax Clash (Thunder)",
+     "set_name": "极巨争锋 雷",
      "number": "041/135",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
+     "same_card": "c2890",
      "release": "r47",
-     "artwork_group": "a1613",
+     "artwork_group": "a1441",
      "release_date": "2023-05-19",
      "sim": 0.7623,
      "variant": "reverse-holo",
-     "picture": "https://img.cardcorpus.com/m/a7ac87a1162e569ec2552e4f0e7de36a"
+     "picture": "https://img.cardcorpus.com/s1/960/a7ac87a1162e569ec2552e4f0e7de36a.avif"
     },
     {
      "handle": "ab2707eeeabac0ea54a50007cdcdea20",
@@ -371,16 +405,17 @@
      "set": "zh-hans/start-deck-100",
      "card": "240",
      "name": "Coalossal",
-     "set_name": "Start Deck 100",
+     "set_name": "起始卡组100",
      "number": "240/414",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
+     "same_card": "c4785",
      "release": "r119",
-     "artwork_group": "a744",
+     "artwork_group": "a592",
      "release_date": "2024-05-17",
      "sim": 0.7557,
      "variant": "holo",
-     "picture": "https://img.cardcorpus.com/m/ab2707eeeabac0ea54a50007cdcdea20"
+     "picture": "https://img.cardcorpus.com/s1/960/ab2707eeeabac0ea54a50007cdcdea20.avif"
     },
     {
      "handle": "6f23c743f447718e172f74f098f13a0f",
@@ -388,18 +423,23 @@
      "set": "zh-hans/primordial-arts-overgrow",
      "card": "067",
      "name": "Coalossal",
-     "set_name": "Primordial Arts (Overgrow)",
+     "set_name": "洪荒演武 茂",
      "number": "067/125",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
+     "same_card": "c4785",
      "release": "r102",
-     "artwork_group": "a744",
+     "artwork_group": "a592",
      "release_date": "2023-11-17",
      "sim": 0.7428,
      "variant": "reverse-holo",
-     "picture": "https://img.cardcorpus.com/m/6f23c743f447718e172f74f098f13a0f"
+     "picture": "https://img.cardcorpus.com/s1/960/6f23c743f447718e172f74f098f13a0f.avif"
     }
    ],
+   "language_guess": {
+    "language": "zh-Hans",
+    "confidence": 0.9536444520292179
+   },
    "numfit": {
     "021/204": -10.541,
     "041/135": -9.986,
@@ -417,9 +457,9 @@
    "alignment": {
     "aligned": true,
     "pass": 1,
-    "inliers": 772,
-    "scan_features": 3000,
-    "box_error": 0.023862862959504128
+    "inliers": 778,
+    "scan_features": 3001,
+    "box_error": 0.023857174441218376
    },
    "quality": "unsure",
    "decided": true
@@ -461,15 +501,16 @@
      "set": "zh-hans/30th-celebration",
      "card": "089",
      "name": "Jangmo-o",
-     "set_name": "30th Celebration",
+     "set_name": "30周年庆典",
      "number": "089/103",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
-     "release": "r760",
-     "artwork_group": "a3212",
+     "same_card": "c23047",
+     "release": "r758",
+     "artwork_group": "a2678",
      "release_date": "2026-09-16",
      "sim": 0.8786,
-     "picture": "https://img.cardcorpus.com/m/b681265a83d45962c3c32112aab109c4"
+     "picture": "https://img.cardcorpus.com/s1/960/b681265a83d45962c3c32112aab109c4.avif"
     },
     {
      "handle": "471cd7eb73f1ad3358fa12650cea2e51",
@@ -477,15 +518,16 @@
      "set": "zh-hans/stellar-crystal",
      "card": "007",
      "name": "Grubbin",
-     "set_name": "Stellar Crystal",
+     "set_name": "星彩晶璃",
      "number": "007/208",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
+     "same_card": "c6566",
      "release": "r120",
-     "artwork_group": "a1460",
+     "artwork_group": "a1289",
      "release_date": "2026-05-15",
      "sim": 0.759,
-     "picture": "https://img.cardcorpus.com/m/471cd7eb73f1ad3358fa12650cea2e51"
+     "picture": "https://img.cardcorpus.com/s1/960/471cd7eb73f1ad3358fa12650cea2e51.avif"
     },
     {
      "handle": "ba48559a11618689fe6bd3f1765c579b",
@@ -493,16 +535,17 @@
      "set": "zh-hans/blade-awakening",
      "card": "081",
      "name": "Helioptile",
-     "set_name": "Blade Awakening",
+     "set_name": "利刃猛醒",
      "number": "081/204",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
+     "same_card": "c1125",
      "release": "r34",
-     "artwork_group": "a1498",
+     "artwork_group": "a1327",
      "release_date": "2026-01-16",
      "sim": 0.7412,
      "variant": "poke-ball",
-     "picture": "https://img.cardcorpus.com/m/ba48559a11618689fe6bd3f1765c579b"
+     "picture": "https://img.cardcorpus.com/s1/960/ba48559a11618689fe6bd3f1765c579b.avif"
     },
     {
      "handle": "c7f9fce6897d75c274a16285b9b9e8ec",
@@ -510,16 +553,17 @@
      "set": "zh-hans/chasing-glory",
      "card": "071",
      "name": "Team Rocket's Flaaffy",
-     "set_name": "Chasing Glory",
+     "set_name": "共逐荣光",
      "number": "071/222",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
+     "same_card": "c2257",
      "release": "r42",
-     "artwork_group": "a2022",
+     "artwork_group": "a1842",
      "release_date": "2026-07-16",
      "sim": 0.7398,
      "variant": "poke-ball",
-     "picture": "https://img.cardcorpus.com/m/c7f9fce6897d75c274a16285b9b9e8ec"
+     "picture": "https://img.cardcorpus.com/s1/960/c7f9fce6897d75c274a16285b9b9e8ec.avif"
     },
     {
      "handle": "6dc9172ddada9a5eb44231ae70b9f8b3",
@@ -527,17 +571,22 @@
      "set": "zh-hans/gem-pack-volume-1",
      "card": "0302",
      "name": "Fuecoco",
-     "set_name": "Gem Pack Volume 1",
+     "set_name": "宝石包 VOL.1",
      "number": "0302/09",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
+     "same_card": "c3779",
      "release": "r57",
-     "artwork_group": "a960",
+     "artwork_group": "a799",
      "release_date": "2025-01-17",
      "sim": 0.7269,
-     "picture": "https://img.cardcorpus.com/m/6dc9172ddada9a5eb44231ae70b9f8b3"
+     "picture": "https://img.cardcorpus.com/s1/960/6dc9172ddada9a5eb44231ae70b9f8b3.avif"
     }
    ],
+   "language_guess": {
+    "language": "zh-Hans",
+    "confidence": 0.9541010717798114
+   },
    "numfit": {
     "007/208": -9.768,
     "017/063": -9.542,
@@ -555,9 +604,9 @@
    "alignment": {
     "aligned": true,
     "pass": 1,
-    "inliers": 442,
-    "scan_features": 1541,
-    "box_error": 0.09367426484823227
+    "inliers": 432,
+    "scan_features": 1531,
+    "box_error": 0.09363808482885361
    },
    "quality": "unsure",
    "decided": true
@@ -599,15 +648,16 @@
      "set": "zh-hans/30th-celebration",
      "card": "082",
      "name": "Dialga",
-     "set_name": "30th Celebration",
+     "set_name": "30周年庆典",
      "number": "082/103",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
-     "release": "r760",
-     "artwork_group": "a144",
+     "same_card": "c23036",
+     "release": "r758",
+     "artwork_group": "a127",
      "release_date": "2026-09-16",
      "sim": 0.7607,
-     "picture": "https://img.cardcorpus.com/m/dfe432e11fec74ac2e6f3cceef2506ff"
+     "picture": "https://img.cardcorpus.com/s1/960/dfe432e11fec74ac2e6f3cceef2506ff.avif"
     },
     {
      "handle": "b0df18d6aa8b511f4b06a702c233adf9",
@@ -615,15 +665,16 @@
      "set": "zh-hans/30th-celebration",
      "card": "012",
      "name": "Articuno",
-     "set_name": "30th Celebration",
+     "set_name": "30周年庆典",
      "number": "012/103",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
-     "release": "r760",
-     "artwork_group": "a694",
+     "same_card": "c22936",
+     "release": "r758",
+     "artwork_group": "a568",
      "release_date": "2026-09-16",
      "sim": 0.7585,
-     "picture": "https://img.cardcorpus.com/m/b0df18d6aa8b511f4b06a702c233adf9"
+     "picture": "https://img.cardcorpus.com/s1/960/b0df18d6aa8b511f4b06a702c233adf9.avif"
     },
     {
      "handle": "4af8d11ae0e0b3a7b1aed2a6e0686bb9",
@@ -631,15 +682,16 @@
      "set": "zh-hans/storming-emergence-gx-starter-deck",
      "card": "218",
      "name": "Noivern",
-     "set_name": "Storming Emergence GX Starter Deck",
+     "set_name": "起始卡组 横空出世GX",
      "number": "218/324",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
+     "same_card": "c7222",
      "release": "r122",
-     "artwork_group": "a2114",
+     "artwork_group": "a1934",
      "release_date": "2022-10-28",
      "sim": 0.7897,
-     "picture": "https://img.cardcorpus.com/m/4af8d11ae0e0b3a7b1aed2a6e0686bb9"
+     "picture": "https://img.cardcorpus.com/s1/960/4af8d11ae0e0b3a7b1aed2a6e0686bb9.avif"
     },
     {
      "handle": "aa709e9a1f2692a9ec4448e19565355c",
@@ -647,15 +699,16 @@
      "set": "zh-hans/dragon-resurgence",
      "card": "019",
      "name": "Noivern",
-     "set_name": "Dragon Resurgence",
+     "set_name": "龙之再临系列礼盒",
      "number": "019/021",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
+     "same_card": null,
      "release": "r44",
-     "artwork_group": "a2114",
+     "artwork_group": "a1934",
      "release_date": "2024-03-01",
      "sim": 0.7946,
-     "picture": "https://img.cardcorpus.com/m/aa709e9a1f2692a9ec4448e19565355c"
+     "picture": "https://img.cardcorpus.com/s1/960/aa709e9a1f2692a9ec4448e19565355c.avif"
     },
     {
      "handle": "62343a3bfa80b1ec8291207f12b57732",
@@ -663,17 +716,22 @@
      "set": "zh-hans/dynamax-tactics",
      "card": "039",
      "name": "Corviknight",
-     "set_name": "Dynamax Tactics",
+     "set_name": "极巨攻防",
      "number": "039/055",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
+     "same_card": "c3241",
      "release": "r49",
-     "artwork_group": "a2269",
+     "artwork_group": "a2083",
      "release_date": "2023-06-28",
      "sim": 0.7822,
-     "picture": "https://img.cardcorpus.com/m/62343a3bfa80b1ec8291207f12b57732"
+     "picture": "https://img.cardcorpus.com/s1/960/62343a3bfa80b1ec8291207f12b57732.avif"
     }
    ],
+   "language_guess": {
+    "language": "zh-Hans",
+    "confidence": 0.9427847208872997
+   },
    "numfit": {
     "012/103": -3.632,
     "018/151": -8.593,
@@ -692,9 +750,9 @@
    "alignment": {
     "aligned": true,
     "pass": 1,
-    "inliers": 626,
-    "scan_features": 2420,
-    "box_error": 0.031352847814559937
+    "inliers": 625,
+    "scan_features": 2419,
+    "box_error": 0.031271789222955704
    },
    "quality": "unsure",
    "decided": true
@@ -736,15 +794,16 @@
      "set": "japanese/30th-celebration",
      "card": "004",
      "name": "Illumise",
-     "set_name": "30th Celebration",
+     "set_name": "30th CELEBRATION",
      "number": "004/103",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
-     "release": "r758",
-     "artwork_group": "a1860",
+     "same_card": "c22910",
+     "release": "r756",
+     "artwork_group": "a1681",
      "release_date": "2026-09-16",
      "sim": 0.8155,
-     "picture": "https://img.cardcorpus.com/m/df94dc78a5fb90c725f1acb5f1b4cb41"
+     "picture": "https://img.cardcorpus.com/s1/960/df94dc78a5fb90c725f1acb5f1b4cb41.avif"
     },
     {
      "handle": "6fd08940f9f5e752b02b0a0c6d5fbbc3",
@@ -752,15 +811,16 @@
      "set": "japanese/pokemon-card-game-battle-academy",
      "card": "005",
      "name": "Toedscool",
-     "set_name": "Pokémon Card Game Battle Academy",
+     "set_name": "バトルアカデミー",
      "number": "005/066",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c818",
      "release": "r402",
-     "artwork_group": "a992",
+     "artwork_group": "a830",
      "release_date": "2024-03-08",
      "sim": 0.5983,
-     "picture": "https://img.cardcorpus.com/m/6fd08940f9f5e752b02b0a0c6d5fbbc3"
+     "picture": "https://img.cardcorpus.com/s1/960/6fd08940f9f5e752b02b0a0c6d5fbbc3.avif"
     },
     {
      "handle": "a6acc46c87f35f5a307a646bb14c141f",
@@ -768,15 +828,16 @@
      "set": "japanese/sword",
      "card": "002",
      "name": "Roserade",
-     "set_name": "Sword",
+     "set_name": "ソード",
      "number": "002/060",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c2672",
      "release": "r487",
-     "artwork_group": "a1346",
+     "artwork_group": "a1179",
      "release_date": "2019-12-06",
      "sim": 0.6033,
-     "picture": "https://img.cardcorpus.com/m/a6acc46c87f35f5a307a646bb14c141f"
+     "picture": "https://img.cardcorpus.com/s1/960/a6acc46c87f35f5a307a646bb14c141f.avif"
     },
     {
      "handle": "a970385570454221eee0ebb73bd8d22f",
@@ -784,15 +845,16 @@
      "set": "japanese/abyss-eye",
      "card": "027",
      "name": "Miraidon",
-     "set_name": "Abyss Eye",
+     "set_name": "アビスアイ",
      "number": "027/081",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c9063",
      "release": "r142",
-     "artwork_group": "a1002",
+     "artwork_group": "a840",
      "release_date": "2026-05-22",
      "sim": 0.6022,
-     "picture": "https://img.cardcorpus.com/m/a970385570454221eee0ebb73bd8d22f"
+     "picture": "https://img.cardcorpus.com/s1/960/a970385570454221eee0ebb73bd8d22f.avif"
     },
     {
      "handle": "d3571313ed643db285795002acb17994",
@@ -802,15 +864,20 @@
      "name": "Pikachu",
      "set_name": "Black & White Promos",
      "number": "No. 284",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": null,
      "release": "r177",
-     "artwork_group": "a122",
+     "artwork_group": "a58",
      "release_date": "2010-12-01",
      "sim": 0.5998,
-     "picture": "https://img.cardcorpus.com/m/d3571313ed643db285795002acb17994"
+     "picture": "https://img.cardcorpus.com/s1/960/d3571313ed643db285795002acb17994.avif"
     }
    ],
+   "language_guess": {
+    "language": "ja",
+    "confidence": 0.9581091576072343
+   },
    "pick": {
     "print": "japanese/30th-celebration/004",
     "margin": 0.3648
@@ -833,9 +900,9 @@
    "alignment": {
     "aligned": true,
     "pass": 1,
-    "inliers": 978,
-    "scan_features": 2866,
-    "box_error": 0.032620638608932495
+    "inliers": 965,
+    "scan_features": 2860,
+    "box_error": 0.032575443387031555
    },
    "quality": "unsure",
    "decided": true
@@ -877,15 +944,16 @@
      "set": "zh-hans/30th-celebration",
      "card": "067",
      "name": "Gimmighoul",
-     "set_name": "30th Celebration",
+     "set_name": "30周年庆典",
      "number": "067/103",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
-     "release": "r760",
-     "artwork_group": "a1627",
+     "same_card": "c23010",
+     "release": "r758",
+     "artwork_group": "a1455",
      "release_date": "2026-09-16",
      "sim": 0.9273,
-     "picture": "https://img.cardcorpus.com/m/c2d4e26027d2fc7b4359e47d93a4faef"
+     "picture": "https://img.cardcorpus.com/s1/960/c2d4e26027d2fc7b4359e47d93a4faef.avif"
     },
     {
      "handle": "f32c06608bb5f8d1b1e5e6e15ff65ff8",
@@ -893,16 +961,17 @@
      "set": "zh-hans/stellar-crystal",
      "card": "084",
      "name": "Azelf",
-     "set_name": "Stellar Crystal",
+     "set_name": "星彩晶璃",
      "number": "084/208",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
+     "same_card": "c6632",
      "release": "r120",
-     "artwork_group": "a1681",
+     "artwork_group": "a1508",
      "release_date": "2026-05-15",
      "sim": 0.7607,
      "variant": "poke-ball",
-     "picture": "https://img.cardcorpus.com/m/f32c06608bb5f8d1b1e5e6e15ff65ff8"
+     "picture": "https://img.cardcorpus.com/s1/960/f32c06608bb5f8d1b1e5e6e15ff65ff8.avif"
     },
     {
      "handle": "59e127e5824d6ab48da0c7696ab67a0b",
@@ -910,15 +979,16 @@
      "set": "zh-hans/black-bolt",
      "card": "043",
      "name": "Elgyem",
-     "set_name": "Black Bolt",
+     "set_name": "黑雷奔流",
      "number": "043/086",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
-     "release": "r886",
-     "artwork_group": "a3072",
+     "same_card": "c14443",
+     "release": "r884",
+     "artwork_group": "a2544",
      "release_date": "2026-11-06",
      "sim": 0.7555,
-     "picture": "https://img.cardcorpus.com/m/59e127e5824d6ab48da0c7696ab67a0b"
+     "picture": "https://img.cardcorpus.com/s1/960/59e127e5824d6ab48da0c7696ab67a0b.avif"
     },
     {
      "handle": "0796341b20e5c09f77948228bf52af04",
@@ -926,15 +996,16 @@
      "set": "zh-hans/primordial-arts-overgrow",
      "card": "099",
      "name": "Herdier",
-     "set_name": "Primordial Arts (Overgrow)",
+     "set_name": "洪荒演武 茂",
      "number": "099/125",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
+     "same_card": "c4817",
      "release": "r102",
-     "artwork_group": "a1646",
+     "artwork_group": "a1474",
      "release_date": "2023-11-17",
      "sim": 0.7477,
-     "picture": "https://img.cardcorpus.com/m/0796341b20e5c09f77948228bf52af04"
+     "picture": "https://img.cardcorpus.com/s1/960/0796341b20e5c09f77948228bf52af04.avif"
     },
     {
      "handle": "48212d26d2268dff82dc9650f6348303",
@@ -942,17 +1013,22 @@
      "set": "zh-hans/nine-colours-gathering-origin",
      "card": "052",
      "name": "Munna",
-     "set_name": "Nine Colours Gathering (Origin)",
+     "set_name": "九彩汇聚 源",
      "number": "052/132",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
+     "same_card": "c4545",
      "release": "r93",
-     "artwork_group": "a2304",
+     "artwork_group": "a2115",
      "release_date": "2024-03-01",
      "sim": 0.7445,
-     "picture": "https://img.cardcorpus.com/m/48212d26d2268dff82dc9650f6348303"
+     "picture": "https://img.cardcorpus.com/s1/960/48212d26d2268dff82dc9650f6348303.avif"
     }
    ],
+   "language_guess": {
+    "language": "zh-Hant",
+    "confidence": 0.9360151941127
+   },
    "pick": {
     "print": "zh-hans/30th-celebration/067",
     "margin": 0.1835
@@ -975,9 +1051,9 @@
    "alignment": {
     "aligned": true,
     "pass": 1,
-    "inliers": 510,
-    "scan_features": 2205,
-    "box_error": 0.02810549922287464
+    "inliers": 508,
+    "scan_features": 2241,
+    "box_error": 0.028469808399677277
    },
    "quality": "sure"
   },
@@ -1018,15 +1094,16 @@
      "set": "zh-hans/30th-celebration",
      "card": "087",
      "name": "Gholdengo",
-     "set_name": "30th Celebration",
+     "set_name": "30周年庆典",
      "number": "087/103",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
-     "release": "r760",
-     "artwork_group": "a2854",
+     "same_card": "c23045",
+     "release": "r758",
+     "artwork_group": "a2345",
      "release_date": "2026-09-16",
      "sim": 0.8907,
-     "picture": "https://img.cardcorpus.com/m/102742981d74886bd667df241d539939"
+     "picture": "https://img.cardcorpus.com/s1/960/102742981d74886bd667df241d539939.avif"
     },
     {
      "handle": "fdc080b182db079f04e06e9cb7afbd4f",
@@ -1034,15 +1111,16 @@
      "set": "zh-hans/30th-celebration",
      "card": "060",
      "name": "Unown",
-     "set_name": "30th Celebration",
+     "set_name": "30周年庆典",
      "number": "060/103",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
-     "release": "r760",
-     "artwork_group": "a3449",
+     "same_card": "c23001",
+     "release": "r758",
+     "artwork_group": "a2893",
      "release_date": "2026-09-16",
      "sim": 0.7419,
-     "picture": "https://img.cardcorpus.com/m/fdc080b182db079f04e06e9cb7afbd4f"
+     "picture": "https://img.cardcorpus.com/s1/960/fdc080b182db079f04e06e9cb7afbd4f.avif"
     },
     {
      "handle": "46a524b85d956f4f9e0e6974457fd245",
@@ -1050,15 +1128,16 @@
      "set": "zh-hans/30th-celebration",
      "card": "130",
      "name": "Sylveon ex",
-     "set_name": "30th Celebration",
+     "set_name": "30周年庆典",
      "number": "130/103",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
-     "release": "r760",
-     "artwork_group": "a966",
+     "same_card": "c23094",
+     "release": "r758",
+     "artwork_group": "a805",
      "release_date": "2026-09-16",
      "sim": 0.6686,
-     "picture": "https://img.cardcorpus.com/m/46a524b85d956f4f9e0e6974457fd245"
+     "picture": "https://img.cardcorpus.com/s1/960/46a524b85d956f4f9e0e6974457fd245.avif"
     },
     {
      "handle": "cfdf4ada290b398347aac50fd041ebdc",
@@ -1066,15 +1145,16 @@
      "set": "zh-hans/30th-celebration",
      "card": "063",
      "name": "Xerneas",
-     "set_name": "30th Celebration",
+     "set_name": "30周年庆典",
      "number": "063/103",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
-     "release": "r760",
-     "artwork_group": "a131",
+     "same_card": "c23005",
+     "release": "r758",
+     "artwork_group": "a115",
      "release_date": "2026-09-16",
      "sim": 0.6609,
-     "picture": "https://img.cardcorpus.com/m/cfdf4ada290b398347aac50fd041ebdc"
+     "picture": "https://img.cardcorpus.com/s1/960/cfdf4ada290b398347aac50fd041ebdc.avif"
     },
     {
      "handle": "38ed9bbb0d35ebf69cc363143c673377",
@@ -1082,18 +1162,23 @@
      "set": "zh-hans/blade-awakening",
      "card": "100",
      "name": "Floette",
-     "set_name": "Blade Awakening",
+     "set_name": "利刃猛醒",
      "number": "100/204",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
+     "same_card": "c1144",
      "release": "r34",
-     "artwork_group": "a1513",
+     "artwork_group": "a1342",
      "release_date": "2026-01-16",
      "sim": 0.6835,
      "variant": "poke-ball",
-     "picture": "https://img.cardcorpus.com/m/38ed9bbb0d35ebf69cc363143c673377"
+     "picture": "https://img.cardcorpus.com/s1/960/38ed9bbb0d35ebf69cc363143c673377.avif"
     }
    ],
+   "language_guess": {
+    "language": "zh-Hans",
+    "confidence": 0.9526160272261861
+   },
    "numfit": {
     "060/103": -6.461,
     "063/103": -8.306,
@@ -1112,9 +1197,9 @@
    "alignment": {
     "aligned": true,
     "pass": 1,
-    "inliers": 761,
-    "scan_features": 2651,
-    "box_error": 0.03691061586141586
+    "inliers": 758,
+    "scan_features": 2637,
+    "box_error": 0.037350043654441833
    },
    "quality": "sure"
   },
@@ -1155,15 +1240,16 @@
      "set": "zh-hans/30th-celebration",
      "card": "075",
      "name": "Alolan Meowth",
-     "set_name": "30th Celebration",
+     "set_name": "30周年庆典",
      "number": "075/103",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
-     "release": "r760",
-     "artwork_group": "a3491",
+     "same_card": "c23019",
+     "release": "r758",
+     "artwork_group": "a2931",
      "release_date": "2026-09-16",
      "sim": 0.8745,
-     "picture": "https://img.cardcorpus.com/m/9a64f3c5393d447f3b575576c7b3f735"
+     "picture": "https://img.cardcorpus.com/s1/960/9a64f3c5393d447f3b575576c7b3f735.avif"
     },
     {
      "handle": "79b2ccc9d3731797c795305df23e034b",
@@ -1171,15 +1257,16 @@
      "set": "zh-hans/gem-pack-volume-4",
      "card": "1507",
      "name": "Minccino",
-     "set_name": "Gem Pack Volume 4",
+     "set_name": "宝石包 VOL.4",
      "number": "1507/07",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
+     "same_card": "c3829",
      "release": "r60",
-     "artwork_group": "a2613",
+     "artwork_group": "a1390",
      "release_date": "2026-02-06",
      "sim": 0.7309,
-     "picture": "https://img.cardcorpus.com/m/79b2ccc9d3731797c795305df23e034b"
+     "picture": "https://img.cardcorpus.com/s1/960/79b2ccc9d3731797c795305df23e034b.avif"
     },
     {
      "handle": "6b455594c27f7f05e76af4049933ac22",
@@ -1187,15 +1274,16 @@
      "set": "zh-hans/black-bolt",
      "card": "157",
      "name": "Minccino",
-     "set_name": "Black Bolt",
+     "set_name": "黑雷奔流",
      "number": "157/086",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
-     "release": "r886",
-     "artwork_group": "a1561",
+     "same_card": "c14556",
+     "release": "r884",
+     "artwork_group": "a1390",
      "release_date": "2026-11-06",
      "sim": 0.7223,
-     "picture": "https://img.cardcorpus.com/m/6b455594c27f7f05e76af4049933ac22"
+     "picture": "https://img.cardcorpus.com/s1/960/6b455594c27f7f05e76af4049933ac22.avif"
     },
     {
      "handle": "e632afbe62abec067b8da8c16ad0a612",
@@ -1203,15 +1291,16 @@
      "set": "zh-hans/stellar-crystal",
      "card": "088",
      "name": "Espurr",
-     "set_name": "Stellar Crystal",
+     "set_name": "星彩晶璃",
      "number": "088/208",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
+     "same_card": "c6636",
      "release": "r120",
-     "artwork_group": "a1122",
+     "artwork_group": "a956",
      "release_date": "2026-05-15",
      "sim": 0.7216,
-     "picture": "https://img.cardcorpus.com/m/e632afbe62abec067b8da8c16ad0a612"
+     "picture": "https://img.cardcorpus.com/s1/960/e632afbe62abec067b8da8c16ad0a612.avif"
     },
     {
      "handle": "42f9aef473733075a498e6e53a665d70",
@@ -1219,18 +1308,23 @@
      "set": "zh-hans/scorching-skies",
      "card": "018",
      "name": "Delibird",
-     "set_name": "Scorching Skies",
+     "set_name": "怒炎灼天",
      "number": "018/066",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
+     "same_card": "c5204",
      "release": "r109",
-     "artwork_group": "a2848",
+     "artwork_group": "a2339",
      "release_date": "2024-01-05",
      "sim": 0.7183,
      "variant": "reverse-holo",
-     "picture": "https://img.cardcorpus.com/m/42f9aef473733075a498e6e53a665d70"
+     "picture": "https://img.cardcorpus.com/s1/960/42f9aef473733075a498e6e53a665d70.avif"
     }
    ],
+   "language_guess": {
+    "language": "zh-Hans",
+    "confidence": 0.953709833627074
+   },
    "numfit": {
     "018/066": -7.017,
     "052/125": -9.345,
@@ -1245,9 +1339,9 @@
    "alignment": {
     "aligned": true,
     "pass": 1,
-    "inliers": 622,
-    "scan_features": 2784,
-    "box_error": 0.21367290616035461
+    "inliers": 590,
+    "scan_features": 2749,
+    "box_error": 0.21334373950958252
    },
    "quality": "unsure",
    "decided": true

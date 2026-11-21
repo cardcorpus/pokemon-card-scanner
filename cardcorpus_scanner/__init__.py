@@ -8,7 +8,7 @@
         print(best["name"], best["set_name"], best["number"], best["print"])
 
 Each candidate's `print` ("<set>/<card>") is the card's address in the
-CardCorpus dataset: https://cardcorpus.com/v1/sets/<set>.json, card <card>.
+CardCorpus dataset: https://pokemon.cardcorpus.com/v1/sets/<set>.json, card <card>.
 """
 from .scanner import Scanner, pick_device
 

@@ -26,6 +26,8 @@ photo as given is kept for small cards (stage 4).
 | `models/heads.safetensors` | `orient_hidden` (256 x 513), `orient_probe` (4 x 257), `back_prototype` (512) |
 | `models/picker.safetensors` | the print picker tower; its spec is `embedder` with `picker.backbone` over it |
 | `models/number-reader.safetensors`, `.json` | the CRNN; its charset, strip size, strip places (`slots`) and preferred set sizes (`denominators`) |
+| `models/language-classifier.onnx` | the language model (`language.Classifier`, onnxruntime): one logit per language in `language.CLASSIFIER_LANGUAGES` order |
+| `models/corner-reader.safetensors`, `.json` | the corner reader (`corner.CornerReader`): a CRNN of the number reader's shape; its charset, where its strips are cut, and `codes`, each set's printed corner code by public set id |
 | `index/` | see `cardcorpus_scanner/index.py` |
 
 ## 1. Detect (`detector.py`)
@@ -91,11 +93,14 @@ photo as given is kept for small cards (stage 4).
 ## 3. Retrieve
 
 - Cosine similarity to every index row (float16, held as float32). A
-  language filter (`families`) sets other families' rows to -2.
+  catalog filter (`catalogs`) sets other catalogs' rows to -2. With no
+  catalogs or languages given, it keeps to `english`, `japanese` and
+  `zh-hans` (`DEFAULT_CATALOGS`, the app's default); `all` lifts it. The
+  language check (below) still looks in every catalog.
 - The top 20 rows (`retrieval.top`), best first: a picture with no card of
   its own (a second view) stands for the first card with one in its
   picture group (`dupe-groups.json`); one candidate per print (else per
-  name, set, number and family) until 10 (`retrieval.candidates`). Each
+  name, set, number and catalog) until 10 (`retrieval.candidates`). Each
   candidate keeps its picture's similarity `sim`, to 4 decimals.
 
 ### Left out
@@ -190,8 +195,9 @@ best candidate's picture group, painting or name (case-insensitive), the
 first 5 in fused order (`verifier.max_prints`). Each one's reference
 picture is its own picture in the dataset, or the one
 `index/verifier-pictures.json` names. Pictures come from a local folder,
-the disk cache or the image mirror (`https://img.cardcorpus.com/m/<id>`,
-the original); a sibling whose picture can't be fetched is left out.
+the disk cache or the image mirror
+(`https://img.cardcorpus.com/s1/960/<id>.avif`, its AVIF copy 960 px wide);
+a sibling whose picture can't be fetched is left out.
 
 1. Working frame 480 x 670. The card and every picture resampled through
    320 px wide (area-downscaled to 320 wide, then bicubic up), grey, [0, 1].
@@ -255,6 +261,120 @@ Then:
   pass came within 8 inliers, or the pick rests on 60 inliers or more and
   it found a quarter as many or fewer.
 
+**Language check** (whenever `Scanner.language_classifier` is set, which
+`Scanner.load` does when the weights folder has the language model, and
+`rules.language_check` is on, as it is by default). The model reads the
+straightened card at 960 x 1340: the name bar (x 0 to 0.75, y 0.02 to
+0.11), the foot (0 to 0.75, 0.88 to 0.99) and the rules text (0.04 to
+0.96, 0.58 to 0.84), each resized to 448 wide (80, 80 and 176 high,
+bicubic) and stacked, ImageNet mean and standard deviation. Its best
+language over all 12 is `"language_guess": {"language", "confidence"}`
+(confidence: the softmax share). When it is another language than the
+final pick's, with confidence at least 0.94 (the model's own bar,
+`language.CLASSIFIER_LAYOUTS`; `rules.language_check_confidence` sets
+another), the card also has `"language_check": {"suggested",
+"confidence", "print", "name", "set_name", "number", "picture", "sim",
+"pick_sim", "linked", "switched"}`: the card's fingerprint looked up among
+that language's prints only (40 nearest, deduplicated as in retrieval),
+the print the dataset links to the pick (`same_card`) when one is there
+(`"linked": true`), else the nearest. The pick stays, unless
+`rules.language_check_switch` is set, the confidence reaches the model's
+own bar and that print's `sim` is within 0.03 of the pick's: then it goes
+first and `"original"` names the pick it replaced. A card in Spanish is
+suggested as the default Spanish only, and only when the scan allows no
+Spanish print ("Spanish twins", below).
+`scan(languages=[...])` limits retrieval to prints in those languages.
+
+**Spanish twins** (`rules.default_spanish`, `"spanish"` by default or
+`"latin-american-spanish"`, `--default-spanish`; `rules.spanish_corner`, on).
+Spain's and Latin America's Spanish prints carry the same text, so the
+picture, the language model (which knows no Latin American Spanish) and the
+words can't tell them apart; only the corner's printed code does (`PBL` and
+`PBL LA`). A scan allows a Spanish print when either Spanish catalog
+(`spanish`, `latin-american-spanish`) is among its catalogs (every catalog
+with `catalogs="all"`) or either Spanish among its `languages`.
+
+- The language check suggests a card in Spanish (either) as the default
+  Spanish, and only when the scan allows no Spanish print; the other Spanish
+  is never suggested.
+- The language reader moves a pick between the two Spanish prints only when
+  the corner reader settles it exactly (a printed code and mark that are the
+  code on record for the prints in play of one language, `"why": "corner
+  <code>"`; a mark alone is not enough). When both are in play the corner is
+  read whatever the language model said. The language model's Spanish class
+  answers for Latin American Spanish when that is the only Spanish in play,
+  and for Spain's when both are, so it never hands a Spanish card to another
+  language for want of a Latin American class.
+- A pick the corner settled exactly (its read names the pick's own Spanish)
+  isn't moved to its print of the same card (`same_card`) in the other
+  Spanish by the verifier yielding (another card, even of the same name, can
+  still win). When a later step does move the pick off the
+  language read, `language_switched` is left out.
+- With `rules.spanish_corner`, when the pick has a print of the same card in
+  the other Spanish within 0.06 by `sim`, the corner is read on that card
+  whether or not the reader runs, and an exact read puts that language's
+  print first (`"language": {"language", "why", "corner"}`,
+  `"language_switched": true`).
+
+**Language reader** (`rules.reads_language`, off by default;
+`language.py`). Prints of one card in two languages match a photo all but
+alike (a Simplified and a Traditional Chinese print, an English one and
+its Thai, Indonesian or European twin). After the second fusion, before
+the pick's own picture is checked: the languages in play are the pick's
+`language` and those of every candidate that has its `same_card` token
+(the dataset's links make them one card; a reprint in another set has
+another, and a card with no link has none), has another language of the pick's layout
+(English, French, German, Spanish, Latin American Spanish, Italian, Portuguese, Indonesian, Thai;
+or Japanese, Korean, Simplified and Traditional Chinese), and whose `sim`
+is within 0.06 of the pick's. With two or more, the card's language is
+read in up to three steps, each only when the one before is unsure, and the
+first candidate of the same card in the language read goes first
+(`"language": {"language", "why", "corner"}`, `"language_switched": true`):
+
+- **The language model** (as in the check above), among the languages in
+  play only: its answer when that language holds 0.95 or more of the
+  probability shared among them.
+- **The corner reader** (`corner.py`): 90 grey strips of the foot (3
+  places x 3 heights x 5 offsets x 2 widths, `corner-reader.json`), each
+  read by its CRNN; the text read by most strips, at 5 or more, with a
+  letter and no `/`. It settles a language only when the text carries a
+  language mark (`EN`, `FR`, `DE`, `IT`, `ES`, `LA` Latin American Spanish, `PT`,
+  `F` Traditional Chinese, `T` Thai, `I` Indonesian, after a space; the
+  dataset's `codeMark`s, in `corner-reader.json`) or is a Simplified
+  Chinese code ending in `C`, and is exactly the code on record (`codes`)
+  for the prints in play of one language. When no print in play has a code
+  on record, the mark alone names its language, unless that language's
+  prints in play have another code on record. `PROMO` settles nothing;
+  Japanese and Korean print no mark, so the corner never tells them apart.
+- **OCR** (`Scanner.language_engine`: Apple's Vision on macOS, else
+  RapidOCR's PP-OCRv5), by the rule below.
+
+1. Regions, as fractions of the card from its top left: the text box
+   (x 0.04, y 0.55, w 0.92, h 0.31), the foot (0, 0.88, 0.6, 0.11), the whole
+   card (0, 0, 1, 1).
+2. One pass per script in play over the text box: `ko-KR` for Korean,
+   `ja-JP` for Japanese, `zh-Hans` for either Chinese, `th-TH` for Thai,
+   and one Latin pass (en-US, fr-FR, de-DE, es-ES, it-IT, pt-BR) for any of
+   English, French, German, Spanish, Italian, Portuguese and Indonesian.
+   The foot with the Latin pass when Chinese or a Latin language is in
+   play. Accurate recognition, no language correction.
+3. Script: each line's characters weighted by its confidence: Hangul in
+   the `ko-KR` pass, kana (counted twice) in `ja-JP`, Han in `zh-Hans`,
+   Thai in any less the Latin letters of the Latin pass. The largest, at 2 or more, names Korean, Japanese, Chinese
+   or Thai.
+4. Chinese: distinct characters read that have another form in the
+   other script (`script-characters.json`, from OpenCC's s2t and t2s);
+   a foot line (its top below 0.84 of the card) with a code ending in
+   ` C` adds 3 to Simplified, one ending in ` F` adds 3 to Traditional.
+   The larger wins; a tie says nothing.
+5. Latin: a foot line with a set code and a language mark (`MEW EN`,
+   `PAF DE`) names it. Else function words (`language.FUNCTION_WORDS`) of
+   each language in play counted in the text: the most, at 2 or more and
+   twice the next, names it.
+6. A language not in play is no answer. When the text box settles
+   nothing, the whole card is read with the same passes as a second reading
+   and the rule runs again on both.
+
 **How sure** (`quality`):
 
 - `back` when `back_sim` is 0.60 or more; else `likely_wrong` as above.
@@ -313,13 +433,31 @@ bars there on a reverse holo (and on every holo rare).
 |---|---|
 | `embeddings.npy` | rows x 512 float16, unit length |
 | `rows.json` | each row's picture handle |
-| `cards.jsonl.gz` | one line per handle: `kind` (`card`: the card's own picture; `variant`: a picture of one copy; `view`: a second view), `set`, `card`, `variant`, `name`, `set_name`, `number`, `family`, `language`, `release`, `artwork_group`, `release_date`, `rarity`, `default_finish`, `scan_prior`, `picture` |
+| `cards.jsonl.gz` | one line per handle: `kind` (`card`: the card's own picture; `variant`: a picture of one copy; `view`: a second view), `set`, `card`, `variant`, `name`, `set_name`, `number`, `catalog`, `language`, `same_card`, `release`, `artwork_group`, `release_date`, `rarity`, `default_finish`, `scan_prior`, `picture` |
 | `dupe-groups.json` | handle to its group of near-identical pictures |
 | `picker-embeddings.npy`, `picker-rows.json` | the print picker's gallery |
 | `verifier-pictures.json` | print to the picture the verifier compares it with, where that isn't its own |
-| `release.json` | the dataset version and models the index was built from |
+| `release.json` | the dataset version and models the index was built from, and its `parts` |
+
+The files other than `release.json` come in parts. `release.json`'s
+`parts` lists each one in order, `{"path", "catalogs", "rows"}`: a folder
+relative to `index/` holding the same file set (`embeddings.npy`,
+`rows.json`, `cards.jsonl.gz`, `dupe-groups.json`, `picker-embeddings.npy`,
+`picker-rows.json`, `verifier-pictures.json`), the catalogs its card rows
+are in, and its row count. The index is its parts joined in order: rows
+and fingerprints, card rows, groups, the picker's gallery and the
+verifier's pictures. Today there is one part, `"path": "."`, `index/`
+itself; a `release.json` without `parts` is read the same way. A reader
+can load only the parts holding the catalogs it wants
+(`Index(folder, catalogs=[...])`). Handles, prints, `release`,
+`artwork_group`, `same_card` and dupe-group tokens are the same in every part, so a
+group can span parts. A second view stands for a card of its picture
+group (Retrieve), so it goes in that card's part.
+
+An index built before the word was `catalog` calls the field `family`;
+the package reads it as `catalog`.
 
 A handle is the picture's id on the dataset's image mirror, or `view-<n>`
-for a picture that isn't in the dataset. `release` and `artwork_group` are
-opaque tokens: equal tokens mean the same set release, or the same
-painting.
+for a picture that isn't in the dataset. `release`, `artwork_group` and
+`same_card` are opaque tokens: equal tokens mean the same set release, the
+same painting, or one card in different languages.

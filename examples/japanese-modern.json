@@ -40,15 +40,16 @@
      "set": "japanese/30th-celebration",
      "card": "058",
      "name": "Espeon",
-     "set_name": "30th Celebration",
+     "set_name": "30th CELEBRATION",
      "number": "058/103",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
-     "release": "r758",
-     "artwork_group": "a849",
+     "same_card": "c22997",
+     "release": "r756",
+     "artwork_group": "a695",
      "release_date": "2026-09-16",
      "sim": 0.9199,
-     "picture": "https://img.cardcorpus.com/m/9510737993dc316e72c83984181949c5"
+     "picture": "https://img.cardcorpus.com/s1/960/9510737993dc316e72c83984181949c5.avif"
     },
     {
      "handle": "14eed5980690d1345056dd6b9789dbb3",
@@ -56,15 +57,16 @@
      "set": "zh-hans/30th-celebration",
      "card": "058",
      "name": "Espeon",
-     "set_name": "30th Celebration",
+     "set_name": "30周年庆典",
      "number": "058/103",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
-     "release": "r760",
-     "artwork_group": "a849",
+     "same_card": "c22997",
+     "release": "r758",
+     "artwork_group": "a695",
      "release_date": "2026-09-16",
      "sim": 0.6476,
-     "picture": "https://img.cardcorpus.com/m/14eed5980690d1345056dd6b9789dbb3"
+     "picture": "https://img.cardcorpus.com/s1/960/14eed5980690d1345056dd6b9789dbb3.avif"
     },
     {
      "handle": "d001e09a2cb991ea952550caca6106f1",
@@ -72,15 +74,16 @@
      "set": "japanese/golden-sky-silvery-ocean",
      "card": "010",
      "name": "Yanma",
-     "set_name": "Golden Sky, Silvery Ocean",
+     "set_name": "金の空、銀の海",
      "number": "010/106",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c13376",
      "release": "r281",
-     "artwork_group": "a1716",
+     "artwork_group": "a1543",
      "release_date": "2005-04-08",
      "sim": 0.587,
-     "picture": "https://img.cardcorpus.com/m/d001e09a2cb991ea952550caca6106f1"
+     "picture": "https://img.cardcorpus.com/s1/960/d001e09a2cb991ea952550caca6106f1.avif"
     },
     {
      "handle": "99bf40b790f2804a225d80886ee9caf0",
@@ -88,15 +91,16 @@
      "set": "japanese/emerald-break",
      "card": "038",
      "name": "Togekiss",
-     "set_name": "Emerald Break",
+     "set_name": "エメラルドブレイク",
      "number": "038/078",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c12013",
      "release": "r235",
-     "artwork_group": "a1621",
+     "artwork_group": "a1449",
      "release_date": "2015-03-14",
      "sim": 0.5786,
-     "picture": "https://img.cardcorpus.com/m/99bf40b790f2804a225d80886ee9caf0"
+     "picture": "https://img.cardcorpus.com/s1/960/99bf40b790f2804a225d80886ee9caf0.avif"
     },
     {
      "handle": "c6d34bd377c25974f86a9344cb497f6f",
@@ -104,25 +108,30 @@
      "set": "japanese/pokemon-card-151",
      "card": "126",
      "name": "Magmar",
-     "set_name": "Pokémon Card 151",
+     "set_name": "ポケモンカード151",
      "number": "126/165",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c416",
      "release": "r401",
-     "artwork_group": "a676",
+     "artwork_group": "a36",
      "release_date": "2023-06-16",
      "sim": 0.5708,
      "variant": "master-ball",
-     "picture": "https://img.cardcorpus.com/m/c6d34bd377c25974f86a9344cb497f6f"
+     "picture": "https://img.cardcorpus.com/s1/960/c6d34bd377c25974f86a9344cb497f6f.avif"
     }
    ],
+   "language_guess": {
+    "language": "ja",
+    "confidence": 0.9489117307851676
+   },
    "pick": {
     "print": "japanese/30th-celebration/058",
     "margin": 0.4439
    },
    "verify": {
-    "japanese/30th-celebration/058": 0.842,
-    "zh-hans/30th-celebration/058": -0.842
+    "japanese/30th-celebration/058": 0.8378,
+    "zh-hans/30th-celebration/058": -0.8378
    },
    "numfit": {
     "010/106": -6.98,
@@ -141,9 +150,9 @@
    "alignment": {
     "aligned": true,
     "pass": 1,
-    "inliers": 723,
-    "scan_features": 2179,
-    "box_error": 0.017521919682621956
+    "inliers": 701,
+    "scan_features": 2138,
+    "box_error": 0.017592862248420715
    },
    "quality": "sure"
   },
@@ -184,15 +193,16 @@
      "set": "japanese/30th-celebration",
      "card": "065",
      "name": "Cosmoem",
-     "set_name": "30th Celebration",
+     "set_name": "30th CELEBRATION",
      "number": "065/103",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
-     "release": "r758",
-     "artwork_group": "a133",
+     "same_card": "c23008",
+     "release": "r756",
+     "artwork_group": "a117",
      "release_date": "2026-09-16",
      "sim": 0.8944,
-     "picture": "https://img.cardcorpus.com/m/fc445aac75ee43362bb05e249664fd5c"
+     "picture": "https://img.cardcorpus.com/s1/960/fc445aac75ee43362bb05e249664fd5c.avif"
     },
     {
      "handle": "621293e7d9aadd2fddad7a44b3f1ddb7",
@@ -200,15 +210,16 @@
      "set": "zh-hans/30th-celebration",
      "card": "065",
      "name": "Cosmoem",
-     "set_name": "30th Celebration",
+     "set_name": "30周年庆典",
      "number": "065/103",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
-     "release": "r760",
-     "artwork_group": "a133",
+     "same_card": "c23008",
+     "release": "r758",
+     "artwork_group": "a117",
      "release_date": "2026-09-16",
      "sim": 0.7018,
-     "picture": "https://img.cardcorpus.com/m/621293e7d9aadd2fddad7a44b3f1ddb7"
+     "picture": "https://img.cardcorpus.com/s1/960/621293e7d9aadd2fddad7a44b3f1ddb7.avif"
     },
     {
      "handle": "a96a400ad5aa4f01474ff7376431cff5",
@@ -216,15 +227,16 @@
      "set": "japanese/30th-celebration",
      "card": "098",
      "name": "Hisuian Zorua",
-     "set_name": "30th Celebration",
+     "set_name": "30th CELEBRATION",
      "number": "098/103",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
-     "release": "r758",
-     "artwork_group": "a3057",
+     "same_card": "c23060",
+     "release": "r756",
+     "artwork_group": "a2530",
      "release_date": "2026-09-16",
      "sim": 0.6406,
-     "picture": "https://img.cardcorpus.com/m/a96a400ad5aa4f01474ff7376431cff5"
+     "picture": "https://img.cardcorpus.com/s1/960/a96a400ad5aa4f01474ff7376431cff5.avif"
     },
     {
      "handle": "3e0800efcca761bd1af6b5e05614d13e",
@@ -232,15 +244,16 @@
      "set": "japanese/30th-celebration",
      "card": "144",
      "name": "Dark Tyranitar",
-     "set_name": "30th Celebration",
+     "set_name": "30th CELEBRATION",
      "number": "144/103",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
-     "release": "r758",
-     "artwork_group": "a3925",
+     "same_card": "c22939",
+     "release": "r756",
+     "artwork_group": "a3310",
      "release_date": "2026-09-16",
      "sim": 0.6122,
-     "picture": "https://img.cardcorpus.com/m/3e0800efcca761bd1af6b5e05614d13e"
+     "picture": "https://img.cardcorpus.com/s1/960/3e0800efcca761bd1af6b5e05614d13e.avif"
     },
     {
      "handle": "51da2459588c5f3ba02f45c916ca2204",
@@ -248,24 +261,29 @@
      "set": "japanese/national-beginning-set",
      "card": "8",
      "name": "Emboar",
-     "set_name": "National Beginning Set",
+     "set_name": "はじめてセット 全国図鑑版",
      "number": "8/34",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c16372",
      "release": "r380",
-     "artwork_group": "a3035",
+     "artwork_group": "a2510",
      "release_date": "2012-04-20",
      "sim": 0.6297,
-     "picture": "https://img.cardcorpus.com/m/51da2459588c5f3ba02f45c916ca2204"
+     "picture": "https://img.cardcorpus.com/s1/960/51da2459588c5f3ba02f45c916ca2204.avif"
     }
    ],
+   "language_guess": {
+    "language": "ja",
+    "confidence": 0.9247095371970119
+   },
    "pick": {
     "print": "japanese/30th-celebration/065",
     "margin": 0.4775
    },
    "verify": {
-    "japanese/30th-celebration/065": 0.7621,
-    "zh-hans/30th-celebration/065": -0.7621
+    "japanese/30th-celebration/065": 0.765,
+    "zh-hans/30th-celebration/065": -0.765
    },
    "numfit": {
     "006/040": -9.838,
@@ -284,9 +302,9 @@
    "alignment": {
     "aligned": true,
     "pass": 1,
-    "inliers": 606,
-    "scan_features": 2399,
-    "box_error": 0.04130958020687103
+    "inliers": 600,
+    "scan_features": 2407,
+    "box_error": 0.04097043350338936
    },
    "quality": "sure"
   },
@@ -327,15 +345,16 @@
      "set": "japanese/30th-celebration",
      "card": "068",
      "name": "Groudon",
-     "set_name": "30th Celebration",
+     "set_name": "30th CELEBRATION",
      "number": "068/103",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
-     "release": "r758",
-     "artwork_group": "a140",
+     "same_card": "c23011",
+     "release": "r756",
+     "artwork_group": "a123",
      "release_date": "2026-09-16",
      "sim": 0.9269,
-     "picture": "https://img.cardcorpus.com/m/e18365b77d4e32ce27edd033b41a9f3d"
+     "picture": "https://img.cardcorpus.com/s1/960/e18365b77d4e32ce27edd033b41a9f3d.avif"
     },
     {
      "handle": "87484ead52e77203a3923fe391f41d1a",
@@ -343,15 +362,16 @@
      "set": "zh-hans/30th-celebration",
      "card": "068",
      "name": "Groudon",
-     "set_name": "30th Celebration",
+     "set_name": "30周年庆典",
      "number": "068/103",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
-     "release": "r760",
-     "artwork_group": "a140",
+     "same_card": "c23011",
+     "release": "r758",
+     "artwork_group": "a123",
      "release_date": "2026-09-16",
      "sim": 0.731,
-     "picture": "https://img.cardcorpus.com/m/87484ead52e77203a3923fe391f41d1a"
+     "picture": "https://img.cardcorpus.com/s1/960/87484ead52e77203a3923fe391f41d1a.avif"
     },
     {
      "handle": "04d77e9cf1149fe22b12a47750b67129",
@@ -359,15 +379,16 @@
      "set": "japanese/blue-sky-stream",
      "card": "049",
      "name": "Turtonator",
-     "set_name": "Blue Sky Stream",
+     "set_name": "蒼空ストリーム",
      "number": "049/067",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c4594",
      "release": "r181",
-     "artwork_group": "a1258",
+     "artwork_group": "a1091",
      "release_date": "2021-07-09",
      "sim": 0.757,
-     "picture": "https://img.cardcorpus.com/m/04d77e9cf1149fe22b12a47750b67129"
+     "picture": "https://img.cardcorpus.com/s1/960/04d77e9cf1149fe22b12a47750b67129.avif"
     },
     {
      "handle": "d8c8f844b9d587245d35186fac67581d",
@@ -375,15 +396,16 @@
      "set": "japanese/start-deck-100",
      "card": "323",
      "name": "Turtonator",
-     "set_name": "Start Deck 100",
+     "set_name": "スタートデッキ100",
      "number": "323/414",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c4594",
      "release": "r472",
-     "artwork_group": "a1258",
+     "artwork_group": "a1091",
      "release_date": "2021-12-17",
      "sim": 0.7553,
-     "picture": "https://img.cardcorpus.com/m/d8c8f844b9d587245d35186fac67581d"
+     "picture": "https://img.cardcorpus.com/s1/960/d8c8f844b9d587245d35186fac67581d.avif"
     },
     {
      "handle": "e2987743326dc6498ce7cfa06c9c3788",
@@ -391,24 +413,29 @@
      "set": "japanese/mirage-forest",
      "card": "052",
      "name": "Golem",
-     "set_name": "Mirage Forest",
+     "set_name": "まぼろしの森",
      "number": "052/086",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c16085",
      "release": "r368",
-     "artwork_group": "a2910",
+     "artwork_group": "a2399",
      "release_date": "2005-06-30",
      "sim": 0.6952,
-     "picture": "https://img.cardcorpus.com/m/e2987743326dc6498ce7cfa06c9c3788"
+     "picture": "https://img.cardcorpus.com/s1/960/e2987743326dc6498ce7cfa06c9c3788.avif"
     }
    ],
+   "language_guess": {
+    "language": "ja",
+    "confidence": 0.947818910319163
+   },
    "pick": {
     "print": "japanese/30th-celebration/068",
     "margin": 0.3345
    },
    "verify": {
-    "japanese/30th-celebration/068": 0.8109,
-    "zh-hans/30th-celebration/068": -0.8109
+    "japanese/30th-celebration/068": 0.8111,
+    "zh-hans/30th-celebration/068": -0.8111
    },
    "numfit": {
     "007/081": -11.083,
@@ -427,9 +454,9 @@
    "alignment": {
     "aligned": true,
     "pass": 1,
-    "inliers": 815,
-    "scan_features": 2298,
-    "box_error": 0.015656115487217903
+    "inliers": 809,
+    "scan_features": 2290,
+    "box_error": 0.0157455001026392
    },
    "quality": "sure"
   },
@@ -470,15 +497,16 @@
      "set": "japanese/30th-celebration",
      "card": "064",
      "name": "Cosmog",
-     "set_name": "30th Celebration",
+     "set_name": "30th CELEBRATION",
      "number": "064/103",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
-     "release": "r758",
-     "artwork_group": "a132",
+     "same_card": "c23007",
+     "release": "r756",
+     "artwork_group": "a116",
      "release_date": "2026-09-16",
      "sim": 0.8673,
-     "picture": "https://img.cardcorpus.com/m/f4e41d149c2fbf6415767a82e920216c"
+     "picture": "https://img.cardcorpus.com/s1/960/f4e41d149c2fbf6415767a82e920216c.avif"
     },
     {
      "handle": "46d604c8ccfc0a29e8ec65974c5de383",
@@ -486,15 +514,16 @@
      "set": "zh-hans/30th-celebration",
      "card": "064",
      "name": "Cosmog",
-     "set_name": "30th Celebration",
+     "set_name": "30周年庆典",
      "number": "064/103",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
-     "release": "r760",
-     "artwork_group": "a132",
+     "same_card": "c23007",
+     "release": "r758",
+     "artwork_group": "a116",
      "release_date": "2026-09-16",
      "sim": 0.8836,
-     "picture": "https://img.cardcorpus.com/m/46d604c8ccfc0a29e8ec65974c5de383"
+     "picture": "https://img.cardcorpus.com/s1/960/46d604c8ccfc0a29e8ec65974c5de383.avif"
     },
     {
      "handle": "f95c44d4cae05f2c431f48e5b3de89a9",
@@ -502,15 +531,16 @@
      "set": "japanese/30th-celebration-premium-deck-set-espeon-umbreon",
      "card": "005",
      "name": "Ninetales",
-     "set_name": "30th Celebration Premium Deck Set Espeon & Umbreon",
+     "set_name": "30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー",
      "number": "005/040",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
-     "release": "r872",
-     "artwork_group": "a1603",
+     "same_card": "c22920",
+     "release": "r870",
+     "artwork_group": "a12",
      "release_date": "2026-09-16",
      "sim": 0.6568,
-     "picture": "https://img.cardcorpus.com/m/f95c44d4cae05f2c431f48e5b3de89a9"
+     "picture": "https://img.cardcorpus.com/s1/960/f95c44d4cae05f2c431f48e5b3de89a9.avif"
     },
     {
      "handle": "a96a400ad5aa4f01474ff7376431cff5",
@@ -518,15 +548,16 @@
      "set": "japanese/30th-celebration",
      "card": "098",
      "name": "Hisuian Zorua",
-     "set_name": "30th Celebration",
+     "set_name": "30th CELEBRATION",
      "number": "098/103",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
-     "release": "r758",
-     "artwork_group": "a3057",
+     "same_card": "c23060",
+     "release": "r756",
+     "artwork_group": "a2530",
      "release_date": "2026-09-16",
      "sim": 0.6274,
-     "picture": "https://img.cardcorpus.com/m/a96a400ad5aa4f01474ff7376431cff5"
+     "picture": "https://img.cardcorpus.com/s1/960/a96a400ad5aa4f01474ff7376431cff5.avif"
     },
     {
      "handle": "5992482a70fb8247e93c8a4cbc6f3887",
@@ -534,21 +565,26 @@
      "set": "zh-hans/30th-celebration-deluxe-deck-set",
      "card": "005",
      "name": "Ninetales",
-     "set_name": "30th Celebration Deluxe Deck Set",
+     "set_name": "30 周年庆典 豪华卡组套装",
      "number": "005/040",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
-     "release": "r786",
-     "artwork_group": "a1603",
+     "same_card": "c22920",
+     "release": "r784",
+     "artwork_group": "a12",
      "release_date": "2026-09-16",
      "sim": 0.6525,
-     "picture": "https://img.cardcorpus.com/m/5992482a70fb8247e93c8a4cbc6f3887"
+     "picture": "https://img.cardcorpus.com/s1/960/5992482a70fb8247e93c8a4cbc6f3887.avif"
     }
    ],
+   "language_guess": {
+    "language": "ja",
+    "confidence": 0.9286780159694084
+   },
    "verify": {
-    "japanese/30th-celebration/064": 0.8154,
-    "zh-hans/30th-celebration/064": -0.8242,
-    "international/30th-celebration/078": -0.8154
+    "japanese/30th-celebration/064": 0.818,
+    "zh-hans/30th-celebration/064": -0.8305,
+    "english/30th-celebration/078": -0.818
    },
    "numfit": {
     "005/040": -9.155,
@@ -565,9 +601,9 @@
    "alignment": {
     "aligned": true,
     "pass": 1,
-    "inliers": 497,
-    "scan_features": 1756,
-    "box_error": 0.011925382539629936
+    "inliers": 511,
+    "scan_features": 1753,
+    "box_error": 0.01188675221055746
    },
    "quality": "unsure",
    "decided": true
@@ -609,15 +645,16 @@
      "set": "japanese/30th-celebration",
      "card": "080",
      "name": "Galarian Meowth",
-     "set_name": "30th Celebration",
+     "set_name": "30th CELEBRATION",
      "number": "080/103",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
-     "release": "r758",
-     "artwork_group": "a2354",
+     "same_card": "c23034",
+     "release": "r756",
+     "artwork_group": "a2165",
      "release_date": "2026-09-16",
      "sim": 0.8908,
-     "picture": "https://img.cardcorpus.com/m/92e111f22cd1927336c472bde9881c5e"
+     "picture": "https://img.cardcorpus.com/s1/960/92e111f22cd1927336c472bde9881c5e.avif"
     },
     {
      "handle": "639f859669332c000cfc1b5f7dabe6d2",
@@ -625,15 +662,16 @@
      "set": "zh-hans/30th-celebration",
      "card": "080",
      "name": "Galarian Meowth",
-     "set_name": "30th Celebration",
+     "set_name": "30周年庆典",
      "number": "080/103",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
-     "release": "r760",
-     "artwork_group": "a2354",
+     "same_card": "c23034",
+     "release": "r758",
+     "artwork_group": "a2165",
      "release_date": "2026-09-16",
      "sim": 0.5789,
-     "picture": "https://img.cardcorpus.com/m/639f859669332c000cfc1b5f7dabe6d2"
+     "picture": "https://img.cardcorpus.com/s1/960/639f859669332c000cfc1b5f7dabe6d2.avif"
     },
     {
      "handle": "37b5a94b353430a0989e96682c90e5e6",
@@ -643,13 +681,14 @@
      "name": "Blissey",
      "set_name": "Pokémon GO",
      "number": "052/071",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c17103",
      "release": "r404",
-     "artwork_group": "a2462",
+     "artwork_group": "a2268",
      "release_date": "2022-06-17",
      "sim": 0.6208,
-     "picture": "https://img.cardcorpus.com/m/37b5a94b353430a0989e96682c90e5e6"
+     "picture": "https://img.cardcorpus.com/s1/960/37b5a94b353430a0989e96682c90e5e6.avif"
     },
     {
      "handle": "fd86ddbbfdf7b4de33f8d1daaab57ca9",
@@ -657,15 +696,16 @@
      "set": "japanese/shiny-star-v",
      "card": "146",
      "name": "Bunnelby",
-     "set_name": "Shiny Star V",
+     "set_name": "シャイニースターV",
      "number": "146/190",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c18720",
      "release": "r449",
-     "artwork_group": "a782",
+     "artwork_group": "a628",
      "release_date": "2020-11-20",
      "sim": 0.5629,
-     "picture": "https://img.cardcorpus.com/m/fd86ddbbfdf7b4de33f8d1daaab57ca9"
+     "picture": "https://img.cardcorpus.com/s1/960/fd86ddbbfdf7b4de33f8d1daaab57ca9.avif"
     },
     {
      "handle": "70e85107ca4943b251f3b0f3ba6670ee",
@@ -673,20 +713,25 @@
      "set": "japanese/explosive-flame-walker",
      "card": "058",
      "name": "Bunnelby",
-     "set_name": "Explosive Flame Walker",
+     "set_name": "爆炎ウォーカー",
      "number": "058/070",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c3236",
      "release": "r248",
-     "artwork_group": "a782",
+     "artwork_group": "a628",
      "release_date": "2020-04-24",
      "sim": 0.5362,
-     "picture": "https://img.cardcorpus.com/m/70e85107ca4943b251f3b0f3ba6670ee"
+     "picture": "https://img.cardcorpus.com/s1/960/70e85107ca4943b251f3b0f3ba6670ee.avif"
     }
    ],
+   "language_guess": {
+    "language": "ja",
+    "confidence": 0.9610829715495951
+   },
    "verify": {
-    "japanese/30th-celebration/080": 0.7249,
-    "zh-hans/30th-celebration/080": -0.7249
+    "japanese/30th-celebration/080": 0.719,
+    "zh-hans/30th-celebration/080": -0.719
    },
    "numfit": {
     "032/059": -9.746,
@@ -706,9 +751,9 @@
    "alignment": {
     "aligned": true,
     "pass": 1,
-    "inliers": 1130,
-    "scan_features": 3000,
-    "box_error": 0.016330355778336525
+    "inliers": 1079,
+    "scan_features": 3001,
+    "box_error": 0.016252301633358
    },
    "quality": "sure"
   },
@@ -749,15 +794,16 @@
      "set": "japanese/30th-celebration",
      "card": "084",
      "name": "Solgaleo",
-     "set_name": "30th Celebration",
+     "set_name": "30th CELEBRATION",
      "number": "084/103",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
-     "release": "r758",
-     "artwork_group": "a146",
+     "same_card": "c23038",
+     "release": "r756",
+     "artwork_group": "a129",
      "release_date": "2026-09-16",
      "sim": 0.8443,
-     "picture": "https://img.cardcorpus.com/m/cd3a6f6473cd24446c63b7e969886b2b"
+     "picture": "https://img.cardcorpus.com/s1/960/cd3a6f6473cd24446c63b7e969886b2b.avif"
     },
     {
      "handle": "58f627264b25915a45ef4452cd396ce7",
@@ -765,15 +811,16 @@
      "set": "zh-hans/30th-celebration",
      "card": "084",
      "name": "Solgaleo",
-     "set_name": "30th Celebration",
+     "set_name": "30周年庆典",
      "number": "084/103",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
-     "release": "r760",
-     "artwork_group": "a146",
+     "same_card": "c23038",
+     "release": "r758",
+     "artwork_group": "a129",
      "release_date": "2026-09-16",
      "sim": 0.5631,
-     "picture": "https://img.cardcorpus.com/m/58f627264b25915a45ef4452cd396ce7"
+     "picture": "https://img.cardcorpus.com/s1/960/58f627264b25915a45ef4452cd396ce7.avif"
     },
     {
      "handle": "3e0800efcca761bd1af6b5e05614d13e",
@@ -781,15 +828,16 @@
      "set": "japanese/30th-celebration",
      "card": "144",
      "name": "Dark Tyranitar",
-     "set_name": "30th Celebration",
+     "set_name": "30th CELEBRATION",
      "number": "144/103",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
-     "release": "r758",
-     "artwork_group": "a3925",
+     "same_card": "c22939",
+     "release": "r756",
+     "artwork_group": "a3310",
      "release_date": "2026-09-16",
      "sim": 0.5493,
-     "picture": "https://img.cardcorpus.com/m/3e0800efcca761bd1af6b5e05614d13e"
+     "picture": "https://img.cardcorpus.com/s1/960/3e0800efcca761bd1af6b5e05614d13e.avif"
     },
     {
      "handle": "7348249e11725e508cf2a016af7ce498",
@@ -797,15 +845,16 @@
      "set": "japanese/30th-celebration",
      "card": "119",
      "name": "Kommo-o",
-     "set_name": "30th Celebration",
+     "set_name": "30th CELEBRATION",
      "number": "119/103",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
-     "release": "r758",
-     "artwork_group": "a2216",
+     "same_card": "c23083",
+     "release": "r756",
+     "artwork_group": "a2035",
      "release_date": "2026-09-16",
      "sim": 0.6349,
-     "picture": "https://img.cardcorpus.com/m/7348249e11725e508cf2a016af7ce498"
+     "picture": "https://img.cardcorpus.com/s1/960/7348249e11725e508cf2a016af7ce498.avif"
     },
     {
      "handle": "777ebcbd0501fe23a271660f529ad046",
@@ -813,25 +862,30 @@
      "set": "japanese/30th-celebration",
      "card": "133",
      "name": "Salamence ex",
-     "set_name": "30th Celebration",
+     "set_name": "30th CELEBRATION",
      "number": "133/103",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
-     "release": "r758",
-     "artwork_group": "a2101",
+     "same_card": "c23097",
+     "release": "r756",
+     "artwork_group": "a1921",
      "release_date": "2026-09-16",
      "sim": 0.5891,
-     "picture": "https://img.cardcorpus.com/m/777ebcbd0501fe23a271660f529ad046"
+     "picture": "https://img.cardcorpus.com/s1/960/777ebcbd0501fe23a271660f529ad046.avif"
     }
    ],
+   "language_guess": {
+    "language": "ja",
+    "confidence": 0.9501447915545654
+   },
    "pick": {
     "print": "japanese/30th-celebration/084",
     "margin": 0.7903
    },
    "verify": {
-    "japanese/30th-celebration/084": 0.8189,
-    "zh-hans/30th-celebration/084": -0.8296,
-    "international/30th-celebration/105": -0.8189
+    "japanese/30th-celebration/084": 0.8188,
+    "zh-hans/30th-celebration/084": -0.8279,
+    "english/30th-celebration/105": -0.8188
    },
    "numfit": {
     "010/021": -9.514,
@@ -851,9 +905,9 @@
    "alignment": {
     "aligned": true,
     "pass": 1,
-    "inliers": 901,
+    "inliers": 914,
     "scan_features": 3000,
-    "box_error": 0.010972929187119007
+    "box_error": 0.01084441039711237
    },
    "quality": "unsure",
    "decided": true
@@ -895,15 +949,16 @@
      "set": "japanese/30th-celebration",
      "card": "073",
      "name": "Nidoran ♀",
-     "set_name": "30th Celebration",
+     "set_name": "30th CELEBRATION",
      "number": "073/103",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
-     "release": "r758",
-     "artwork_group": "a3984",
+     "same_card": "c23017",
+     "release": "r756",
+     "artwork_group": "a3365",
      "release_date": "2026-09-16",
      "sim": 0.9417,
-     "picture": "https://img.cardcorpus.com/m/517ca16eb6d1e8b4fcdaa7bfb78def5e"
+     "picture": "https://img.cardcorpus.com/s1/960/517ca16eb6d1e8b4fcdaa7bfb78def5e.avif"
     },
     {
      "handle": "02e10b2131817aad4b568f1efebfa7bd",
@@ -911,15 +966,16 @@
      "set": "zh-hans/30th-celebration",
      "card": "073",
      "name": "Nidoran ♀",
-     "set_name": "30th Celebration",
+     "set_name": "30周年庆典",
      "number": "073/103",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
-     "release": "r760",
-     "artwork_group": "a3984",
+     "same_card": "c23017",
+     "release": "r758",
+     "artwork_group": "a3365",
      "release_date": "2026-09-16",
      "sim": 0.702,
-     "picture": "https://img.cardcorpus.com/m/02e10b2131817aad4b568f1efebfa7bd"
+     "picture": "https://img.cardcorpus.com/s1/960/02e10b2131817aad4b568f1efebfa7bd.avif"
     },
     {
      "handle": "b1d30db3a20865f7eed651b17c7b11d1",
@@ -927,15 +983,16 @@
      "set": "japanese/30th-celebration",
      "card": "016",
      "name": "Wishiwashi",
-     "set_name": "30th Celebration",
+     "set_name": "30th CELEBRATION",
      "number": "016/103",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
-     "release": "r758",
-     "artwork_group": "a2290",
+     "same_card": "c22942",
+     "release": "r756",
+     "artwork_group": "a2103",
      "release_date": "2026-09-16",
      "sim": 0.6748,
-     "picture": "https://img.cardcorpus.com/m/b1d30db3a20865f7eed651b17c7b11d1"
+     "picture": "https://img.cardcorpus.com/s1/960/b1d30db3a20865f7eed651b17c7b11d1.avif"
     },
     {
      "handle": "629ea86808f13aa392320ed59b8e79c7",
@@ -943,15 +1000,16 @@
      "set": "japanese/30th-celebration",
      "card": "096",
      "name": "Igglybuff",
-     "set_name": "30th Celebration",
+     "set_name": "30th CELEBRATION",
      "number": "096/103",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
-     "release": "r758",
-     "artwork_group": "a4081",
+     "same_card": "c23058",
+     "release": "r756",
+     "artwork_group": "a3444",
      "release_date": "2026-09-16",
      "sim": 0.6521,
-     "picture": "https://img.cardcorpus.com/m/629ea86808f13aa392320ed59b8e79c7"
+     "picture": "https://img.cardcorpus.com/s1/960/629ea86808f13aa392320ed59b8e79c7.avif"
     },
     {
      "handle": "78d1f8a31b2e88d3a9d3f500f3f1934d",
@@ -959,25 +1017,30 @@
      "set": "japanese/30th-celebration-premium-deck-set-espeon-umbreon",
      "card": "025",
      "name": "Eevee",
-     "set_name": "30th Celebration Premium Deck Set Espeon & Umbreon",
+     "set_name": "30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー",
      "number": "025/040",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
-     "release": "r872",
-     "artwork_group": "a683",
+     "same_card": "c23055",
+     "release": "r870",
+     "artwork_group": "a558",
      "release_date": "2026-09-16",
      "sim": 0.6621,
-     "picture": "https://img.cardcorpus.com/m/78d1f8a31b2e88d3a9d3f500f3f1934d"
+     "picture": "https://img.cardcorpus.com/s1/960/78d1f8a31b2e88d3a9d3f500f3f1934d.avif"
     }
    ],
+   "language_guess": {
+    "language": "ja",
+    "confidence": 0.9390786400724078
+   },
    "pick": {
     "print": "japanese/30th-celebration/073",
     "margin": 0.5508
    },
    "verify": {
-    "japanese/30th-celebration/073": 0.721,
-    "zh-hans/30th-celebration/073": -0.721,
-    "international/30th-celebration/087": -0.7572
+    "japanese/30th-celebration/073": 0.7295,
+    "zh-hans/30th-celebration/073": -0.7295,
+    "english/30th-celebration/087": -0.762
    },
    "numfit": {
     "016/103": -6.01,
@@ -997,9 +1060,9 @@
    "alignment": {
     "aligned": true,
     "pass": 1,
-    "inliers": 673,
-    "scan_features": 1645,
-    "box_error": 0.020583592355251312
+    "inliers": 657,
+    "scan_features": 1637,
+    "box_error": 0.0201997272670269
    },
    "quality": "sure"
   },
@@ -1040,15 +1103,16 @@
      "set": "japanese/30th-celebration",
      "card": "063",
      "name": "Xerneas",
-     "set_name": "30th Celebration",
+     "set_name": "30th CELEBRATION",
      "number": "063/103",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
-     "release": "r758",
-     "artwork_group": "a131",
+     "same_card": "c23005",
+     "release": "r756",
+     "artwork_group": "a115",
      "release_date": "2026-09-16",
      "sim": 0.9261,
-     "picture": "https://img.cardcorpus.com/m/4c0d9621109275c5aebbd3fb615ed731"
+     "picture": "https://img.cardcorpus.com/s1/960/4c0d9621109275c5aebbd3fb615ed731.avif"
     },
     {
      "handle": "cfdf4ada290b398347aac50fd041ebdc",
@@ -1056,15 +1120,16 @@
      "set": "zh-hans/30th-celebration",
      "card": "063",
      "name": "Xerneas",
-     "set_name": "30th Celebration",
+     "set_name": "30周年庆典",
      "number": "063/103",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
-     "release": "r760",
-     "artwork_group": "a131",
+     "same_card": "c23005",
+     "release": "r758",
+     "artwork_group": "a115",
      "release_date": "2026-09-16",
      "sim": 0.6368,
-     "picture": "https://img.cardcorpus.com/m/cfdf4ada290b398347aac50fd041ebdc"
+     "picture": "https://img.cardcorpus.com/s1/960/cfdf4ada290b398347aac50fd041ebdc.avif"
     },
     {
      "handle": "f1ecd81ba11e90c9ec6324b0e1ae4389",
@@ -1072,15 +1137,16 @@
      "set": "japanese/30th-celebration",
      "card": "067",
      "name": "Gimmighoul",
-     "set_name": "30th Celebration",
+     "set_name": "30th CELEBRATION",
      "number": "067/103",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
-     "release": "r758",
-     "artwork_group": "a1627",
+     "same_card": "c23010",
+     "release": "r756",
+     "artwork_group": "a1455",
      "release_date": "2026-09-16",
      "sim": 0.6211,
-     "picture": "https://img.cardcorpus.com/m/f1ecd81ba11e90c9ec6324b0e1ae4389"
+     "picture": "https://img.cardcorpus.com/s1/960/f1ecd81ba11e90c9ec6324b0e1ae4389.avif"
     },
     {
      "handle": "88648891bbf88f2ea4b364c5db84a4b8",
@@ -1088,15 +1154,16 @@
      "set": "japanese/30th-celebration",
      "card": "141",
      "name": "Shining Celebi",
-     "set_name": "30th Celebration",
+     "set_name": "30th CELEBRATION",
      "number": "141/103",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
-     "release": "r758",
-     "artwork_group": "a3118",
+     "same_card": "c23039",
+     "release": "r756",
+     "artwork_group": "a2590",
      "release_date": "2026-09-16",
      "sim": 0.6135,
-     "picture": "https://img.cardcorpus.com/m/88648891bbf88f2ea4b364c5db84a4b8"
+     "picture": "https://img.cardcorpus.com/s1/960/88648891bbf88f2ea4b364c5db84a4b8.avif"
     },
     {
      "handle": "cdc2b43acbb9bb2e2866227fd4b16d60",
@@ -1104,25 +1171,30 @@
      "set": "japanese/30th-celebration-premium-deck-set-espeon-umbreon",
      "card": "033",
      "name": "Pokémon Catcher",
-     "set_name": "30th Celebration Premium Deck Set Espeon & Umbreon",
+     "set_name": "30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー",
      "number": "033/040",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
-     "release": "r872",
-     "artwork_group": "a1028",
+     "same_card": "c24590",
+     "release": "r870",
+     "artwork_group": "a865",
      "release_date": "2026-09-16",
      "sim": 0.6361,
-     "picture": "https://img.cardcorpus.com/m/cdc2b43acbb9bb2e2866227fd4b16d60"
+     "picture": "https://img.cardcorpus.com/s1/960/cdc2b43acbb9bb2e2866227fd4b16d60.avif"
     }
    ],
+   "language_guess": {
+    "language": "ja",
+    "confidence": 0.9551115042436267
+   },
    "pick": {
     "print": "japanese/30th-celebration/063",
     "margin": 0.5996
    },
    "verify": {
-    "japanese/30th-celebration/063": 0.8528,
-    "zh-hans/30th-celebration/063": -0.8587,
-    "international/30th-celebration/076": -0.8528
+    "japanese/30th-celebration/063": 0.852,
+    "zh-hans/30th-celebration/063": -0.8643,
+    "english/30th-celebration/076": -0.852
    },
    "numfit": {
     "030/040": -11.474,
@@ -1142,9 +1214,9 @@
    "alignment": {
     "aligned": true,
     "pass": 1,
-    "inliers": 608,
-    "scan_features": 2202,
-    "box_error": 0.021946560591459274
+    "inliers": 604,
+    "scan_features": 2160,
+    "box_error": 0.021784286946058273
    },
    "quality": "sure"
   },
@@ -1185,15 +1257,16 @@
      "set": "japanese/30th-celebration",
      "card": "053",
      "name": "Miraidon",
-     "set_name": "30th Celebration",
+     "set_name": "30th CELEBRATION",
      "number": "053/103",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
-     "release": "r758",
-     "artwork_group": "a1002",
+     "same_card": "c22990",
+     "release": "r756",
+     "artwork_group": "a840",
      "release_date": "2026-09-16",
      "sim": 0.9227,
-     "picture": "https://img.cardcorpus.com/m/3a21ca323096a6cd3e511b050c5a1af3"
+     "picture": "https://img.cardcorpus.com/s1/960/3a21ca323096a6cd3e511b050c5a1af3.avif"
     },
     {
      "handle": "03514416175b08bfa724502ac6d31bac",
@@ -1201,15 +1274,16 @@
      "set": "zh-hans/30th-celebration",
      "card": "053",
      "name": "Miraidon",
-     "set_name": "30th Celebration",
+     "set_name": "30周年庆典",
      "number": "053/103",
-     "family": "zh-hans",
+     "catalog": "zh-hans",
      "language": "zh-Hans",
-     "release": "r760",
-     "artwork_group": "a1002",
+     "same_card": "c22990",
+     "release": "r758",
+     "artwork_group": "a840",
      "release_date": "2026-09-16",
      "sim": 0.7477,
-     "picture": "https://img.cardcorpus.com/m/03514416175b08bfa724502ac6d31bac"
+     "picture": "https://img.cardcorpus.com/s1/960/03514416175b08bfa724502ac6d31bac.avif"
     },
     {
      "handle": "bd511a03597cc2549bc3eb28756c2fed",
@@ -1217,15 +1291,16 @@
      "set": "japanese/infinity-zone",
      "card": "003",
      "name": "Carnivine",
-     "set_name": "Infinity Zone",
+     "set_name": "ムゲンゾーン",
      "number": "003/100",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c8815",
      "release": "r305",
-     "artwork_group": "a1101",
+     "artwork_group": "a936",
      "release_date": "2020-06-05",
      "sim": 0.6677,
-     "picture": "https://img.cardcorpus.com/m/bd511a03597cc2549bc3eb28756c2fed"
+     "picture": "https://img.cardcorpus.com/s1/960/bd511a03597cc2549bc3eb28756c2fed.avif"
     },
     {
      "handle": "d4eb2e5af53dee43ebbaeb659d528caf",
@@ -1233,15 +1308,16 @@
      "set": "japanese/30th-celebration",
      "card": "091",
      "name": "Kommo-o",
-     "set_name": "30th Celebration",
+     "set_name": "30th CELEBRATION",
      "number": "091/103",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
-     "release": "r758",
-     "artwork_group": "a2216",
+     "same_card": "c23049",
+     "release": "r756",
+     "artwork_group": "a2035",
      "release_date": "2026-09-16",
      "sim": 0.6265,
-     "picture": "https://img.cardcorpus.com/m/d4eb2e5af53dee43ebbaeb659d528caf"
+     "picture": "https://img.cardcorpus.com/s1/960/d4eb2e5af53dee43ebbaeb659d528caf.avif"
     },
     {
      "handle": "a537f8c77e7af423ca111f3e973c5dec",
@@ -1249,27 +1325,32 @@
      "set": "japanese/lost-abyss",
      "card": "061",
      "name": "Barbaracle",
-     "set_name": "Lost Abyss",
+     "set_name": "ロストアビス",
      "number": "061/100",
-     "family": "japanese",
+     "catalog": "japanese",
      "language": "ja",
+     "same_card": "c5429",
      "release": "r326",
-     "artwork_group": "a2348",
+     "artwork_group": "a2159",
      "release_date": "2022-07-15",
      "sim": 0.6268,
-     "picture": "https://img.cardcorpus.com/m/a537f8c77e7af423ca111f3e973c5dec"
+     "picture": "https://img.cardcorpus.com/s1/960/a537f8c77e7af423ca111f3e973c5dec.avif"
     }
    ],
+   "language_guess": {
+    "language": "ja",
+    "confidence": 0.9412547528048898
+   },
    "pick": {
     "print": "japanese/30th-celebration/053",
     "margin": 0.4243
    },
    "verify": {
-    "japanese/30th-celebration/053": 0.8215,
-    "zh-hans/30th-celebration/053": -0.8278,
-    "japanese/2023-pokemon-world-championships-yokohama-deck-pikachu/009": -0.8215,
-    "japanese/scarlet-violet-promos/005": -0.8237,
-    "international/30th-celebration/062": -0.8401
+    "japanese/30th-celebration/053": 0.8143,
+    "zh-hans/30th-celebration/053": -0.822,
+    "japanese/2023-pokemon-world-championships-yokohama-deck-pikachu/009": -0.8163,
+    "japanese/scarlet-violet-promos/005": -0.8143,
+    "english/30th-celebration/062": -0.8372
    },
    "numfit": {
     "003/100": -7.246,
@@ -1288,9 +1369,9 @@
    "alignment": {
     "aligned": true,
     "pass": 1,
-    "inliers": 603,
-    "scan_features": 2039,
-    "box_error": 0.026294279843568802
+    "inliers": 625,
+    "scan_features": 2092,
+    "box_error": 0.026002705097198486
    },
    "quality": "sure"
   }
@@ -1320,19 +1401,20 @@
    "reason": "unsure",
    "top": {
     "handle": "64d04b23133daa1d50091950031ef94b",
-    "print": "international/neo-genesis/92",
-    "set": "international/neo-genesis",
+    "print": "english/neo-genesis/92",
+    "set": "english/neo-genesis",
     "card": "92",
     "name": "Card-Flip Game",
     "set_name": "Neo Genesis",
     "number": "92/111",
-    "family": "international",
+    "catalog": "english",
     "language": "en",
-    "release": "r674",
-    "artwork_group": "a8703",
+    "same_card": "c13347",
+    "release": "r669",
+    "artwork_group": "a3742",
     "release_date": "2000-12-16",
     "sim": 0.6697,
-    "picture": "https://img.cardcorpus.com/m/64d04b23133daa1d50091950031ef94b"
+    "picture": "https://img.cardcorpus.com/s1/960/64d04b23133daa1d50091950031ef94b.avif"
    }
   },
   {
@@ -1358,19 +1440,20 @@
    "reason": "unsure",
    "top": {
     "handle": "e8ffb2a75157fd3c2570930591670aff",
-    "print": "international/stormfront/89",
-    "set": "international/stormfront",
+    "print": "english/stormfront/89",
+    "set": "english/stormfront",
     "card": "89",
     "name": "Poké Drawer +",
     "set_name": "Stormfront",
     "number": "89/100",
-    "family": "international",
+    "catalog": "english",
     "language": "en",
-    "release": "r727",
-    "artwork_group": "a4692",
+    "same_card": "c14359",
+    "release": "r723",
+    "artwork_group": "a3934",
     "release_date": "2008-11-05",
     "sim": 0.6906,
-    "picture": "https://img.cardcorpus.com/m/e8ffb2a75157fd3c2570930591670aff"
+    "picture": "https://img.cardcorpus.com/s1/960/e8ffb2a75157fd3c2570930591670aff.avif"
    }
   }
  ]
