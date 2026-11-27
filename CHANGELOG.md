@@ -1,5 +1,29 @@
 # Changelog
 
+## 1.2.0 (26 November 2026)
+
+**Index.** Rebuilt from the dataset of 26 November 2026: 256,216
+pictures of 214,180 cards, among them its new cards and pictures.
+
+**Upside-down cards at the photo's edge.** A whole card touching the
+photo's edge can now be read turned 180°, as one inside the photo always
+could; only a card cut off by the edge keeps the turn it was found at.
+
+**Examples.** Each example's JSON labels every card with the print it
+really is, and the examples README says where the default scan picks
+another (two Traditional Chinese cards in `chinese-binder.jpg` scan as
+Simplified unless Traditional Chinese is searched; the language check
+flags one of them).
+
+**Faster on a CPU.** On the CPU the scanner now runs its models through
+ONNX Runtime instead of PyTorch: the same answers, about twice as fast (a
+binder page of nine cards in about 11 s instead of 18 s on four server
+cores). Each model is converted the first time it is needed, checked
+against PyTorch, and cached in `~/.cache/cardcorpus-scanner/onnx`; one
+that doesn't match stays on PyTorch. `--runtime torch` (`Scanner(...,
+runtime="torch")`) keeps PyTorch; GPUs (`cuda`, `mps`) are unchanged. The
+package now needs `onnx` for the conversion.
+
 ## 1.1.0 (21 November 2026)
 
 **Sixteen languages.** The index now holds 256,022 pictures of

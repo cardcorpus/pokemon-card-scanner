@@ -44,7 +44,7 @@
      "number": "23/64",
      "catalog": "english",
      "language": "en",
-     "same_card": "c23756",
+     "same_card": "c23747",
      "release": "r640",
      "artwork_group": "a495",
      "release_date": "1999-06-16",
@@ -78,7 +78,7 @@
      "number": "7/64",
      "catalog": "english",
      "language": "en",
-     "same_card": "c17145",
+     "same_card": "c17149",
      "release": "r640",
      "artwork_group": "a495",
      "release_date": "1999-06-16",
@@ -156,7 +156,15 @@
     "scan_features": 3000,
     "box_error": 0.047073859721422195
    },
-   "quality": "sure"
+   "quality": "sure",
+   "label": {
+    "print": "english/jungle/23",
+    "name": "Nidoqueen",
+    "set": "english/jungle",
+    "set_name": "Jungle",
+    "number": "23/64",
+    "language": "en"
+   }
   },
   {
    "box": 1,
@@ -217,7 +225,7 @@
      "number": "13/62",
      "catalog": "english",
      "language": "en",
-     "same_card": "c16297",
+     "same_card": "c16301",
      "release": "r626",
      "artwork_group": "a530",
      "release_date": "1999-10-10",
@@ -252,7 +260,7 @@
      "number": "41/115",
      "catalog": "english",
      "language": "en",
-     "same_card": "c13382",
+     "same_card": "c13387",
      "release": "r621",
      "artwork_group": "a1613",
      "release_date": "2005-08-01",
@@ -312,7 +320,15 @@
     "scan_features": 2678,
     "box_error": 0.05119730159640312
    },
-   "quality": "sure"
+   "quality": "sure",
+   "label": {
+    "print": "english/fossil/28",
+    "name": "Muk",
+    "set": "english/fossil",
+    "set_name": "Fossil",
+    "number": "28/62",
+    "language": "en"
+   }
   },
   {
    "box": 2,
@@ -355,7 +371,7 @@
      "number": "31/64",
      "catalog": "english",
      "language": "en",
-     "same_card": "c23764",
+     "same_card": "c23755",
      "release": "r640",
      "artwork_group": "a505",
      "release_date": "1999-06-16",
@@ -373,7 +389,7 @@
      "number": "15/64",
      "catalog": "english",
      "language": "en",
-     "same_card": "c17151",
+     "same_card": "c17155",
      "release": "r640",
      "artwork_group": "a505",
      "release_date": "1999-06-16",
@@ -407,7 +423,7 @@
      "number": "13/168",
      "catalog": "english",
      "language": "en",
-     "same_card": "c18879",
+     "same_card": "c18884",
      "release": "r580",
      "artwork_group": "a1279",
      "release_date": "2018-08-03",
@@ -424,7 +440,7 @@
      "number": "13/82",
      "catalog": "english",
      "language": "en",
-     "same_card": "c18023",
+     "same_card": "c18027",
      "release": "r729",
      "artwork_group": "a4481",
      "release_date": "2000-04-24",
@@ -465,7 +481,15 @@
     "scan_features": 2998,
     "box_error": 0.0505070798099041
    },
-   "quality": "sure"
+   "quality": "sure",
+   "label": {
+    "print": "english/jungle/31",
+    "name": "Vileplume",
+    "set": "english/jungle",
+    "set_name": "Jungle",
+    "number": "31/64",
+    "language": "en"
+   }
   },
   {
    "box": 3,
@@ -508,7 +532,7 @@
      "number": "17/64",
      "catalog": "english",
      "language": "en",
-     "same_card": "c23750",
+     "same_card": "c23741",
      "release": "r640",
      "artwork_group": "a497",
      "release_date": "1999-06-16",
@@ -525,7 +549,7 @@
      "number": "1/64",
      "catalog": "english",
      "language": "en",
-     "same_card": "c17146",
+     "same_card": "c17150",
      "release": "r640",
      "artwork_group": "a497",
      "release_date": "1999-06-16",
@@ -578,7 +602,7 @@
      "number": "014/034",
      "catalog": "english",
      "language": "en",
-     "same_card": "c17146",
+     "same_card": "c17150",
      "release": "r691",
      "artwork_group": "a497",
      "release_date": "2023-11-17",
@@ -621,7 +645,15 @@
     "scan_features": 3000,
     "box_error": 0.03845275193452835
    },
-   "quality": "sure"
+   "quality": "sure",
+   "label": {
+    "print": "english/jungle/17",
+    "name": "Clefable",
+    "set": "english/jungle",
+    "set_name": "Jungle",
+    "number": "17/64",
+    "language": "en"
+   }
   },
   {
    "box": 4,
@@ -664,7 +696,7 @@
      "number": "30/64",
      "catalog": "english",
      "language": "en",
-     "same_card": "c23763",
+     "same_card": "c23754",
      "release": "r640",
      "artwork_group": "a519",
      "release_date": "1999-06-16",
@@ -681,7 +713,7 @@
      "number": "14/64",
      "catalog": "english",
      "language": "en",
-     "same_card": "c17162",
+     "same_card": "c17166",
      "release": "r640",
      "artwork_group": "a519",
      "release_date": "1999-06-16",
@@ -716,7 +748,7 @@
      "number": "10/64",
      "catalog": "english",
      "language": "en",
-     "same_card": "c17177",
+     "same_card": "c17181",
      "release": "r640",
      "artwork_group": "a552",
      "release_date": "1999-06-16",
@@ -775,7 +807,15 @@
     "scan_features": 3000,
     "box_error": 0.05305859446525574
    },
-   "quality": "sure"
+   "quality": "sure",
+   "label": {
+    "print": "english/jungle/30",
+    "name": "Victreebel",
+    "set": "english/jungle",
+    "set_name": "Jungle",
+    "number": "30/64",
+    "language": "en"
+   }
   },
   {
    "box": 5,
@@ -836,7 +876,7 @@
      "number": "11/62",
      "catalog": "english",
      "language": "en",
-     "same_card": "c16295",
+     "same_card": "c16299",
      "release": "r626",
      "artwork_group": "a9",
      "release_date": "1999-10-10",
@@ -870,7 +910,7 @@
      "number": "7/62",
      "catalog": "english",
      "language": "en",
-     "same_card": "c16306",
+     "same_card": "c16310",
      "release": "r626",
      "artwork_group": "a541",
      "release_date": "1999-10-10",
@@ -930,7 +970,15 @@
     "scan_features": 3000,
     "box_error": 0.04144735261797905
    },
-   "quality": "sure"
+   "quality": "sure",
+   "label": {
+    "print": "english/fossil/26",
+    "name": "Magneton",
+    "set": "english/fossil",
+    "set_name": "Fossil",
+    "number": "26/62",
+    "language": "en"
+   }
   },
   {
    "box": 6,
@@ -990,7 +1038,7 @@
      "number": "8/62",
      "catalog": "english",
      "language": "en",
-     "same_card": "c16303",
+     "same_card": "c16307",
      "release": "r626",
      "artwork_group": "a534",
      "release_date": "1999-10-10",
@@ -1080,7 +1128,15 @@
     "scan_features": 2692,
     "box_error": 0.042970623821020126
    },
-   "quality": "sure"
+   "quality": "sure",
+   "label": {
+    "print": "english/fossil/23",
+    "name": "Hypno",
+    "set": "english/fossil",
+    "set_name": "Fossil",
+    "number": "23/62",
+    "language": "en"
+   }
   },
   {
    "box": 7,
@@ -1123,7 +1179,7 @@
      "number": "29/64",
      "catalog": "english",
      "language": "en",
-     "same_card": "c23762",
+     "same_card": "c23753",
      "release": "r640",
      "artwork_group": "a509",
      "release_date": "1999-06-16",
@@ -1141,7 +1197,7 @@
      "number": "13/64",
      "catalog": "english",
      "language": "en",
-     "same_card": "c17155",
+     "same_card": "c17159",
      "release": "r640",
      "artwork_group": "a509",
      "release_date": "1999-06-16",
@@ -1176,7 +1232,7 @@
      "number": "14/106",
      "catalog": "english",
      "language": "en",
-     "same_card": "c11429",
+     "same_card": "c11433",
      "release": "r630",
      "artwork_group": "a486",
      "release_date": "2008-02-13",
@@ -1193,7 +1249,7 @@
      "number": "52/97",
      "catalog": "english",
      "language": "en",
-     "same_card": "c18258",
+     "same_card": "c18263",
      "release": "r605",
      "artwork_group": "a1616",
      "release_date": "2003-11-24",
@@ -1235,7 +1291,15 @@
     "scan_features": 3000,
     "box_error": 0.05477125570178032
    },
-   "quality": "sure"
+   "quality": "sure",
+   "label": {
+    "print": "english/jungle/29",
+    "name": "Venomoth",
+    "set": "english/jungle",
+    "set_name": "Jungle",
+    "number": "29/64",
+    "language": "en"
+   }
   },
   {
    "box": 8,
@@ -1296,7 +1360,7 @@
      "number": "5/62",
      "catalog": "english",
      "language": "en",
-     "same_card": "c16302",
+     "same_card": "c16306",
      "release": "r626",
      "artwork_group": "a533",
      "release_date": "1999-10-10",
@@ -1331,7 +1395,7 @@
      "number": "34/112",
      "catalog": "english",
      "language": "en",
-     "same_card": "c12715",
+     "same_card": "c12720",
      "release": "r608",
      "artwork_group": "a29",
      "release_date": "2004-09-01",
@@ -1348,7 +1412,7 @@
      "number": "108/112",
      "catalog": "english",
      "language": "en",
-     "same_card": "c12716",
+     "same_card": "c12721",
      "release": "r608",
      "artwork_group": "a2977",
      "release_date": "2004-09-01",
@@ -1388,7 +1452,15 @@
     "scan_features": 3000,
     "box_error": 0.045292023569345474
    },
-   "quality": "sure"
+   "quality": "sure",
+   "label": {
+    "print": "english/fossil/20",
+    "name": "Gengar",
+    "set": "english/fossil",
+    "set_name": "Fossil",
+    "number": "20/62",
+    "language": "en"
+   }
   },
   {
    "box": 9,
@@ -1449,7 +1521,7 @@
      "number": "14/62",
      "catalog": "english",
      "language": "en",
-     "same_card": "c16282",
+     "same_card": "c16286",
      "release": "r626",
      "artwork_group": "a14",
      "release_date": "1999-10-10",
@@ -1484,7 +1556,7 @@
      "number": "83/82",
      "catalog": "english",
      "language": "en",
-     "same_card": "c11009",
+     "same_card": "c11013",
      "release": "r729",
      "artwork_group": "a3443",
      "release_date": "2000-04-24",
@@ -1535,7 +1607,15 @@
     "scan_features": 2908,
     "box_error": 0.03797902539372444
    },
-   "quality": "sure"
+   "quality": "sure",
+   "label": {
+    "print": "english/fossil/29",
+    "name": "Raichu",
+    "set": "english/fossil",
+    "set_name": "Fossil",
+    "number": "29/62",
+    "language": "en"
+   }
   },
   {
    "box": 10,
@@ -1578,7 +1658,7 @@
      "number": "32/64",
      "catalog": "english",
      "language": "en",
-     "same_card": "c23765",
+     "same_card": "c23756",
      "release": "r640",
      "artwork_group": "a1198",
      "release_date": "1999-06-16",
@@ -1596,7 +1676,7 @@
      "number": "16/64",
      "catalog": "english",
      "language": "en",
-     "same_card": "c17148",
+     "same_card": "c17152",
      "release": "r640",
      "artwork_group": "a1198",
      "release_date": "1999-06-16",
@@ -1631,7 +1711,7 @@
      "number": "62/111",
      "catalog": "english",
      "language": "en",
-     "same_card": "c13280",
+     "same_card": "c13285",
      "release": "r669",
      "artwork_group": "a547",
      "release_date": "2000-12-16",
@@ -1689,7 +1769,15 @@
     "scan_features": 2897,
     "box_error": 0.04989546164870262
    },
-   "quality": "sure"
+   "quality": "sure",
+   "label": {
+    "print": "english/jungle/32",
+    "name": "Wigglytuff",
+    "set": "english/jungle",
+    "set_name": "Jungle",
+    "number": "32/64",
+    "language": "en"
+   }
   },
   {
    "box": 11,
@@ -1750,7 +1838,7 @@
      "number": "6/62",
      "catalog": "english",
      "language": "en",
-     "same_card": "c16301",
+     "same_card": "c16305",
      "release": "r626",
      "artwork_group": "a29",
      "release_date": "1999-10-10",
@@ -1802,7 +1890,7 @@
      "number": "DP50",
      "catalog": "english",
      "language": "en",
-     "same_card": "c16990",
+     "same_card": "c16994",
      "release": "r593",
      "artwork_group": "a3153",
      "release_date": "2007-05-01",
@@ -1840,7 +1928,15 @@
     "scan_features": 2672,
     "box_error": 0.0493449866771698
    },
-   "quality": "sure"
+   "quality": "sure",
+   "label": {
+    "print": "english/fossil/21",
+    "name": "Haunter",
+    "set": "english/fossil",
+    "set_name": "Fossil",
+    "number": "21/62",
+    "language": "en"
+   }
   }
  ],
  "cut_off": [],

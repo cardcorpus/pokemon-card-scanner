@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "cardcorpus-scanner"
-version = "1.1.0"
+version = "1.2.0"
 description = "Name Pokémon trading cards in photos: every card on a binder page, table or hand, matched to the CardCorpus dataset."
 readme = "README.md"
 license = "Apache-2.0"
@@ -30,8 +30,10 @@ dependencies = [
     "opencv-python-headless>=5.0",
     # downloads the weights when no local copy is given
     "huggingface_hub>=0.24",
-    # the language model (language-classifier.onnx): the language check on every card
+    # the language model (language-classifier.onnx): the language check on every card; and on a CPU
+    # every model (runtime.py), exported once with onnx
     "onnxruntime>=1.18",
+    "onnx>=1.16",
 ]
 
 [project.optional-dependencies]

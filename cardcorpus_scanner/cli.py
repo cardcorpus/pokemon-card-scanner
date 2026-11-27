@@ -20,8 +20,10 @@ def _scanner(args):
     t = time.time()
     scanner = Scanner.load(args.weights, device=pick_device(args.device), verifier=not args.no_verifier,
                            picture_cache=args.picture_cache, language_model=not args.no_language_model,
-                           corner_reader=not args.no_language_model)
-    print(f"scanner ready in {time.time() - t:.1f} s on {scanner.device} "
+                           corner_reader=not args.no_language_model, runtime=args.runtime)
+    onnx = sum(v == "onnx" for v in scanner.runtime.values())
+    print(f"scanner ready in {time.time() - t:.1f} s on {scanner.device}"
+          f"{f' with ONNX Runtime ({onnx} of {len(scanner.runtime)} models)' if onnx else ''} "
           f"({scanner.index.release.get('cards', '?')} cards in the index)", file=sys.stderr)
     return scanner
 
@@ -30,6 +32,9 @@ def _common(ap):
     ap.add_argument("--weights", help="folder with pipeline.json, models/ and index/ (default: the Hub's copy)")
     ap.add_argument("--device", default="auto",
                     help="cpu, cuda or mps; auto (the default) picks an NVIDIA GPU, then Apple silicon's GPU, then the CPU")
+    ap.add_argument("--runtime", default="auto", choices=("auto", "torch", "onnx"),
+                    help="on the CPU, run the models through ONNX Runtime (onnx) or PyTorch (torch); auto (the "
+                    "default) uses ONNX Runtime on the CPU: same answers, about twice as fast")
     ap.add_argument("--no-verifier", action="store_true",
                     help="skip the print verifier (it fetches reference pictures from the image mirror)")
     ap.add_argument("--picture-cache", default=str(Path.home() / ".cache" / "cardcorpus-scanner" / "pictures"),

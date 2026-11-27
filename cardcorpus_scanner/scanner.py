@@ -28,6 +28,7 @@ from pathlib import Path
 import numpy as np
 
 from . import language, marks, tower
+from . import runtime as runtime_mod
 from .detector import Detector, containment
 from .index import Index
 from .number_reader import Reader, printed_nd
@@ -356,7 +357,10 @@ class Scanner:
 
     def __init__(self, weights, device="cpu", number_reader=True, picker=True, verifier=True,
                  mirror=MIRROR, picture_cache=None, picture_folder=None, picture_width=COPY_WIDTH,
-                 catalogs=None, language_model=True, corner_reader=True):
+                 catalogs=None, language_model=True, corner_reader=True, runtime="auto"):
+        """runtime: "torch", "onnx" (the models through ONNX Runtime, on the CPU only) or "auto" (the
+        default: ONNX Runtime when the device is the CPU and onnx and onnxruntime are installed). Same answers,
+        about twice as fast on a CPU (runtime.py)."""
         W = Path(weights)
         cfg = load_config(W)
         # catalogs loads only the index parts that hold one of them (index.py)
@@ -385,6 +389,51 @@ class Scanner:
                     preprocess=tower.preprocess(cfg["embedder"]),
                     heads=heads, picker=pick, reader=reader, verifier=ver, mirror=mirror)
         self.load_language_models(models, language_model, corner_reader)
+        if self.resolve_runtime(runtime) == "onnx":
+            self.use_onnx()
+
+    def resolve_runtime(self, runtime):
+        if runtime not in ("auto", "torch", "onnx"):
+            raise ValueError(f"runtime must be auto, torch or onnx, not {runtime!r}")
+        on_cpu = str(self.device) == "cpu"
+        if runtime == "onnx":
+            if not on_cpu:
+                raise ValueError("runtime onnx runs on the CPU only (device cpu)")
+            if not runtime_mod.available():
+                raise ImportError("runtime onnx needs the onnx and onnxruntime packages")
+            return "onnx"
+        if runtime == "auto" and on_cpu and runtime_mod.available():
+            return "onnx"
+        return "torch"
+
+    def use_onnx(self, threads=None, folder=None):
+        """Runs the detector, matcher, picker, number reader and corner reader through ONNX Runtime
+        (runtime.py): each is exported once into a cache and checked against PyTorch first; one that can't be
+        stays on PyTorch. threads: ONNX Runtime's threads per model (default: torch.get_num_threads(), so
+        torch.set_num_threads and OMP_NUM_THREADS set both). Returns {model: "onnx" or "torch"}."""
+        from PIL import Image
+
+        torch = self.torch
+        threads = threads or torch.get_num_threads()
+        blank = Image.new("RGB", (self.HW, self.HH), (128, 128, 128))
+        done = {}
+
+        def swap(owner, attr, name, example, dynamic):
+            model = runtime_mod.to_onnx(getattr(owner, attr), name, example, dynamic, threads, folder)
+            if model is not None:
+                setattr(owner, attr, model)
+            done[name] = "onnx" if model is not None else "torch"
+
+        swap(self.detector, "model", "detector", torch.rand(1, 3, 1280, 960), {0: "batch", 2: "height", 3: "width"})
+        swap(self, "matcher", "matcher", torch.stack([self.preprocess(blank)] * 4), {0: "batch"})
+        if self.picker is not None:
+            swap(self, "picker", "picker", self.pick_tf(blank)[None], {0: "batch"})
+        for name, reader in (("number-reader", self.reader),
+                             ("corner-reader", getattr(self.corner_reader, "reader", None))):
+            if reader is not None:
+                swap(reader, "model", name, torch.rand(64, 1, reader.strip_h, reader.strip_w), {0: "batch"})
+        self.runtime = done
+        return done
 
     def load_language_models(self, models, language_model=True, corner_reader=True):
         """The language model (models/language-classifier.onnx; needs onnxruntime) and the corner reader
@@ -479,6 +528,8 @@ class Scanner:
         self.corner_reader = None
         self.verifier = verifier
         self.mirror = (mirror or "").rstrip("/")
+        # which models run where (use_onnx); PyTorch until it is called
+        self.runtime = {}
 
     @property
     def languages(self):
@@ -764,10 +815,12 @@ class Scanner:
         found = containment(self.detector(arr), img.width, img.height, self.cfg["detector"]["contain"])
         return [(np.array(q, dtype=np.float32), s) for s, q in found]
 
-    def orient_embed(self, img, quad):
+    def orient_embed(self, img, quad, cut_off=False):
         """Straighten the box at 384 x 536 in each turn of its corners, and
         keep the one that reads upright. (crop, oriented quad, fingerprint,
-        orientation probability, that turn's index similarities) or None."""
+        orientation probability, that turn's index similarities) or None.
+        cut_off: the box is a card cut off by the photo's edge, which never
+        takes the half turn."""
         from PIL import Image
 
         W, H = self.W, self.H
@@ -800,8 +853,10 @@ class Scanner:
                 if alt != best and top[alt] - top[best] >= ocfg["match_margin"] and top[alt] >= ocfg["match_floor"]:
                     best = alt
             # a card that reads alike both ways up: the half turn wins when
-            # the index finds the same card there, better
-            if best == probe and len(rolls) == 4 and not touches_frame(quad, img.width, img.height):
+            # the index finds the same card there, better. A whole card that
+            # only touches the photo's edge gets it too (#1739); a cut-off one
+            # doesn't
+            if best == probe and len(rolls) == 4 and not cut_off:
                 turn = (best + 2) % 4
                 if self.half_turn_wins(sims[best], sims[turn]):
                     best = turn
@@ -1169,7 +1224,7 @@ class Scanner:
         for di, (quad, conf, edge) in enumerate(boxes):
             if edge:
                 continue
-            oe = self.orient_embed(img, quad)
+            oe = self.orient_embed(img, quad, cut_off=edge)
             if oe is None:
                 continue
             crop, q, feat, orient_p, sims = oe

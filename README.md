@@ -31,7 +31,10 @@ pip install "cardcorpus-scanner @ git+https://github.com/cardcorpus/pokemon-card
 or, from a clone, `pip install -e .`. It uses the fastest hardware it
 finds: an NVIDIA GPU, then Apple silicon's GPU, then the CPU, and says
 which when it starts (`scanner ready in ... on mps`). `--device cpu`,
-`cuda` or `mps` picks one yourself. The first run
+`cuda` or `mps` picks one yourself. On the CPU it runs the models through
+ONNX Runtime, which gives the same answers about twice as fast as PyTorch:
+each model is converted once, checked against PyTorch, and kept in
+`~/.cache/cardcorpus-scanner/onnx`. `--runtime torch` keeps PyTorch. The first run
 downloads the weights and index from the Hub, about 572 MB, and
 keeps them in the Hugging Face cache.
 
@@ -217,7 +220,7 @@ gives every number.
    possible turns and fingerprinted by the matcher (a fine-tuned DINOv3
    ViT-S/16); an orientation head says which turn is upright.
 3. **Retrieve.** The fingerprint's nearest pictures in the reference
-   index: 256,022 pictures of 214,029 cards.
+   index: 256,216 pictures of 214,180 cards.
 4. **Straighten** the card again at full resolution.
 5. **Read the number.** A small CRNN reads the collector number from the
    bottom of the card.
@@ -245,13 +248,13 @@ the first pick is the right print):
 
 | photos | cards | right (default) | right (`--catalog all`) |
 |---|---|---|---|
-| binder pages of vintage cards, at the camera's full resolution | 641 | 629 (98.1%) | 620 (96.7%) |
+| binder pages of vintage cards, at the camera's full resolution | 641 | 629 (98.1%) | 618 (96.4%) |
 | the same photos shrunk to 3000 px | 641 | 630 (98.3%) | 618 (96.4%) |
-| a collection's binder pages | 1,263 | 1,233 (97.6%) | 1,180 (93.4%) |
+| a collection's binder pages | 1,263 | 1,234 (97.7%) | 1,179 (93.3%) |
 | cards photographed with a phone | 139 | 122 (87.8%) | 101 (72.7%) |
 | varied real-world photos, many small, blurred or at an angle | 672 | 585 (87.1%) | 431 (64.1%) |
 
-Measured on 21 November 2026 with these models and the index of that day.
+Measured on 26 November 2026 with these models and the index of that day.
 The default keeps to English, Japanese and Simplified Chinese prints;
 `--catalog all` matches against all sixteen languages, and nearly all of
 the cards it loses come back as the same card printed in another language
@@ -263,15 +266,16 @@ A binder page of 9 to 12 cards takes about 3.6 s on Apple silicon's GPU
 (`--device mps`, an Apple M6) and about 12.5 s on its CPU.
 
 It knows the cards in the index it was built with (the dataset as of
-21 November 2026). A card released after that isn't in it, and the scanner
+26 November 2026). A card released after that isn't in it, and the scanner
 names the closest card it knows. It reads which print a card is, not its
 condition, and it wasn't tested on cards in graded slabs.
 
 ## Examples
 
-[examples/](examples/) has photos of binder pages with what the scanner
-says about each, from these weights. `pytest` checks the scanner still
-says it.
+[examples/](examples/) has photos of binder pages with what each card
+really is, checked by eye, and what the scanner says about it with these
+weights and the default languages. `pytest` checks the scanner still says
+it.
 
 ## Licence
 

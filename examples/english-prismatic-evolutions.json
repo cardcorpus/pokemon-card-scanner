@@ -44,7 +44,7 @@
      "number": "005/131",
      "catalog": "english",
      "language": "en",
-     "same_card": "c24083",
+     "same_card": "c24078",
      "release": "r703",
      "artwork_group": "a704",
      "release_date": "2025-01-17",
@@ -78,7 +78,7 @@
      "number": "16/160",
      "catalog": "english",
      "language": "en",
-     "same_card": "c12940",
+     "same_card": "c12945",
      "release": "r702",
      "artwork_group": "a1282",
      "release_date": "2015-02-04",
@@ -154,7 +154,15 @@
     "scan_features": 3000,
     "box_error": 0.0144341504201293
    },
-   "quality": "sure"
+   "quality": "sure",
+   "label": {
+    "print": "english/prismatic-evolutions/005",
+    "name": "Leafeon",
+    "set": "english/prismatic-evolutions",
+    "set_name": "Prismatic Evolutions",
+    "number": "005/131",
+    "language": "en"
+   }
   },
   {
    "box": 1,
@@ -197,7 +205,7 @@
      "number": "022/131",
      "catalog": "english",
      "language": "en",
-     "same_card": "c24085",
+     "same_card": "c24080",
      "release": "r703",
      "artwork_group": "a559",
      "release_date": "2025-01-17",
@@ -309,7 +317,15 @@
     "scan_features": 3000,
     "box_error": 0.018825098872184753
    },
-   "quality": "sure"
+   "quality": "sure",
+   "label": {
+    "print": "english/prismatic-evolutions/022",
+    "name": "Vaporeon",
+    "set": "english/prismatic-evolutions",
+    "set_name": "Prismatic Evolutions",
+    "number": "022/131",
+    "language": "en"
+   }
   },
   {
    "box": 2,
@@ -352,7 +368,7 @@
      "number": "025/131",
      "catalog": "english",
      "language": "en",
-     "same_card": "c24086",
+     "same_card": "c24081",
      "release": "r703",
      "artwork_group": "a705",
      "release_date": "2025-01-17",
@@ -386,7 +402,7 @@
      "number": "48/108",
      "catalog": "english",
      "language": "en",
-     "same_card": "c11231",
+     "same_card": "c11235",
      "release": "r587",
      "artwork_group": "a695",
      "release_date": "2012-05-09",
@@ -404,7 +420,7 @@
      "number": "7/12",
      "catalog": "english",
      "language": "en",
-     "same_card": "c23922",
+     "same_card": "c23913",
      "release": "r662",
      "artwork_group": "a1463",
      "release_date": "2014-05-23",
@@ -465,7 +481,15 @@
     "scan_features": 2692,
     "box_error": 0.015393626876175404
    },
-   "quality": "sure"
+   "quality": "sure",
+   "label": {
+    "print": "english/prismatic-evolutions/025",
+    "name": "Glaceon",
+    "set": "english/prismatic-evolutions",
+    "set_name": "Prismatic Evolutions",
+    "number": "025/131",
+    "language": "en"
+   }
   },
   {
    "box": 3,
@@ -508,7 +532,7 @@
      "number": "029/131",
      "catalog": "english",
      "language": "en",
-     "same_card": "c24087",
+     "same_card": "c24082",
      "release": "r703",
      "artwork_group": "a560",
      "release_date": "2025-01-17",
@@ -618,7 +642,15 @@
     "scan_features": 2832,
     "box_error": 0.01670231483876705
    },
-   "quality": "sure"
+   "quality": "sure",
+   "label": {
+    "print": "english/prismatic-evolutions/029",
+    "name": "Jolteon",
+    "set": "english/prismatic-evolutions",
+    "set_name": "Prismatic Evolutions",
+    "number": "029/131",
+    "language": "en"
+   }
   },
   {
    "box": 4,
@@ -696,7 +728,7 @@
      "catalog": "english",
      "language": "en",
      "same_card": null,
-     "release": "r886",
+     "release": "r889",
      "artwork_group": "a899",
      "release_date": "2026-11-03",
      "sim": 0.669,
@@ -763,7 +795,15 @@
     "scan_features": 3000,
     "box_error": 0.02078845165669918
    },
-   "quality": "sure"
+   "quality": "sure",
+   "label": {
+    "print": "english/prismatic-evolutions/033",
+    "name": "Espeon",
+    "set": "english/prismatic-evolutions",
+    "set_name": "Prismatic Evolutions",
+    "number": "033/131",
+    "language": "en"
+   }
   },
   {
    "box": 5,
@@ -806,7 +846,7 @@
      "number": "040/131",
      "catalog": "english",
      "language": "en",
-     "same_card": "c13158",
+     "same_card": "c13163",
      "release": "r703",
      "artwork_group": "a721",
      "release_date": "2025-01-17",
@@ -840,7 +880,7 @@
      "number": "026/086",
      "catalog": "english",
      "language": "en",
-     "same_card": "c14595",
+     "same_card": "c14599",
      "release": "r741",
      "artwork_group": "a1755",
      "release_date": "2025-07-18",
@@ -857,7 +897,7 @@
      "number": "028/086",
      "catalog": "english",
      "language": "en",
-     "same_card": "c14597",
+     "same_card": "c14601",
      "release": "r741",
      "artwork_group": "a3025",
      "release_date": "2025-07-18",
@@ -915,7 +955,15 @@
     "scan_features": 2853,
     "box_error": 0.017822185531258583
    },
-   "quality": "sure"
+   "quality": "sure",
+   "label": {
+    "print": "english/prismatic-evolutions/040",
+    "name": "Sylveon",
+    "set": "english/prismatic-evolutions",
+    "set_name": "Prismatic Evolutions",
+    "number": "040/131",
+    "language": "en"
+   }
   },
   {
    "box": 6,
@@ -1064,7 +1112,15 @@
     "scan_features": 2605,
     "box_error": 0.03811897709965706
    },
-   "quality": "sure"
+   "quality": "sure",
+   "label": {
+    "print": "english/prismatic-evolutions/059",
+    "name": "Umbreon",
+    "set": "english/prismatic-evolutions",
+    "set_name": "Prismatic Evolutions",
+    "number": "059/131",
+    "language": "en"
+   }
   },
   {
    "box": 7,
@@ -1142,7 +1198,7 @@
      "number": "022/131",
      "catalog": "english",
      "language": "en",
-     "same_card": "c24085",
+     "same_card": "c24080",
      "release": "r703",
      "artwork_group": "a559",
      "release_date": "2025-01-17",
@@ -1176,7 +1232,7 @@
      "number": "13/147",
      "catalog": "english",
      "language": "en",
-     "same_card": "c21517",
+     "same_card": "c21519",
      "release": "r575",
      "artwork_group": "a2386",
      "release_date": "2017-08-04",
@@ -1219,7 +1275,15 @@
     "scan_features": 3000,
     "box_error": 0.015497222542762756
    },
-   "quality": "sure"
+   "quality": "sure",
+   "label": {
+    "print": "english/prismatic-evolutions/020",
+    "name": "Goldeen",
+    "set": "english/prismatic-evolutions",
+    "set_name": "Prismatic Evolutions",
+    "number": "020/131",
+    "language": "en"
+   }
   },
   {
    "box": 8,
@@ -1279,7 +1343,7 @@
      "number": "254/SM-P",
      "catalog": "japanese",
      "language": "ja",
-     "same_card": "c20402",
+     "same_card": "c20405",
      "release": "r481",
      "artwork_group": "a539",
      "release_date": "2016-11-01",
@@ -1296,7 +1360,7 @@
      "number": "064/083",
      "catalog": "japanese",
      "language": "ja",
-     "same_card": "c16610",
+     "same_card": "c16614",
      "release": "r387",
      "artwork_group": "a1593",
      "release_date": "2026-03-13",
@@ -1330,7 +1394,7 @@
      "number": "082/193",
      "catalog": "japanese",
      "language": "ja",
-     "same_card": "c15371",
+     "same_card": "c15375",
      "release": "r348",
      "artwork_group": "a4071",
      "release_date": "2025-11-28",
@@ -1363,7 +1427,15 @@
     "scan_features": 1769,
     "box_error": 0.01370623242110014
    },
-   "quality": "sure"
+   "quality": "sure",
+   "label": {
+    "print": "japanese/double-blaze/043",
+    "name": "Diglett",
+    "set": "japanese/double-blaze",
+    "set_name": "ダブルブレイズ",
+    "number": "043/095",
+    "language": "ja"
+   }
   }
  ],
  "cut_off": [],
@@ -1399,7 +1471,7 @@
     "number": "79/108",
     "catalog": "english",
     "language": "en",
-    "same_card": "c22498",
+    "same_card": "c22499",
     "release": "r612",
     "artwork_group": "a4753",
     "release_date": "2007-02-14",
@@ -1438,8 +1510,8 @@
     "number": "097/103",
     "catalog": "english",
     "language": "en",
-    "same_card": "c20201",
-    "release": "r882",
+    "same_card": "c20204",
+    "release": "r885",
     "artwork_group": "a4612",
     "release_date": "2026-11-06",
     "sim": 0.7071,
@@ -1478,7 +1550,7 @@
     "catalog": "english",
     "language": "en",
     "same_card": null,
-    "release": "r786",
+    "release": "r788",
     "artwork_group": "a3934",
     "release_date": "2009-10-28",
     "sim": 0.6408,

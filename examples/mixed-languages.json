@@ -44,7 +44,7 @@
      "number": "No. 233",
      "catalog": "japanese",
      "language": "ja",
-     "same_card": "c11367",
+     "same_card": "c11371",
      "release": "r207",
      "artwork_group": "a3537",
      "release_date": "2001-04-26",
@@ -61,7 +61,7 @@
      "number": null,
      "catalog": "japanese",
      "language": "ja",
-     "same_card": "c24309",
+     "same_card": "c24301",
      "release": "r753",
      "artwork_group": "a4907",
      "release_date": "1996-10-15",
@@ -95,7 +95,7 @@
      "number": null,
      "catalog": "japanese",
      "language": "ja",
-     "same_card": "c24310",
+     "same_card": "c24302",
      "release": "r753",
      "artwork_group": "a4483",
      "release_date": "1996-10-15",
@@ -134,7 +134,15 @@
     "scan_features": 3000,
     "box_error": 0.03592706844210625
    },
-   "quality": "sure"
+   "quality": "sure",
+   "label": {
+    "print": "japanese/darkness-and-to-light-neo-destiny/no-233",
+    "name": "Dark Porygon2",
+    "set": "japanese/darkness-and-to-light-neo-destiny",
+    "set_name": "闇、そして光へ...",
+    "number": "No. 233",
+    "language": "ja"
+   }
   },
   {
    "box": 1,
@@ -194,7 +202,7 @@
      "number": "105/086",
      "catalog": "english",
      "language": "en",
-     "same_card": "c14674",
+     "same_card": "c14678",
      "release": "r741",
      "artwork_group": "a727",
      "release_date": "2025-07-18",
@@ -245,7 +253,7 @@
      "number": "1/107",
      "catalog": "english",
      "language": "en",
-     "same_card": "c10696",
+     "same_card": "c10700",
      "release": "r604",
      "artwork_group": "a971",
      "release_date": "2005-02-01",
@@ -281,7 +289,15 @@
     "scan_features": 3000,
     "box_error": 0.019926266744732857
    },
-   "quality": "sure"
+   "quality": "sure",
+   "label": {
+    "print": "english/paradox-rift/189",
+    "name": "Mantyke",
+    "set": "english/paradox-rift",
+    "set_name": "Paradox Rift",
+    "number": "189/182",
+    "language": "en"
+   }
   },
   {
    "box": 2,
@@ -341,8 +357,8 @@
      "number": "103/086",
      "catalog": "zh-hans",
      "language": "zh-Hans",
-     "same_card": "c14675",
-     "release": "r885",
+     "same_card": "c14679",
+     "release": "r888",
      "artwork_group": "a1496",
      "release_date": "2026-11-06",
      "sim": 0.8108,
@@ -358,8 +374,8 @@
      "number": "104/086",
      "catalog": "zh-hans",
      "language": "zh-Hans",
-     "same_card": "c14676",
-     "release": "r885",
+     "same_card": "c14680",
+     "release": "r888",
      "artwork_group": "a1652",
      "release_date": "2026-11-06",
      "sim": 0.8101,
@@ -424,7 +440,15 @@
     "scan_features": 3000,
     "box_error": 0.012823417782783508
    },
-   "quality": "sure"
+   "quality": "sure",
+   "label": {
+    "print": "zh-hans/gem-pack-volume-3/1507",
+    "name": "Ceruledge",
+    "set": "zh-hans/gem-pack-volume-3",
+    "set_name": "宝石包 VOL.3",
+    "number": "1507/07",
+    "language": "zh-Hans"
+   }
   },
   {
    "box": 3,
@@ -467,7 +491,7 @@
      "number": "022/021",
      "catalog": "japanese",
      "language": "ja",
-     "same_card": "c15624",
+     "same_card": "c15628",
      "release": "r350",
      "artwork_group": "a29",
      "release_date": "2025-09-05",
@@ -484,7 +508,7 @@
      "number": "027",
      "catalog": "english",
      "language": "en",
-     "same_card": "c15624",
+     "same_card": "c15628",
      "release": "r663",
      "artwork_group": "a29",
      "release_date": "2025-09-01",
@@ -518,7 +542,7 @@
      "number": "092/080",
      "catalog": "japanese",
      "language": "ja",
-     "same_card": "c14240",
+     "same_card": "c14244",
      "release": "r304",
      "artwork_group": "a1597",
      "release_date": "2025-09-26",
@@ -535,7 +559,7 @@
      "number": "072/063",
      "catalog": "japanese",
      "language": "ja",
-     "same_card": "c15252",
+     "same_card": "c15256",
      "release": "r346",
      "artwork_group": "a2215",
      "release_date": "2025-08-01",
@@ -573,7 +597,15 @@
     "scan_features": 3001,
     "box_error": 0.022383587434887886
    },
-   "quality": "sure"
+   "quality": "sure",
+   "label": {
+    "print": "japanese/mega-starter-set-mega-gengar-ex/022",
+    "name": "Haunter",
+    "set": "japanese/mega-starter-set-mega-gengar-ex",
+    "set_name": "スターターセットMEGA メガゲンガーex",
+    "number": "022/021",
+    "language": "ja"
+   }
   },
   {
    "box": 4,
@@ -684,7 +716,7 @@
      "number": "114/086",
      "catalog": "english",
      "language": "en",
-     "same_card": "c14517",
+     "same_card": "c14521",
      "release": "r569",
      "artwork_group": "a1992",
      "release_date": "2025-07-18",
@@ -717,7 +749,15 @@
     "scan_features": 2997,
     "box_error": 0.024902693927288055
    },
-   "quality": "sure"
+   "quality": "sure",
+   "label": {
+    "print": "english/paradox-rift/201",
+    "name": "Minior",
+    "set": "english/paradox-rift",
+    "set_name": "Paradox Rift",
+    "number": "201/182",
+    "language": "en"
+   }
   },
   {
    "box": 5,
@@ -862,7 +902,15 @@
     "scan_features": 3000,
     "box_error": 0.019688434898853302
    },
-   "quality": "sure"
+   "quality": "sure",
+   "label": {
+    "print": "japanese/sword-shield-promos/265",
+    "name": "Pikachu VMAX",
+    "set": "japanese/sword-shield-promos",
+    "set_name": "Sword & Shield Promos",
+    "number": "265/S-P",
+    "language": "ja"
+   }
   },
   {
    "box": 6,
@@ -905,7 +953,7 @@
      "number": "293/217",
      "catalog": "english",
      "language": "en",
-     "same_card": "c15538",
+     "same_card": "c15542",
      "release": "r564",
      "artwork_group": "a1783",
      "release_date": "2026-01-30",
@@ -1011,7 +1059,15 @@
     "scan_features": 3000,
     "box_error": 0.020388685166835785
    },
-   "quality": "sure"
+   "quality": "sure",
+   "label": {
+    "print": "english/ascended-heroes/293",
+    "name": "Surfer",
+    "set": "english/ascended-heroes",
+    "set_name": "Ascended Heroes",
+    "number": "293/217",
+    "language": "en"
+   }
   },
   {
    "box": 7,
@@ -1105,7 +1161,7 @@
      "number": "10/101",
      "catalog": "english",
      "language": "en",
-     "same_card": "c10231",
+     "same_card": "c10235",
      "release": "r682",
      "artwork_group": "a2488",
      "release_date": "2013-08-14",
@@ -1123,7 +1179,7 @@
      "number": "144/156",
      "catalog": "english",
      "language": "en",
-     "same_card": "c13618",
+     "same_card": "c13623",
      "release": "r734",
      "artwork_group": "a1133",
      "release_date": "2018-02-02",
@@ -1161,7 +1217,15 @@
     "scan_features": 3001,
     "box_error": 0.03864247724413872
    },
-   "quality": "sure"
+   "quality": "sure",
+   "label": {
+    "print": "english/prismatic-evolutions/152",
+    "name": "Wellspring Mask Ogerpon ex",
+    "set": "english/prismatic-evolutions",
+    "set_name": "Prismatic Evolutions",
+    "number": "152/131",
+    "language": "en"
+   }
   },
   {
    "box": 8,
@@ -1313,7 +1377,15 @@
     "scan_features": 3000,
     "box_error": 0.02677701786160469
    },
-   "quality": "sure"
+   "quality": "sure",
+   "label": {
+    "print": "english/prismatic-evolutions/160",
+    "name": "Cornerstone Mask Ogerpon ex",
+    "set": "english/prismatic-evolutions",
+    "set_name": "Prismatic Evolutions",
+    "number": "160/131",
+    "language": "en"
+   }
   }
  ],
  "cut_off": [],

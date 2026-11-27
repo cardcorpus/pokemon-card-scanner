@@ -2,8 +2,11 @@
 
 Photos of binder pages, and what the scanner says about each card in
 them (`<photo>.json`, written by `cardcorpus-scan --json` with these
-weights). `pytest` checks the scanner still says it when the weights
-are on hand (`CARDCORPUS_WEIGHTS=<folder or hub>`).
+weights and the default languages). Each card's `label` is what the card
+really is, checked by eye; the table names it, and says so where the
+scanner's first pick differs. `pytest` checks the scanner still says
+what it said when the weights are on hand
+(`CARDCORPUS_WEIGHTS=<folder or hub>`).
 
 The photos are under CC BY 4.0. The cards in them are © The Pokémon
 Company, Nintendo, Creatures, GAME FREAK and, for older cards, Wizards
@@ -13,7 +16,7 @@ of the Coast.
 
 A binder page of twelve vintage English Jungle and Fossil cards.
 
-| # | first pick | set | number | similarity |
+| # | card | set | number | similarity |
 |---|---|---|---|---|
 | 1 | [Nidoqueen](https://pokemon.cardcorpus.com/v1/sets/english/jungle.json) | Jungle | 23/64 | 0.981 |
 | 2 | [Muk](https://pokemon.cardcorpus.com/v1/sets/english/fossil.json) | Fossil | 28/62 | 0.980 |
@@ -32,7 +35,7 @@ A binder page of twelve vintage English Jungle and Fossil cards.
 
 A binder page of nine vintage Japanese Southern Islands holo cards.
 
-| # | first pick | set | number | similarity |
+| # | card | set | number | similarity |
 |---|---|---|---|---|
 | 1 | [Exeggutor](https://pokemon.cardcorpus.com/v1/sets/japanese/southern-islands.json) | Southern Islands | No. 103 | 0.949 |
 | 2 | [Slowking](https://pokemon.cardcorpus.com/v1/sets/japanese/southern-islands.json) | Southern Islands |  | 0.949 |
@@ -48,7 +51,7 @@ A binder page of nine vintage Japanese Southern Islands holo cards.
 
 A binder page of modern English Prismatic Evolutions cards with one Japanese card.
 
-| # | first pick | set | number | similarity |
+| # | card | set | number | similarity |
 |---|---|---|---|---|
 | 1 | [Leafeon](https://pokemon.cardcorpus.com/v1/sets/english/prismatic-evolutions.json) | Prismatic Evolutions | 005/131 | 0.922 |
 | 2 | [Vaporeon](https://pokemon.cardcorpus.com/v1/sets/english/prismatic-evolutions.json) | Prismatic Evolutions | 022/131 | 0.957 |
@@ -64,7 +67,7 @@ A binder page of modern English Prismatic Evolutions cards with one Japanese car
 
 A binder page of nine modern Japanese holo cards from a 30th anniversary set.
 
-| # | first pick | set | number | similarity |
+| # | card | set | number | similarity |
 |---|---|---|---|---|
 | 1 | [Espeon](https://pokemon.cardcorpus.com/v1/sets/japanese/30th-celebration.json) | 30th CELEBRATION | 058/103 | 0.920 |
 | 2 | [Cosmoem](https://pokemon.cardcorpus.com/v1/sets/japanese/30th-celebration.json) | 30th CELEBRATION | 065/103 | 0.894 |
@@ -78,25 +81,28 @@ A binder page of nine modern Japanese holo cards from a 30th anniversary set.
 
 ## chinese-binder.jpg
 
-A curved binder page of Simplified Chinese cards and one Japanese card from a 30th anniversary set.
+A curved binder page of Simplified and Traditional Chinese cards and one Japanese card from a 30th anniversary set.
 
-| # | first pick | set | number | similarity |
+| # | card | set | number | similarity |
 |---|---|---|---|---|
 | 1 | [Articuno](https://pokemon.cardcorpus.com/v1/sets/zh-hans/30th-celebration.json) | 30周年庆典 | 012/103 | 0.957 |
-| 2 | [Eevee](https://pokemon.cardcorpus.com/v1/sets/zh-hans/30th-celebration.json) | 30周年庆典 | 094/103 | 0.931 |
+| 2 | [Eevee](https://pokemon.cardcorpus.com/v1/sets/zh-hant/30th-celebration.json) | 30th Celebration | 094/103 |  |
 | 3 | [Solgaleo](https://pokemon.cardcorpus.com/v1/sets/zh-hans/30th-celebration.json) | 30周年庆典 | 084/103 | 0.862 |
 | 4 | [Jangmo-o](https://pokemon.cardcorpus.com/v1/sets/zh-hans/30th-celebration.json) | 30周年庆典 | 089/103 | 0.879 |
 | 5 | [Dialga](https://pokemon.cardcorpus.com/v1/sets/zh-hans/30th-celebration.json) | 30周年庆典 | 082/103 | 0.761 |
 | 6 | [Illumise](https://pokemon.cardcorpus.com/v1/sets/japanese/30th-celebration.json) | 30th CELEBRATION | 004/103 | 0.816 |
-| 7 | [Gimmighoul](https://pokemon.cardcorpus.com/v1/sets/zh-hans/30th-celebration.json) | 30周年庆典 | 067/103 | 0.927 |
+| 7 | [Gimmighoul](https://pokemon.cardcorpus.com/v1/sets/zh-hant/30th-celebration.json) | 30th Celebration | 067/103 |  |
 | 8 | [Gholdengo](https://pokemon.cardcorpus.com/v1/sets/zh-hans/30th-celebration.json) | 30周年庆典 | 087/103 | 0.891 |
 | 9 | [Alolan Meowth](https://pokemon.cardcorpus.com/v1/sets/zh-hans/30th-celebration.json) | 30周年庆典 | 075/103 | 0.875 |
+
+Card 2 is the Traditional Chinese print (zh-hant/30th-celebration/094). With the default languages the scanner picks zh-hans/30th-celebration/094 (0.931), and its language check says it looks Traditional Chinese.
+Card 7 is the Traditional Chinese print (zh-hant/30th-celebration/067). With the default languages the scanner picks zh-hans/30th-celebration/067 (0.927); its language check doesn't flag it.
 
 ## mixed-languages.jpg
 
 A binder page of English, Japanese and Chinese full-art and special cards.
 
-| # | first pick | set | number | similarity |
+| # | card | set | number | similarity |
 |---|---|---|---|---|
 | 1 | [Dark Porygon2](https://pokemon.cardcorpus.com/v1/sets/japanese/darkness-and-to-light-neo-destiny.json) | 闇、そして光へ... | No. 233 | 0.953 |
 | 2 | [Mantyke](https://pokemon.cardcorpus.com/v1/sets/english/paradox-rift.json) | Paradox Rift | 189/182 | 0.951 |

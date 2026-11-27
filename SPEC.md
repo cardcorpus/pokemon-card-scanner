@@ -84,8 +84,8 @@ photo as given is kept for small cards (stage 4).
   roll's by `orientation.match_margin` (0.08) and reaches
   `orientation.match_floor` (0.90): a card printed along its long edge
   reads upright to the head when turned a quarter.
-- Half turn: when the head's roll was kept and the box doesn't touch the
-  photo's edge (within 0.5% of its longer side), the roll turned 180° wins
+- Half turn: when the head's roll was kept and the box isn't cut off by
+  the photo's edge (see "Cut off by the edge"), the roll turned 180° wins
   if its best index match is the same card name, 0.02 more similar, and
   at least 0.80.
 - `back_sim` = fingerprint . `back_prototype`.

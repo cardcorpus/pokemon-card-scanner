@@ -44,7 +44,7 @@
      "number": "012/103",
      "catalog": "zh-hans",
      "language": "zh-Hans",
-     "same_card": "c22936",
+     "same_card": "c22937",
      "release": "r758",
      "artwork_group": "a568",
      "release_date": "2026-09-16",
@@ -61,7 +61,7 @@
      "number": "011/103",
      "catalog": "zh-hans",
      "language": "zh-Hans",
-     "same_card": "c22935",
+     "same_card": "c22936",
      "release": "r758",
      "artwork_group": "a556",
      "release_date": "2026-09-16",
@@ -78,7 +78,7 @@
      "number": "146/103",
      "catalog": "zh-hans",
      "language": "zh-Hans",
-     "same_card": "c22924",
+     "same_card": "c22925",
      "release": "r758",
      "artwork_group": "a3856",
      "release_date": "2026-09-16",
@@ -149,7 +149,15 @@
     "scan_features": 2200,
     "box_error": 0.027621068060398102
    },
-   "quality": "sure"
+   "quality": "sure",
+   "label": {
+    "print": "zh-hans/30th-celebration/012",
+    "name": "Articuno",
+    "set": "zh-hans/30th-celebration",
+    "set_name": "30周年庆典",
+    "number": "012/103",
+    "language": "zh-Hans"
+   }
   },
   {
    "box": 1,
@@ -192,7 +200,7 @@
      "number": "094/103",
      "catalog": "zh-hans",
      "language": "zh-Hans",
-     "same_card": "c23054",
+     "same_card": "c23057",
      "release": "r758",
      "artwork_group": "a558",
      "release_date": "2026-09-16",
@@ -226,8 +234,8 @@
      "number": "072/086",
      "catalog": "zh-hans",
      "language": "zh-Hans",
-     "same_card": "c14644",
-     "release": "r885",
+     "same_card": "c14648",
+     "release": "r888",
      "artwork_group": "a1473",
      "release_date": "2026-11-06",
      "sim": 0.6781,
@@ -314,7 +322,15 @@
     "scan_features": 3000,
     "box_error": 0.011598648503422737
    },
-   "quality": "sure"
+   "quality": "sure",
+   "label": {
+    "print": "zh-hant/30th-celebration/094",
+    "name": "Eevee",
+    "set": "zh-hant/30th-celebration",
+    "set_name": "30th Celebration",
+    "number": "094/103",
+    "language": "zh-Hant"
+   }
   },
   {
    "box": 2,
@@ -357,7 +373,7 @@
      "number": "084/103",
      "catalog": "zh-hans",
      "language": "zh-Hans",
-     "same_card": "c23038",
+     "same_card": "c23041",
      "release": "r758",
      "artwork_group": "a129",
      "release_date": "2026-09-16",
@@ -462,7 +478,15 @@
     "box_error": 0.023857174441218376
    },
    "quality": "unsure",
-   "decided": true
+   "decided": true,
+   "label": {
+    "print": "zh-hans/30th-celebration/084",
+    "name": "Solgaleo",
+    "set": "zh-hans/30th-celebration",
+    "set_name": "30周年庆典",
+    "number": "084/103",
+    "language": "zh-Hans"
+   }
   },
   {
    "box": 3,
@@ -505,7 +529,7 @@
      "number": "089/103",
      "catalog": "zh-hans",
      "language": "zh-Hans",
-     "same_card": "c23047",
+     "same_card": "c23050",
      "release": "r758",
      "artwork_group": "a2678",
      "release_date": "2026-09-16",
@@ -609,7 +633,15 @@
     "box_error": 0.09363808482885361
    },
    "quality": "unsure",
-   "decided": true
+   "decided": true,
+   "label": {
+    "print": "zh-hans/30th-celebration/089",
+    "name": "Jangmo-o",
+    "set": "zh-hans/30th-celebration",
+    "set_name": "30周年庆典",
+    "number": "089/103",
+    "language": "zh-Hans"
+   }
   },
   {
    "box": 4,
@@ -652,7 +684,7 @@
      "number": "082/103",
      "catalog": "zh-hans",
      "language": "zh-Hans",
-     "same_card": "c23036",
+     "same_card": "c23039",
      "release": "r758",
      "artwork_group": "a127",
      "release_date": "2026-09-16",
@@ -669,7 +701,7 @@
      "number": "012/103",
      "catalog": "zh-hans",
      "language": "zh-Hans",
-     "same_card": "c22936",
+     "same_card": "c22937",
      "release": "r758",
      "artwork_group": "a568",
      "release_date": "2026-09-16",
@@ -755,7 +787,15 @@
     "box_error": 0.031271789222955704
    },
    "quality": "unsure",
-   "decided": true
+   "decided": true,
+   "label": {
+    "print": "zh-hans/30th-celebration/082",
+    "name": "Dialga",
+    "set": "zh-hans/30th-celebration",
+    "set_name": "30周年庆典",
+    "number": "082/103",
+    "language": "zh-Hans"
+   }
   },
   {
    "box": 5,
@@ -798,7 +838,7 @@
      "number": "004/103",
      "catalog": "japanese",
      "language": "ja",
-     "same_card": "c22910",
+     "same_card": "c22911",
      "release": "r756",
      "artwork_group": "a1681",
      "release_date": "2026-09-16",
@@ -905,7 +945,15 @@
     "box_error": 0.032575443387031555
    },
    "quality": "unsure",
-   "decided": true
+   "decided": true,
+   "label": {
+    "print": "japanese/30th-celebration/004",
+    "name": "Illumise",
+    "set": "japanese/30th-celebration",
+    "set_name": "30th CELEBRATION",
+    "number": "004/103",
+    "language": "ja"
+   }
   },
   {
    "box": 6,
@@ -948,7 +996,7 @@
      "number": "067/103",
      "catalog": "zh-hans",
      "language": "zh-Hans",
-     "same_card": "c23010",
+     "same_card": "c23011",
      "release": "r758",
      "artwork_group": "a1455",
      "release_date": "2026-09-16",
@@ -983,8 +1031,8 @@
      "number": "043/086",
      "catalog": "zh-hans",
      "language": "zh-Hans",
-     "same_card": "c14443",
-     "release": "r884",
+     "same_card": "c14447",
+     "release": "r887",
      "artwork_group": "a2544",
      "release_date": "2026-11-06",
      "sim": 0.7555,
@@ -1055,7 +1103,15 @@
     "scan_features": 2241,
     "box_error": 0.028469808399677277
    },
-   "quality": "sure"
+   "quality": "sure",
+   "label": {
+    "print": "zh-hant/30th-celebration/067",
+    "name": "Gimmighoul",
+    "set": "zh-hant/30th-celebration",
+    "set_name": "30th Celebration",
+    "number": "067/103",
+    "language": "zh-Hant"
+   }
   },
   {
    "box": 7,
@@ -1098,7 +1154,7 @@
      "number": "087/103",
      "catalog": "zh-hans",
      "language": "zh-Hans",
-     "same_card": "c23045",
+     "same_card": "c23048",
      "release": "r758",
      "artwork_group": "a2345",
      "release_date": "2026-09-16",
@@ -1115,7 +1171,7 @@
      "number": "060/103",
      "catalog": "zh-hans",
      "language": "zh-Hans",
-     "same_card": "c23001",
+     "same_card": "c23002",
      "release": "r758",
      "artwork_group": "a2893",
      "release_date": "2026-09-16",
@@ -1132,7 +1188,7 @@
      "number": "130/103",
      "catalog": "zh-hans",
      "language": "zh-Hans",
-     "same_card": "c23094",
+     "same_card": "c23097",
      "release": "r758",
      "artwork_group": "a805",
      "release_date": "2026-09-16",
@@ -1149,7 +1205,7 @@
      "number": "063/103",
      "catalog": "zh-hans",
      "language": "zh-Hans",
-     "same_card": "c23005",
+     "same_card": "c23006",
      "release": "r758",
      "artwork_group": "a115",
      "release_date": "2026-09-16",
@@ -1201,7 +1257,15 @@
     "scan_features": 2637,
     "box_error": 0.037350043654441833
    },
-   "quality": "sure"
+   "quality": "sure",
+   "label": {
+    "print": "zh-hans/30th-celebration/087",
+    "name": "Gholdengo",
+    "set": "zh-hans/30th-celebration",
+    "set_name": "30周年庆典",
+    "number": "087/103",
+    "language": "zh-Hans"
+   }
   },
   {
    "box": 8,
@@ -1244,7 +1308,7 @@
      "number": "075/103",
      "catalog": "zh-hans",
      "language": "zh-Hans",
-     "same_card": "c23019",
+     "same_card": "c23020",
      "release": "r758",
      "artwork_group": "a2931",
      "release_date": "2026-09-16",
@@ -1278,8 +1342,8 @@
      "number": "157/086",
      "catalog": "zh-hans",
      "language": "zh-Hans",
-     "same_card": "c14556",
-     "release": "r884",
+     "same_card": "c14560",
+     "release": "r887",
      "artwork_group": "a1390",
      "release_date": "2026-11-06",
      "sim": 0.7223,
@@ -1344,7 +1408,15 @@
     "box_error": 0.21334373950958252
    },
    "quality": "unsure",
-   "decided": true
+   "decided": true,
+   "label": {
+    "print": "zh-hans/30th-celebration/075",
+    "name": "Alolan Meowth",
+    "set": "zh-hans/30th-celebration",
+    "set_name": "30周年庆典",
+    "number": "075/103",
+    "language": "zh-Hans"
+   }
   }
  ],
  "cut_off": [

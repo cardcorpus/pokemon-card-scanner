@@ -12,5 +12,5 @@ CardCorpus dataset: https://pokemon.cardcorpus.com/v1/sets/<set>.json, card <car
 """
 from .scanner import Scanner, pick_device
 
-__version__ = "1.0.0"
+__version__ = "1.2.0"
 __all__ = ["Scanner", "pick_device", "__version__"]

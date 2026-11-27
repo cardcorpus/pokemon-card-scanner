@@ -44,7 +44,7 @@
      "number": "No. 103",
      "catalog": "japanese",
      "language": "ja",
-     "same_card": "c19030",
+     "same_card": "c19035",
      "release": "r464",
      "artwork_group": "a538",
      "release_date": "1999-07-17",
@@ -61,7 +61,7 @@
      "number": "No. 095",
      "catalog": "japanese",
      "language": "ja",
-     "same_card": "c19029",
+     "same_card": "c19034",
      "release": "r464",
      "artwork_group": "a56",
      "release_date": "1999-07-17",
@@ -96,7 +96,7 @@
      "number": "DPBP#449",
      "catalog": "japanese",
      "language": "ja",
-     "same_card": "c19099",
+     "same_card": "c19104",
      "release": "r466",
      "artwork_group": "a1283",
      "release_date": "2006-11-30",
@@ -142,7 +142,15 @@
     "scan_features": 2705,
     "box_error": 0.012701544910669327
    },
-   "quality": "sure"
+   "quality": "sure",
+   "label": {
+    "print": "japanese/southern-islands/no-103",
+    "name": "Exeggutor",
+    "set": "japanese/southern-islands",
+    "set_name": "Southern Islands",
+    "number": "No. 103",
+    "language": "ja"
+   }
   },
   {
    "box": 1,
@@ -185,7 +193,7 @@
      "number": null,
      "catalog": "japanese",
      "language": "ja",
-     "same_card": "c19036",
+     "same_card": "c19041",
      "release": "r464",
      "artwork_group": "a2765",
      "release_date": "1999-07-17",
@@ -236,7 +244,7 @@
      "number": "No. 008",
      "catalog": "japanese",
      "language": "ja",
-     "same_card": "c19021",
+     "same_card": "c19026",
      "release": "r464",
      "artwork_group": "a42",
      "release_date": "1999-07-17",
@@ -253,7 +261,7 @@
      "number": "No. 064",
      "catalog": "japanese",
      "language": "ja",
-     "same_card": "c18033",
+     "same_card": "c18037",
      "release": "r434",
      "artwork_group": "a4409",
      "release_date": "1997-11-21",
@@ -275,7 +283,15 @@
     "scan_features": 2622,
     "box_error": 0.013350182212889194
    },
-   "quality": "sure"
+   "quality": "sure",
+   "label": {
+    "print": "japanese/southern-islands/slowking",
+    "name": "Slowking",
+    "set": "japanese/southern-islands",
+    "set_name": "Southern Islands",
+    "number": null,
+    "language": "ja"
+   }
   },
   {
    "box": 2,
@@ -318,7 +334,7 @@
      "number": "No. 008",
      "catalog": "japanese",
      "language": "ja",
-     "same_card": "c19021",
+     "same_card": "c19026",
      "release": "r464",
      "artwork_group": "a42",
      "release_date": "1999-07-17",
@@ -352,7 +368,7 @@
      "number": "No. 080",
      "catalog": "japanese",
      "language": "ja",
-     "same_card": "c18041",
+     "same_card": "c18045",
      "release": "r434",
      "artwork_group": "a4410",
      "release_date": "1997-11-21",
@@ -370,7 +386,7 @@
      "catalog": "japanese",
      "language": "ja",
      "same_card": null,
-     "release": "r880",
+     "release": "r883",
      "artwork_group": "a31",
      "release_date": "1999-05-22",
      "sim": 0.691,
@@ -414,7 +430,15 @@
     "scan_features": 2224,
     "box_error": 0.019066112115979195
    },
-   "quality": "sure"
+   "quality": "sure",
+   "label": {
+    "print": "japanese/southern-islands/no-008",
+    "name": "Wartortle",
+    "set": "japanese/southern-islands",
+    "set_name": "Southern Islands",
+    "number": "No. 008",
+    "language": "ja"
+   }
   },
   {
    "box": 3,
@@ -457,7 +481,7 @@
      "number": "No. 045",
      "catalog": "japanese",
      "language": "ja",
-     "same_card": "c19026",
+     "same_card": "c19031",
      "release": "r464",
      "artwork_group": "a505",
      "release_date": "1999-07-17",
@@ -474,7 +498,7 @@
      "number": "No. 023",
      "catalog": "japanese",
      "language": "ja",
-     "same_card": "c16280",
+     "same_card": "c16284",
      "release": "r378",
      "artwork_group": "a490",
      "release_date": "1997-06-20",
@@ -491,7 +515,7 @@
      "number": "No. 079",
      "catalog": "japanese",
      "language": "ja",
-     "same_card": "c13278",
+     "same_card": "c13283",
      "release": "r280",
      "artwork_group": "a526",
      "release_date": "2000-02-04",
@@ -508,7 +532,7 @@
      "number": "No. 048",
      "catalog": "japanese",
      "language": "ja",
-     "same_card": "c17154",
+     "same_card": "c17158",
      "release": "r405",
      "artwork_group": "a508",
      "release_date": "1997-03-05",
@@ -525,7 +549,7 @@
      "number": "No. 108",
      "catalog": "japanese",
      "language": "ja",
-     "same_card": "c17170",
+     "same_card": "c17174",
      "release": "r405",
      "artwork_group": "a542",
      "release_date": "1997-03-05",
@@ -552,7 +576,15 @@
     "scan_features": 3000,
     "box_error": 0.04668764770030975
    },
-   "quality": "sure"
+   "quality": "sure",
+   "label": {
+    "print": "japanese/southern-islands/no-045",
+    "name": "Vileplume",
+    "set": "japanese/southern-islands",
+    "set_name": "Southern Islands",
+    "number": "No. 045",
+    "language": "ja"
+   }
   },
   {
    "box": 4,
@@ -595,7 +627,7 @@
      "number": "No. 131",
      "catalog": "japanese",
      "language": "ja",
-     "same_card": "c19032",
+     "same_card": "c19037",
      "release": "r464",
      "artwork_group": "a556",
      "release_date": "1999-07-17",
@@ -691,7 +723,15 @@
     "scan_features": 2670,
     "box_error": 0.016762210056185722
    },
-   "quality": "sure"
+   "quality": "sure",
+   "label": {
+    "print": "japanese/southern-islands/no-131",
+    "name": "Lapras",
+    "set": "japanese/southern-islands",
+    "set_name": "Southern Islands",
+    "number": "No. 131",
+    "language": "ja"
+   }
   },
   {
    "box": 5,
@@ -734,7 +774,7 @@
      "number": "No. 108",
      "catalog": "japanese",
      "language": "ja",
-     "same_card": "c19031",
+     "same_card": "c19036",
      "release": "r464",
      "artwork_group": "a542",
      "release_date": "1999-07-17",
@@ -785,7 +825,7 @@
      "number": "No. 045",
      "catalog": "japanese",
      "language": "ja",
-     "same_card": "c19026",
+     "same_card": "c19031",
      "release": "r464",
      "artwork_group": "a505",
      "release_date": "1999-07-17",
@@ -802,7 +842,7 @@
      "number": "No. 050",
      "catalog": "japanese",
      "language": "ja",
-     "same_card": "c18024",
+     "same_card": "c18028",
      "release": "r434",
      "artwork_group": "a47",
      "release_date": "1997-11-21",
@@ -828,7 +868,15 @@
     "scan_features": 2726,
     "box_error": 0.012508649379014969
    },
-   "quality": "sure"
+   "quality": "sure",
+   "label": {
+    "print": "japanese/southern-islands/no-108",
+    "name": "Lickitung",
+    "set": "japanese/southern-islands",
+    "set_name": "Southern Islands",
+    "number": "No. 108",
+    "language": "ja"
+   }
   },
   {
    "box": 6,
@@ -871,7 +919,7 @@
      "number": "No. 073",
      "catalog": "japanese",
      "language": "ja",
-     "same_card": "c19028",
+     "same_card": "c19033",
      "release": "r464",
      "artwork_group": "a521",
      "release_date": "1999-07-17",
@@ -922,7 +970,7 @@
      "number": "No. 055",
      "catalog": "japanese",
      "language": "ja",
-     "same_card": "c18029",
+     "same_card": "c18033",
      "release": "r434",
      "artwork_group": "a4484",
      "release_date": "1997-11-21",
@@ -961,7 +1009,15 @@
     "scan_features": 2827,
     "box_error": 0.007266783155500889
    },
-   "quality": "sure"
+   "quality": "sure",
+   "label": {
+    "print": "japanese/southern-islands/no-073",
+    "name": "Tentacruel",
+    "set": "japanese/southern-islands",
+    "set_name": "Southern Islands",
+    "number": "No. 073",
+    "language": "ja"
+   }
   },
   {
    "box": 7,
@@ -1004,7 +1060,7 @@
      "number": "No. 057",
      "catalog": "japanese",
      "language": "ja",
-     "same_card": "c19027",
+     "same_card": "c19032",
      "release": "r464",
      "artwork_group": "a515",
      "release_date": "1999-07-17",
@@ -1038,7 +1094,7 @@
      "number": "No. 020",
      "catalog": "japanese",
      "language": "ja",
-     "same_card": "c19024",
+     "same_card": "c19029",
      "release": "r464",
      "artwork_group": "a40",
      "release_date": "1999-07-17",
@@ -1055,7 +1111,7 @@
      "number": "036/088",
      "catalog": "japanese",
      "language": "ja",
-     "same_card": "c19241",
+     "same_card": "c19246",
      "release": "r468",
      "artwork_group": "a560",
      "release_date": "2002-08-23",
@@ -1102,7 +1158,15 @@
     "scan_features": 2983,
     "box_error": 0.0274361465126276
    },
-   "quality": "sure"
+   "quality": "sure",
+   "label": {
+    "print": "japanese/southern-islands/no-057",
+    "name": "Primeape",
+    "set": "japanese/southern-islands",
+    "set_name": "Southern Islands",
+    "number": "No. 057",
+    "language": "ja"
+   }
   },
   {
    "box": 8,
@@ -1145,7 +1209,7 @@
      "number": null,
      "catalog": "japanese",
      "language": "ja",
-     "same_card": "c19035",
+     "same_card": "c19040",
      "release": "r464",
      "artwork_group": "a834",
      "release_date": "1999-07-17",
@@ -1162,7 +1226,7 @@
      "number": "No. 189",
      "catalog": "japanese",
      "language": "ja",
-     "same_card": "c13316",
+     "same_card": "c13321",
      "release": "r280",
      "artwork_group": "a2232",
      "release_date": "2000-02-04",
@@ -1179,7 +1243,7 @@
      "number": "016/053",
      "catalog": "japanese",
      "language": "ja",
-     "same_card": "c10042",
+     "same_card": "c10046",
      "release": "r174",
      "artwork_group": "a1755",
      "release_date": "2010-12-17",
@@ -1196,7 +1260,7 @@
      "number": "DPBP#087",
      "catalog": "japanese",
      "language": "ja",
-     "same_card": "c16134",
+     "same_card": "c16138",
      "release": "r370",
      "artwork_group": "a2765",
      "release_date": "2007-10-26",
@@ -1214,7 +1278,7 @@
      "number": "No. 043",
      "catalog": "japanese",
      "language": "ja",
-     "same_card": "c17149",
+     "same_card": "c17153",
      "release": "r405",
      "artwork_group": "a503",
      "release_date": "1997-03-05",
@@ -1241,7 +1305,15 @@
     "scan_features": 3000,
     "box_error": 0.019196767359972
    },
-   "quality": "sure"
+   "quality": "sure",
+   "label": {
+    "print": "japanese/southern-islands/marill",
+    "name": "Marill",
+    "set": "japanese/southern-islands",
+    "set_name": "Southern Islands",
+    "number": null,
+    "language": "ja"
+   }
   }
  ],
  "cut_off": [
