@@ -220,7 +220,7 @@ gives every number.
    possible turns and fingerprinted by the matcher (a fine-tuned DINOv3
    ViT-S/16); an orientation head says which turn is upright.
 3. **Retrieve.** The fingerprint's nearest pictures in the reference
-   index: 256,216 pictures of 214,180 cards.
+   index: 256,216 pictures of 214,178 cards.
 4. **Straighten** the card again at full resolution.
 5. **Read the number.** A small CRNN reads the collector number from the
    bottom of the card.
@@ -266,7 +266,7 @@ A binder page of 9 to 12 cards takes about 3.6 s on Apple silicon's GPU
 (`--device mps`, an Apple M6) and about 12.5 s on its CPU.
 
 It knows the cards in the index it was built with (the dataset as of
-26 November 2026). A card released after that isn't in it, and the scanner
+27 November 2026). A card released after that isn't in it, and the scanner
 names the closest card it knows. It reads which print a card is, not its
 condition, and it wasn't tested on cards in graded slabs.
 

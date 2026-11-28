@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "cardcorpus-scanner"
-version = "1.2.0"
+version = "1.2.1"
 description = "Name Pokémon trading cards in photos: every card on a binder page, table or hand, matched to the CardCorpus dataset."
 readme = "README.md"
 license = "Apache-2.0"

@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.2.1 (27 November 2026)
+
+**Index.** Rebuilt from the dataset of 27 November 2026: 256,216
+pictures of 214,178 cards. Its card ids follow the dataset's: the
+Japanese and Traditional Chinese Black Bolt and White Flare sets drop
+`japanese-` from their ids, and Korean card numbers keep their leading
+zeros (`korean/lost-abyss/038`).
+
 ## 1.2.0 (26 November 2026)
 
 **Index.** Rebuilt from the dataset of 26 November 2026: 256,216
